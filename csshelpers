@@ -1,0 +1,236 @@
+/****************************************************************************
+*****************************************************************************
+# Helpers
+*****************************************************************************
+****************************************************************************/
+
+/* General Helpers
+-----------------------------------------------*/
+
+.bkg-img { background-repeat: no-repeat; background-size: cover; }
+.clearfix:after {  content: " "; display: block;  height: 0;  clear: both; }
+.h100 { height: 100%; }
+
+/* ID link Gives Adds Space Above */
+.id-link-fix:before {  display: block;  content: " ";  margin-top: -285px;  height: 285px;  visibility: hidden;  pointer-events: none; }
+
+/* Position */
+.relative { position: relative; }
+
+/* Overflow */
+.overflow-h { overflow: hidden; }
+.overflow-v { overflow: visible; }
+
+/* Hider */
+.hidden_visually { position: absolute;overflow: hidden;margin: -1px;padding: 0;width: 1px;height: 1px;border: 0;clip: rect(0 0 0 0); }
+
+/* center child*/
+.flex-center-vertically, .flex-vert { display: flex; justify-content: center; flex-direction: column; height: 100%; }
+
+/* Make Img Cover Using <div.img-cover><picture><img>...*/
+.img-cover { position: relative; overflow: hidden; z-index: 0; }
+.img-cover > picture { width: 100%; height: 100%; display: flex; }
+.img-cover > picture img { object-fit: cover; object-position: center center; }
+
+/* Make Img Cover Using Picture Tag <div.img-cover.picture-cover><img>... */
+.img-cover.picture-cover { /*width: 100%; height: 100%; */display: flex; z-index: 0; }
+.img-cover.picture-cover > img { object-fit: cover; object-position: center center; }
+
+/* Make Image Absolute and Cover with no specific height */
+.img-cover.picture-absolute > picture, .img-cover.img-absolute > picture, .img-cover.img-absolute > img 
+{ position: absolute; top: 0; width: 100%; height: 100%; z-index: -1; }
+
+/* Creates overlay over position:relative parent. Forcess Full Height */
+.box-over { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 2; }
+
+/* Text Alignment Helpers */
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center {text-align: center; }
+.text-justify {text-align: justify; }
+
+/* lists */
+ol.no-bullet, ul.no-bullet { margin-left:0; list-style:none; }
+
+/* List Menu */
+.menu { padding: 0; margin: 0; list-style: none; position: relative; display: flex; flex-wrap: wrap; }
+.menu a { margin-bottom: 0; line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
+.align-right { justify-content: flex-end; }
+.align-center { justify-content: center; }
+.menu.expanded li { flex: 1 1 0px; }
+.menu.vertical { flex-wrap: nowrap; flex-direction: column; }
+
+/* Spacing Helpers
+-----------------------------------------------*/
+
+/* GCW - Grid Container Width */
+.gcw { max-width: 1440px; margin: 0 auto;}
+.gcw.fluid { max-width: 100%; margin: 0 auto; }
+.gcw-l { max-width: 1200px; margin: 0 auto; }
+.gcw-m { max-width: 1000px; margin: 0 auto; }
+.gcw-s { max-width: 800px; margin: 0 auto; }
+.gcw-600 { max-width: 600px; margin: 0 auto; }
+
+/* GCW Medium only */
+@media screen and (min-width: 701) and (max-width: 1023px) {
+  .gcw { max-width: 100%; margin: 0 auto; }
+  .gcw.fluid { max-width: 100%; margin: 0 auto; }
+  .gcw-l { max-width: 1100px; margin: 0 auto; }
+  .gcw-m { max-width: 800px; margin: 0 auto; }
+  .gcw-s { max-width: 550px; margin: 0 auto; }
+}
+
+/* GCW Small only */
+@media screen and (max-width: 700px) {
+  .gcw { max-width: 100%; margin: 0 auto; }
+  .gcw.fluid { max-width: 100%; margin: 0 auto; }
+  .gcw-l { max-width: 100%; margin: 0 auto; }
+  .gcw-m { max-width: 100%; margin: 0 auto; }
+  .gcw-s { max-width: 100%; margin: 0 auto; }
+}
+
+/* Padding & Margin Helpers
+-----------------------------------------------*/
+
+/* Margin */
+.mb-base { margin-bottom: var(--sp-base) !important; }
+.mb-rim { margin-bottom: var(--sp-rim) !important; }
+.mb-feat { margin-bottom: var(--sp-feat) !important; }
+.mb0, .mb-0, .smb0 :last-child { margin-bottom: 0px !important; }
+
+/* Padding */
+.spv { padding-top: var(--sp-base) !important; ; padding-bottom: var(--sp-base) !important; ; }
+.spb { padding-bottom: var(--sp-base) !important; ; }
+.spt { padding-top: var(--sp-base) !important; ; }
+.sph { padding-left: var(--sp-base); padding-right: var(--sp-base) !important; ; }
+
+/* Padding Rim */
+.spv-rim { padding-top: var(--sp-rim) !important; ; padding-bottom: var(--sp-rim) !important; ; }
+.spb-rim { padding-bottom: var(--sp-rim) !important; ; }
+.spt-rim { padding-top: var(--sp-rim) !important; ; }
+.sph-rim { padding-left: var(--sp-rim); padding-right: var(--sp-rim) !important; ; }
+
+/* Padding Feature */
+.spv-feat { padding-top: var(--sp-feat) !important; ; padding-bottom: var(--sp-feat) !important; ; }
+.spb-feat { padding-bottom: var(--sp-feat) !important; ; }
+.spt-feat { padding-top: var(--sp-feat) !important; ; }
+.sph-feat { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; ; }
+
+/* Padding Edge i.e. only on screen near container width or less */
+@media screen and (max-width: 1450px) {
+    .sph-edge { padding-left: var(--sp-base); padding-right: var(--sp-base) !important; }
+    .sph-rim-edge { padding-left: var(--sp-rim); padding-right: var(--sp-rim) !important; }
+    .sph-feat-edge { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; }
+}
+
+
+/* CSS Grid Helpers - GRID BREAKS @ 700px
+-----------------------------------------------*/
+
+/* Replacing Gutenberg Columns Flex to grid */
+.grid-auto, .grid-autowpbg > .wp-block-group__inner-container, .wp-block-columns { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
+.wp-block-column:not(:first-child) { margin-left: 0em; }
+.grid-rows { grid-auto-flow: row; }
+
+/*Grid  Column Modifiers breaks @ 700px */
+@media screen and (min-width: 701px) {
+
+    /* Grid Autos */
+    .grid-auto-450, .grid-auto-450wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat( auto-fit, minmax(450px, 1fr)); }
+    .grid-auto-300, .grid-auto-300wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat( auto-fit, minmax(300px, 1fr)); }
+    .grid-auto-150, .grid-auto-150wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat( auto-fit, minmax(150px, 1fr)); }
+
+    /* repeat grids */
+    .grid-r-2,      .grid-r-2wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(2, 1fr); }
+    .grid-r-3,      .grid-r-3wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); }
+    .grid-r-4,      .grid-r-4wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); }
+    .grid-r-5,      .grid-r-5wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(5, 1fr); }
+    .grid-r-6,      .grid-r-6wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(6, 1fr); }
+    .grid-r-12,     .grid-r-12wpbg > .wp-block-group__inner-container { display: grid; grid-auto-flow: row; grid-template-columns: repeat(12, 1fr); }
+    /* Set grid - Thirds */
+    .grid-1-2,      .grid-1-2wpbg > .wp-block-group__inner-container     { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 2fr; }
+    .grid-2-1,      .grid-2-1wpbg > .wp-block-group__inner-container     { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 1fr; }
+    /* Set grid - Fourths */
+    .grid-1-3,      .grid-1-3wpbg > .wp-block-group__inner-container    { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 3fr; }
+    .grid-3-1,      .grid-3-1wpbg > .wp-block-group__inner-container    { display: grid; grid-auto-flow: row; grid-template-columns: 3fr 1fr; }
+    .grid-2-1-1,    .grid-2-1-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 1fr 1fr; }
+    .grid-1-2-1,    .grid-1-2-1wpbg > .wp-block-group__inner-container   { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 2fr 1fr; }
+    .grid-1-1-2,    .grid-1-1-2wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 1fr 2fr; }
+    .grid-2-1-1,    .grid-2-1-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 1fr 1fr; }
+    /* Set grid - Fifths */
+    .grid-1-4,      .grid-1-4wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 4fr; }
+    .grid-4-1,      .grid-4-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 4fr 1fr; }
+    .grid-1-1-3,    .grid-1-1-3wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 1fr 3fr; }
+    .grid-1-3-1,    .grid-1-3-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 3fr 1fr; }
+    .grid-3-1-1,    .grid-3-1-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 3fr 1fr 1fr; }
+    .grid-2-2-1,    .grid-2-1-1wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 2fr 1fr; }
+    .grid-2-1-2,    .grid-2-1-2wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 1fr 2fr; }
+    .grid-1-2-2,    .grid-1-2-2wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 1fr 2fr 2fr; }
+    .grid-2-3,      .grid-2-3wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 2fr 3fr; }
+    .grid-3-2,      .grid-3-2wpbg > .wp-block-group__inner-container  { display: grid; grid-auto-flow: row; grid-template-columns: 3fr 2fr; }
+    /* Set grid - Sixths */
+    .grid-1-5,      .grid-1-5wpbg > .wp-block-group__inner-container     { display: grid; grid-template-columns: 1fr 5fr; }
+    .grid-5-1,      .grid-5-1wpbg > .wp-block-group__inner-container     { display: grid; grid-template-columns: 5fr 1fr; }
+
+    /* Grid Column Order i.e. Source Ordering */
+    .gc-order-1 { grid-column: 1; }
+    .gc-order-2 { grid-column: 2; }
+    /* Grid Column Over i.e. Overlap/Pull */
+    .gc-over-r { position: relative; z-index: 10; margin-right: calc(-1 * var(--sp-base)); }
+    .gc-over-l { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); }
+    .gc-over-lr { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); margin-right: calc(-2 * var(--sp-base)); }
+    .gc-over-t { position: relative; margin-top:  calc(-2 * var(--sp-base)); }
+    /* Grid Column Push */
+    .gc-push-r { margin-right: calc(1 * var(--sp-base)) !important; }
+    .gc-push-l  { margin-left: calc(1 * var(--sp-base)) !important; }
+    /*Grid Column Span*/
+    .gc-span-0 { grid-column: 1 / -1; }
+    .gc-span-2 { grid-column: auto / span 2; }
+    .gc-span-3 { grid-column: auto / span 3; }
+    .gc-span-4 { grid-column: auto / span 4; }
+    .gc-span-5 { grid-column: auto / span 5; }
+    .gc-span-6 { grid-column: auto / span 6; }
+    .gc-span-7 { grid-column: auto / span 7; }
+    .gc-span-8 { grid-column: auto / span 8; }
+    .gc-span-9 { grid-column: auto / span 9; }
+    .gc-span-10 { grid-column: auto / span 10; }
+    .gc-span-11 { grid-column: auto / span 11; }
+
+}
+
+/* Mobile Break */
+@media screen and (max-width: 700px) {
+    .grid-auto, .grid-autowpbg > .wp-block-group__inner-container, .wp-block-columns  { grid-template-columns: 1fr; grid-auto-flow: row; }
+
+}
+
+/* Grid Gap */
+.grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim) }
+.grid-gap,      .grid-gapwpbg      > .wp-block-group__inner-container   { grid-gap: var(--sp-base) } 
+.grid-gap-feat, .grid-gap-featwpbg > .wp-block-group__inner-container   { grid-gap: var(--sp-feat) }
+
+.grid-row-gap-rim   { grid-row-gap: var(--sp-rim) }
+.grid-row-gap       { grid-row-gap: var(--sp-base) } 
+.grid-row-gap-feat  { grid-row-gap: var(--sp-feat) }
+
+.grid-column-gap-rim   { grid-column-gap: var(--sp-rim) }
+.grid-column-gap       { grid-column-gap: var(--sp-base) } 
+.grid-column-gap-feat  { grid-column-gap: var(--sp-feat) }
+
+
+/* Form Layout Helpers
+-----------------------------------------------*/
+
+/* Form Layout --------------------------------------- */
+.form-control { display: grid; grid-template-columns: repeat(12, 1fr); grid-gap: 20px; }
+.form-control p { grid-column: 1 / -1; margin: 0; }
+.form-control p input[type="submit"] { margin-bottom: 0; }
+.form-control p.half { grid-column: auto / span 6; }
+.form-control p.third { grid-column: auto / span 4; }
+.form-control p.fourth { grid-column: auto / span 3; }
+.form-control p.three_fourth { grid-column: auto / span 9; }
+/* Mobile Break */
+@media screen and (max-width: 700px) {
+    .form-control { grid-gap: 10px; }
+    .form-control p.half, .form-control p.third, .form-control p.fourth, .form-control p.three_fourth { grid-column: 1 / -1; }
+}  
