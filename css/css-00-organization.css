@@ -1,18 +1,18 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Includes
-# Root Variavles
-# Fallbacks
-# Helpers
-# Base
+01 Includes
+02 Root Variavles
+03 Fallbacks
+03 Helpers
+05 Base
     - Colors
     - Typography
     - Elements
     - Links
     - Forms and buttons
     - Light Text
-# Components
+05 Components
     - Unique Brand Elements
     - Navigation
     - Posts and pages
@@ -23,7 +23,7 @@
     - Galleries
     - Blocks
     - Footer
-# plugins
+06 plugins
     - Jetpack infinite scroll
 # Utilities
     - Accessibility
