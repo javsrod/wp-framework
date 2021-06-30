@@ -1,3 +1,6 @@
+<?php
+
+// Gutenberg Color Pickers
 function gb_blocks_theme_suported_featurs() {
     add_theme_support( 'editor-color-palette', array(
 
