@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Includes
+# Root Variavles
+# Fallbacks
+# Helpers
+# Base
+    - Colors
+    - Typography
+    - Elements
+    - Links
+    - Forms and buttons
+    - Light Text
+# Components
+    - Unique Brand Elements
+    - Navigation
+    - Posts and pages
+    - Comments
+    - Widgets
+    - Media
+    - Captions
+    - Galleries
+    - Blocks
+    - Footer
+# plugins
+    - Jetpack infinite scroll
+# Utilities
+    - Accessibility
+    - Alignments
+    
+--------------------------------------------------------------*/
+
+/* --------------- NOTE MAKER LEGEND --------------- */
+
+    /****************************************************************************
+    *****************************************************************************
+    0.0 Main Section
+    *****************************************************************************
+    ****************************************************************************/
+
+    /*---------------------------------------------------------------------------
+    Sub Section
+    ---------------------------------------------------------------------------*/
+
+    /* Sub Section Part
+    -----------------------------------------------*/
+
+    /* Note text..... */
+
+
+/* --------------- MEDIA QUERY REFFERENCE --------------- */
+    /* Small */
+    @media screen and (max-width: 800px) {}
+
+    /* Medium */
+    @media screen and (min-width: 801px) and (max-width: 1023px) {}
+
+    /* Large  Standard */
+    @media screen and (min-width: 1024px) and (max-width: 1450px) {}
+
+    /* Extra Large  */
+    @media screen and (min-width: 1451px) {}
