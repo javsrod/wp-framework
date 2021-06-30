@@ -1,0 +1,136 @@
+/****************************************************************************
+*****************************************************************************
+# Root Variables
+*****************************************************************************
+****************************************************************************/
+
+/* Fonts sizing*/
+:root {
+    /* Font size is the basis of all other measurements helpers: Margin Padding; */
+    --fontSize: 18px;
+
+    /* heading size */
+    --xxxlarge-size:  8.5rem;
+    --xxlarge-size:  6.5rem;
+    --xlarge-size: 4.2rem;
+    --large-size: 3.6rem;
+    --h1-size: 2.8rem;
+    --h2-size: 2.4rem;
+    --h3-size: 1.8rem;
+    --h4-size: 1.4rem;
+    --h5-size: 1.2rem;
+    --h6-size: 1.0rem;
+    --small-size: 0.85rem;
+    --xsmall-size: 0.8em;
+    --xxsmall-size: 0.65em;
+    --xxxsmall-size: 0.5em;
+
+    --lineHeight: 1.4;
+
+    /* horizontal rule */
+    --hrThickness: 2px;
+}
+    /* Small */
+    @media only screen and (max-width: 700px) { 
+        :root { 
+            --fontSize: 14px;
+            --xxxlarge-size:  3.4rem;
+            --xxlarge-size:  3.2rem;
+            --xlarge-size: 3.0rem;
+            --large-size: 2.8rem;
+            --h1-size: 2.6rem;
+            --h2-size: 2.2rem;
+            --h3-size: 1.8rem;
+            --h4-size: 1.4rem;
+            --h5-size: 1.2rem;
+            --h5-size: 1.0rem;
+        }
+    }
+    /* Medium */
+    @media screen and (min-width: 701px) and (max-width: 1023px) {
+        :root { 
+            --fontSize: 16px;
+            --xxxlarge-size:  3.4rem;
+            --xxlarge-size:  3.2rem;
+            --xlarge-size: 3.0rem;
+            --large-size: 2.8rem;
+            --h1-size: 2.6rem;
+            --h2-size: 2.2rem;
+            --h3-size: 1.8rem;
+            --h4-size: 1.4rem;
+            --h5-size: 1.2rem;
+            --h5-size: 1.0rem;
+        }
+    }
+    /* Extra Large  */
+    @media screen and (min-width: 1451px) {
+        :root {
+              --xxxlarge-size:  10.5rem;
+              --xxlarge-size:  7.5rem;
+              --xlarge-size: 5.5rem;
+              --large-size: 3.6rem;
+              --h1-size: 2.8rem;
+              --h2-size: 2.2rem;
+              --h3-size: 1.4rem;
+              --h4-size: 1.1rem;
+              --h5-size: 1.0rem;
+              --h6-size: 1.0rem;
+        }
+    }
+
+/* Pading spacing variables NOTE: var(--fontSize) is changed in  */
+:root {
+  --sp-feat: calc( var(--fontSize) * 6.5);
+  --sp-base: calc( var(--fontSize) * 3);
+  --sp-rim: calc( var(--fontSize) * .9);
+}
+    /* Small */
+    @media screen and (max-width: 700px) {
+        :root {
+            --sp-feat: calc( var(--fontSize) * 3.5);
+            --sp-base: calc( var(--fontSize) * 1.5);
+            --sp-rim: calc( var(--fontSize) * .75);
+        }
+    }
+
+/* Branding Variables */
+:root {
+    /* Hex Alpha Codes: 95% = F2, 90% = E6,  85% = D9, 80% = CC,  75% = BF, 70% = B3,  65% = A6, 60% = 99,  55% = 8C, 50% = 80,  45% = 73, 40% = 66,  35% = 59, 30% = 4D,  25% = 40, 20% = 33,  15% = 26, 10% = 1A,  5% = 0D */
+    --clr-body: #535363;
+
+    --clr-1: #83007e;
+    --clr-1-dark: #45246c;
+    --clr-1-light: #83007e;
+    --clr-1-op: #83007eBF;
+    --clr-1-hover: #45246c;
+
+    --clr-2: #62bb46;
+    --clr-2-dark: #368e33;
+    --clr-2-light: #62bb46;
+    --clr-2-op: #62bb4699;
+    --clr-2-hover: #368e33;
+
+    --clr-3: #7b7c8e;
+    --clr-3-dark: #303039;
+    --clr-3-light: #f7f7f7;
+    --clr-3-op: #30303926;
+    --clr-3-hover: #505d66;
+
+    --clr-4: #e8003d;
+    --clr-4-dark: #e8003d;
+    --clr-4-light: #e8003d;
+    --clr-4-op: #e8003d99;
+    --clr-4-hover: #e8003d;
+
+    --clr-white: #ffffff;
+    --clr-white-op: #ffffffFC;
+    --clr-white-hover: #ffffff80;
+    --clr-black: #000000;
+    --clr-black-op: #000000E6;
+    --clr-black-hover: #00000080;
+
+    --shadow-text: 1px 1px 1px rgb(39 41 46 / 24%);
+}
+
+/* WP Admin Bar */
+:root { --wpadminbar: 46px; } /* Small */ @media screen and (max-width: 800px) { :root { --wpadminbar: 32px; } }
