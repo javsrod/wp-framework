@@ -1,0 +1,73 @@
+/****************************************************************************
+*****************************************************************************
+03 Fallbacks & Gutenberg Block Reset
+*****************************************************************************
+****************************************************************************/
+
+html {
+    box-sizing: border-box;
+    font-family: nunito, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fontSize);
+    line-height: var(--lineHeight);
+    color: var(--clr-body);
+    background-color: var(--clr-3);
+}
+*, *:before, *:after { box-sizing: inherit; }
+body { -webkit-overflow-scrolling: touch; scroll-behavior: smooth; background: transparent; }
+body, p { 
+    font-family: nunito, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fontSize); 
+    line-height: var(--lineHeight); }
+p { margin: 0 0 .85rem 0; }
+main, .main { overflow: hidden; } 
+b, strong, .bold { color: var(--clr-1); font-weight: 700; }
+i, em, .italic { color: var(--clr-1);  font-style: italic; font-weight: 700; }
+hr { background-color: var(--clr-1); border: 0 !important; height: var(--hrThickness); margin-bottom: 1.5em; border-radius: 20px; }
+ol, ul { position: relative; padding: 0; margin: 0 0 1rem 2rem; }
+ol {list-style: decimal;}
+ol li, ul li{ -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
+li > ul, li > ol { margin-bottom: 0; margin-left: 1.5em;}
+dt { font-weight: bold;}
+dd { margin: 0 1.5em 1.5em;}
+img { height: auto; max-width: 100%; width: 100%; vertical-align: bottom; }
+  /* Make sure images are scaled correctly. */
+  /* Adhere to container width. */
+figure {margin: 0;}
+  /* Extra wide images within figure tags don't overflow the content area. */
+table { margin: 0 0 1.5em; width: 100%; }
+textarea, input, button { outline: none; }
+textarea { width: 100%; }
+section { position: relative; overflow: hidden;}
+section:focus { outline: none !important; }
+/*code*/
+pre code { padding: 0; border: none; }
+pre[class*="language-"] { padding: .5em !important; }
+code[class*="language-"], pre[class*="language-"] { font-size: .85em !important; line-height: .9em !important; }
+code { padding: .125rem .3125rem .0625rem; border: 1px solid #cacaca; background-color: #e6e6e6; 
+    font-family: Consolas,"Liberation Mono",Courier,monospace; font-weight: 400; color: var(--clr-black); font-size: .5rem; }
+
+/*---------------------------------------------------------------------------
+Gutenberg Block Resets
+---------------------------------------------------------------------------*/
+.wp-block-image { margin: 0; }
+.wp-block-file { margin-bottom: 1.5em; display: grid; text-align: center; }
+.wp-block-file .wp-block-file__button { background: unset; border-radius: unset; color: unset; font-size: unset; padding: unset; }
+
+.wp-block-latest-posts.is-grid { display: grid; grid-gap: var(--sp-rim); }
+.wp-block-latest-posts__featured-image img { height: auto; width: 100%; max-width: 100%; object-fit: cover; max-height: 150px; }
+.wp-block-latest-posts.wp-block-latest-posts__list { margin: 0; }
+.wp-block-latest-posts.wp-block-latest-posts__list li { background-color: var(--clr-white);  margin: 0; width: 100%; box-shadow: var(--shadowbox-btn); transition: all 0.2s ease-in-out; }
+.wp-block-latest-posts.wp-block-latest-posts__list li:hover { box-shadow: var(--shadowbox); }
+.wp-block-latest-posts.wp-block-latest-posts__list li > a { font-family: futura-pt, sans-serif; font-weight: 700; font-style: italic; padding: calc( var(--sp-rim) * 0.5 ) var(--sp-rim);  display: block; }
+.wp-block-latest-posts__featured-image a { width: 100%;}
+    @media screen and (min-width: 800px) {
+        .wp-block-latest-posts.is-grid.columns-2 { grid-template-columns: repeat(2, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-3 { grid-template-columns: repeat(3, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-4 { grid-template-columns: repeat(4, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-5 { grid-template-columns: repeat(5, 1fr); }
+        .wp-block-latest-posts__featured-image img { max-height: 200px; }
+    }
