@@ -14,7 +14,7 @@
 .block-editor-page .edit-post-visual-editor .wp-block.is-reusable { border: 4px #c0c5ff solid !important; }
 .block-editor-page .edit-post-visual-editor .wp-block[data-align=wide] { max-width: 1080px; }
 .block-editor-page .edit-post-visual-editor .wp-block[data-align=full] { max-width: 100%; }
-.editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black !important); }
+.editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black) !important; }
 
 /****************************************************************************
 *****************************************************************************
