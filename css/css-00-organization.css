@@ -5,7 +5,7 @@
 02 Root Variavles
 03 Fallbacks
 04 Helpers
-05 Base
+05 Base Styling
     - Colors
     - Typography
     - Elements
@@ -14,7 +14,7 @@
     - Buttons
     - Light Text
 06 Components
-    - Unique Brand Elements
+    - Unique Brand Elements & Classes
     - Navigation
     - Posts and pages
     - Comments
@@ -26,9 +26,8 @@
     - Footer
 07 plugins
     - Jetpack infinite scroll
-# Utilities
+08 Utilities
     - Accessibility
-    - Alignments
     
 --------------------------------------------------------------*/
 
@@ -51,14 +50,17 @@
 
 
 /* --------------- MEDIA QUERY REFFERENCE --------------- */
-    /* Small */
-    @media screen and (max-width: 800px) {}
+    /* Mobile */
+    @media screen and (max-width: 799px) {}
 
-    /* Medium */
-    @media screen and (min-width: 801px) and (max-width: 1023px) {}
+    /* Tablet */
+    @media screen and (min-width: 800px) and (max-width: 1023px) {}
 
-    /* Large  Standard */
-    @media screen and (min-width: 1024px) and (max-width: 1450px) {}
+    /* Laptop Med  */
+    @media screen and (min-width: 1024px) and (max-width: 1299px) {}
 
-    /* Extra Large  */
-    @media screen and (min-width: 1451px) {}
+    /* Laptop large  */
+    @media screen and (min-width: 1300px) and (max-width: 1599px) {}
+
+    /* Desktop */
+    @media screen and (min-width: 1600px) {}
