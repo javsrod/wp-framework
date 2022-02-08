@@ -76,11 +76,15 @@ Padding & Margin Helpers
 .mb-feat { margin-bottom: var(--sp-feat) !important; }
 .mb-0 { margin-bottom: 0px !important; }
 .mb0, .mb-0, .smb0 :last-child, .smb0-child > :first-child { margin-bottom: 0px !important; }
+.mt0, .mt-0 { margin-top: 0px !important; }
 
 /* Padding */
 .spv, .spv-child > :first-child { padding-top: var(--sp-base) !important; ; padding-bottom: var(--sp-base) !important; ; }
+.spv0, .spv-0, .spv0-child > :first-child { padding-top: 0px !important; ; padding-bottom: 0px !important; ; }
 .spb, .spb-child > :first-child { padding-bottom: var(--sp-base) !important; ; }
+.spb0, .spb-0, .spb0-child > :first-child { padding-bottom: 0px !important; ; }
 .spt, .spt-child > :first-child { padding-top: var(--sp-base) !important; ; }
+.spt0, .spt-0, .spt0-child > :first-child  { padding-top: 0px !important; ; }
 .sph, .sph-child > :first-child { padding-left: var(--sp-base); padding-right: var(--sp-base) !important; ; }
 .smv, .smv-child > :first-child { margin-top: var(--sp-base) !important; ; padding-bottom: var(--sp-base) !important; ; }
 .smb, .smb-child > :first-child { margin-bottom: var(--sp-base) !important; ; }
