@@ -1,0 +1,394 @@
+/****************************************************************************
+*****************************************************************************
+05 Base Styling
+*****************************************************************************
+****************************************************************************/
+
+/*---------------------------------------------------------------------------
+Colors
+---------------------------------------------------------------------------*/
+
+/* Colors Clases */
+.clr-1, .has-clr-1-color { color: var(--clr-1) !important; }
+.clr-2, .has-clr-2-color { color: var(--clr-2) !important; }
+.clr-3, .has-clr-3-color { color: var(--clr-3) !important; }
+.clr-white, .has-white-color { color: var(--clr-white) !important; }
+.clr-black, .has-black-color { color: var(--clr-black) !important; }
+
+/* BKG Clases */
+.bkg-1, .has-clr-1-background-color { background-color: var(--clr-1) !important; }
+.bkg-1-grad{ background: linear-gradient( 90deg, var(--clr-1-light), var(--clr-1-dark) ); }
+.bkg-1-grad-op{ background: linear-gradient( 90deg, var(--clr-1-light-op), var(--clr-1-dark-op) ); }
+
+.bkg-2, .has-clr-2-background-color { background-color: var(--clr-2) !important; } 
+.bkg-2-grad{ background: linear-gradient( 90deg,var(--clr-2-light), var(--clr-2-dark) ); }
+.bkg-2-grad-op{ background: linear-gradient( 90deg,var(--clr-2-light-op), var(--clr-2-dark-op) ); }
+
+.bkg-3, .has-clr-3-background-color { background-color: var(--clr-3) !important; }
+.bkg-3-dark, .has-clr-3-dark-background-color { background-color: var(--clr-3-dark) !important; }
+
+.bkg-white, .has-clr-white-background-color  { background-color: var(--clr-white) !important; }
+.bkg-white-child > :first-child { background-color: var(--clr-white) !important; }
+.bkg-black, .has-clr-black-background-color{ background-color: var(--clr-black) !important; }
+
+/*---------------------------------------------------------------------------
+Typography
+---------------------------------------------------------------------------*/
+
+/* Body & P In fallbacks */
+p.lead { font-size: var(--lead-size); line-height: 1.3; margin-bottom: 1.2rem; }
+ 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: none;
+    line-height: 1;
+    margin: 0 0 1rem 0; 
+    color: var(--clr-2);
+    letter-spacing: -1px;
+}
+
+.head-2 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.head-3 {
+    font-family: nunito, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.head-4 {
+    font-family: nunito, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, .h1 { font-size: var(--h1-size); margin-left: calc(var(--h1-size) / -22); word-break: break-word; }
+h2, .h2 { font-size: var(--h2-size); margin-left: calc(var(--h2-size) / -26); }
+h3, .h3 { font-size: var(--h3-size); color: var(--clr-1); }
+h4, .h4 { font-size: var(--h4-size); color: var(--clr-1); }
+h5, .h5 { font-size: var(--h5-size); margin-bottom: 1rem; }
+h6, .h6 { font-size: var(--h6-size); margin-bottom: 1rem; }
+
+
+.legal-content h1 { font-size: calc(var(--h1-size) * 0.8); }
+.legal-content h2 { font-size: calc(var(--h2-size) * 0.7); }
+.legal-content h3 { font-size: calc(var(--h3-size) * 0.6); }
+.legal-content h4 { font-size: calc(var(--h4-size) * 0.6); }
+
+
+/* Header space after Paragraph */
+p + h1, p + h2, p + h3, p + h4 {  padding-top: .75rem; } 
+p + h5, p + h6 {  padding-top: .75rem; } 
+
+/* large headers */
+h1.large, .h1.large { font-size: var(--large-size); }
+h1.xlarge, .h1.xlarge { font-size: var(--xlarge-size); }
+h1.xxlarge, .h1.xxlarge { font-size: var(--xxlarge-size); }
+h1.xxxlarge, .h1.xxxlarge { font-size: var(--xxxlarge-size); }
+
+/* small text */
+.small { font-size: var(--small-size);  }
+.xsmall { font-size: var(--xsmall-size); }
+.xxsmall { font-size: var(--xxsmall-size); }
+.xxxsmall { font-size: var(--xxxsmall-size); }
+
+/* Light Text */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 { text-shadow: var(--shadow-text); color: var(--clr-white) !important; }
+.light p, .light li, .light li:after { color: var(--clr-white) !important; }
+.light hr, hr.light {background-color: var(--clr-white) !important; }
+.light b, b.light, .light strong, strong.light , .light .bold, .light.bold  { color: var(--clr-white); }
+
+
+/*---------------------------------------------------------------------------
+links
+---------------------------------------------------------------------------*/
+
+a { transition: all 250ms ease-in-out; color: var(--clr-1); text-decoration: none;}
+a:visited {color: var(--clr-1);}
+a:hover, a:focus, a:active {color: var(--clr-1-dark);}
+a, a:active, a:focus{ outline: none; }
+a:hover, a:active {outline: 0;}
+a p, a p:visited, a p:hover, a p:focus, a p:active { color: var(--clr-body); }
+
+.light a:visited { color: var(--clr-white); }
+.light a:hover, .light a:focus, .light a:active { color: var(--clr-white); opacity: 0.7 }
+.light a, .light a:active, .light a:focus{ color: var(--clr-white); outline: none; }
+.light  a:hover, .light  a:active { outline: 0;}
+.light a p, .light a p:visited, .light a p:hover, .light a p:focus, .light a p:active { color: var(--clr-white); }
+
+/*---------------------------------------------------------------------------
+Lists
+---------------------------------------------------------------------------*/
+
+ol.list-grid, ul.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 5px 2rem; }
+ol.list-grid > li, ul.list-grid > li { margin-bottom: 0px; }
+
+
+ol, ul { margin-left: 2rem; }
+.no-bullet { list-style: none; margin-left: 0; }
+ol.no-bullet, ul.no-bullet { margin-left: 0; list-style: none; }
+
+/* Number Lists */
+ol.num-list, .styled-type ol { list-style-type: none; list-style-type: decimal !ie; /*IE 7- hack*/ counter-reset: li-counter;}
+    .light ol.num-list, .styled-type.light ol, .styled-type .light ol { color: var(--clr-white); } 
+ol.num-list > li, .styled-type ol > li { position: relative; margin-bottom: 10px; padding-left: 0.5em; min-height: 1.6em; border-left: 4px solid var(--clr-1);}
+    .light ol.num-list > li, .styled-type.light ol > li, .styled-type .light ol > li { border-left: 4px solid var(--clr-2); } 
+ol.num-list > li:before, .styled-type ol > li:before 
+{ position: absolute; font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; top: 0; left: -2.1rem; width: 1.8rem; font-size: 1.3rem; 
+    text-align: center; color: var(--clr-2); content: counter(li-counter); counter-increment: li-counter; }
+    .light ol.num-list > li:before, .styled-type.light ol, .styled-type .light ol  > li:before { color: var(--clr-white); }
+ol.num-list li:marker { display: none; }
+ol.num-list > li::marker, .styled-type ol > li::marker { color: transparent; }
+
+/* Bullet List */
+ul.bullet-list, .styled-type ul { list-style: none; }
+ul.bullet-list li, .styled-type ul li { color: var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
+    .light ul.bullet-list li, .styled-type.light ul li, .styled-type .light ul li  { color:  var(--clr-white); }
+ul.bullet-list li::before, .styled-type ul li::before  { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 900; content: "\f111" !important; }
+ul.bullet-list li::before, .styled-type ul li::before  { display: none; }
+
+ul.bullet-list li svg, .styled-type ul li svg { color: var(--clr-1); position: absolute; margin-top: .4rem; margin-left: -1.2rem; font-size: .6rem; } 
+    .light ul.bullet-list li svg, .styled-type.light ul li svg, .styled-type .light ul li svg { color: var(--clr-2) } 
+
+/* Check List */
+ul.check-list { list-style: none; }
+ul.check-list li { color:  var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
+ul.check-list li::before { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f00c" !important; }
+ul.check-list li:before { display: none !important; }
+ul.check-list li svg { color: var(--clr-1); position: absolute; margin-top: .15rem; margin-left: -1.6rem; font-size: 1.2rem; } 
+.light ul.check-list li { color:  var(--clr-white); } .light ul.check-list li svg { color: var(--clr-2) } 
+ul.check-list ul { list-style-type: none; margin-top: calc( var(--sp-rim) / 2); }
+ul.check-list ul  li { margin-bottom: .5em; }
+ul.check-list ul  li::before { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f054" !important; }
+
+/* Star List */
+ul.star-list { list-style: none; }
+ul.star-list li { color: var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
+    .light ul.star-list li  { color:  var(--clr-white); }
+ul.star-list li::before  { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 900; content: "\f005" !important; }
+ul.star-list li:before  { display: none; }
+ul.star-list li svg { color: var(--clr-1); position: absolute; margin-top: .15rem; margin-left: -1.6rem; font-size: 1.2rem; } 
+    .light ul.star-list li svg  { color: var(--clr-2) } 
+
+
+/*---------------------------------------------------------------------------
+Buttons
+---------------------------------------------------------------------------*/
+
+:root { --button_brdr: 3px; }
+    @media screen and (max-width: 700px) {
+        :root { --button_brdr: 3px; }
+    }
+
+
+textarea, input, button { outline: none; }
+.wp-block-buttons>.wp-block-button { display: inline-block; margin: 0 !important; }
+
+
+/* Woo Base*/ .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
+/* Woo Alt*/  .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+/* Gut */ a.wp-block-button__link,
+/* Wpsl Search page */ #wpsl-search-btn,
+
+.button, .wp-block-file a.wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="submit" i]
+
+{   display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 .7em 0;
+    padding: .7em 1.2em;
+    text-transform: uppercase !important;
+    font-family: nunito, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 1;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--clr-1);
+    color: var(--clr-white) !important;
+    border-radius: 9999px !important;
+    transition: all 350ms ease-in-out !important;
+    text-shadow: var(--shadow-text);
+}
+/* Woo Base*/ .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
+/* Woo Alt*/  .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
+/* Gut */ a.wp-block-button__link:hover,
+.button:hover,.button:focus, .wp-block-file a.wp-block-file__button:hover,.wp-block-file a.wp-block-file__button:focus,
+button:hover,button:active, button:focus,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+
+
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus  
+
+{ background-color: var(--clr-1-dark) !important; opacity: .7; color: #fff !important; }
+
+/* Solid Buttons */
+
+.button.bkg-1, .wp-block-button__link.has-clr-1-background-color, 
+.wp-block-file a.wp-block-file__button { color: var(--clr-white) !important; background: linear-gradient( 90deg, var(--clr-1-light),var(--clr-1-dark) ); border: none; }
+.button.bkg-1:hover, .wp-block-button__link.has-clr-1-background-color:hover, .button.bkg-1:focus, .wp-block-button__link.has-clr-1-background-color:focus {  }
+
+.button.bkg-2, .wp-block-button__link.has-clr-2-background-color { color: var(--clr-3) !important;  text-shadow: var(--shadow-text) !important; background: linear-gradient( 90deg, var(--clr-2-light),var(--clr-2-dark) ); border: none; }
+.button.bkg-2:hover, .wp-block-button__link.has-clr-2-background-color:hover, .button.bkg-2:focus, .wp-block-button__link.has-clr-2-background-color:focus {  }
+
+.button.bkg-3, .wp-block-button__link.has-clr-3-background-color { color: var(--clr-1) !important; background-color: var(--clr-3) !important;  }
+.button.bkg-3:hover, .wp-block-button__link.has-clr-3-background-color:hover, .button.bkg-3:focus, .wp-block-button__link.has-clr-3-background-color:focus { background-color: var(--clr-3-hover) !important;  }
+
+#wpsl-search-btn,
+.wpsl-search-widget input[type="submit" i], 
+.button.bkg-white, .wp-block-button__link.has-white-background-color 
+    { color: var(--clr-1) !important; background-color: var(--clr-white) !important;  }
+
+#wpsl-search-btn:hover, #wpsl-search-btn:focus,    
+.wpsl-search-widget input[type="submit" i]:hover, .wpsl-search-widget input[type="submit" i]:focus, 
+.button.bkg-white:hover, .wp-block-button__link.has-white-background-color:hover, .button.bkg-white:focus, .wp-block-button__link.has-white-background-color:focus {
+     color: var(--clr-white) !important; background-color: var(--clr-white-hover) !important;  }
+
+.button.bkg-black, .wp-block-button__link.has-black-background-color 
+    { color: var(--clr-white) !important; background-color: var(--clr-black) !important;  }
+.button.bkg-black:hover,.wp-block-button__link.has-black-background-color:hover, .button.bkg-black:focus,.wp-block-button__link.has-black-background-color:focus { background-color: var(--clr-black-hover) !important;  }
+
+
+/* Hollow Buttons */
+.button.hollow, .is-style-outline>.wp-block-button__link, .wp-block-button__link.is-style-outline { border: var(--button_brdr) solid !important; background: transparent !important; text-shadow: none;}
+
+.is-style-outline > .wp-block-button__link:not(.has-background), .wp-block-button__link.is-style-outline:not(.has-background),
+.is-style-outline > .wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color),
+
+.button.hollow, .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline,
+.button.bkg-1.hollow, .is-style-outline>.wp-block-button__link.has-clr-1-color, .wp-block-button__link.has-clr-1-color.is-style-outline 
+    { color: var(--clr-1) !important; border-color: var(--clr-1) !important; background: transparent !important}
+.button.bkg-1.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-1-color:hover, .wp-block-button__link.has-clr-1-color.is-style-outline:hover,
+.button.bkg-1.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-1-color:focus, .wp-block-button__linkhas-clr-1-color.is-style-outline:focus
+    { color: var(--clr-1-hover) !important; border-color: var(--clr-1-hover) !important; background: transparent !important}
+
+.button.bkg-2.hollow, .is-style-outline>.wp-block-button__link.has-clr-2-color, .wp-block-button__link.has-clr-2-color.is-style-outline 
+    { color: var(--clr-2) !important; border-color: var(--clr-2) !important; background: transparent !important}
+.button.bkg-2.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-2-color:hover, .wp-block-button__link.has-clr-2-color.is-style-outline:hover,
+.button.bkg-2.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-2-color:focus, .wp-block-button__linkhas-clr-2-color.is-style-outline:focus
+    { color: var(--clr-2-hover) !important; border-color: var(--clr-2-hover) !important; background: transparent !important}
+
+.button.bkg-3.hollow, .is-style-outline>.wp-block-button__link.has-clr-3-color, .wp-block-button__link.has-clr-3-color.is-style-outline 
+    { color: var(--clr-3) !important; border-color: var(--clr-3) !important; background: transparent !important}
+.button.bkg-3.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-3-color:hover, .wp-block-button__link.has-clr-3-color.is-style-outline:hover,
+.button.bkg-3.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-3-color:focus, .wp-block-button__linkhas-clr-3-color.is-style-outline:focus
+    { color: var(--clr-3-hover) !important; border-color: var(--clr-3-hover) !important; background: transparent !important}
+
+.button.bkg-white.hollow, .is-style-outline>.wp-block-button__link.has-white-color, .wp-block-button__link.has-white-color.is-style-outline 
+    { color: var(--clr-white) !important; border-color: var(--clr-white) !important; background: transparent !important}
+.button.bkg-white.hollow:hover, .is-style-outline>.wp-block-button__link.has-white-color:hover, .wp-block-button__link.has-white-color.is-style-outline:hover,
+.button.bkg-white.hollow:focus, .is-style-outline>.wp-block-button__link.has-white-color:focus, .wp-block-button__linkhas-white-color.is-style-outline:focus
+    { color: var(--clr-white-hover) !important; border-color: var(--clr-white-hover) !important; background: transparent !important}
+
+.button.bkg-black.hollow, .is-style-outline>.wp-block-button__link.has-black-color, .wp-block-button__link.has-black-color.is-style-outline 
+    { color: var(--clr-black) !important; border-color: var(--clr-black) !important; background: transparent !important}
+.button.bkg-black.hollow:hover, .is-style-outline>.wp-block-button__link.has-black-color:hover, .wp-block-button__link.has-black-color.is-style-outline:hover,
+.button.bkg-black.hollow:focus, .is-style-outline>.wp-block-button__link.has-black-color:focus, .wp-block-button__linkhas-black-color.is-style-outline:focus
+    { color: var(--clr-black-hover) !important; border-color: var(--clr-black-hover) !important; background: transparent !important}
+
+/* Button Woocommerce */
+.woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled] {
+    color: inherit; cursor: not-allowed; opacity: .5; padding: .618em 1em; padding: .4rem 1.8rem; font-size: 1rem; color: #fff; }
+
+/* Button Sizing*/
+.button.smallbtn, .wp-block-button.smallbtn .wp-block-button__link { font-size: 0.75rem; }
+.button.largebtn, .wp-block-button.largebtn .wp-block-button__link { font-size: 2rem; }
+.button.expanded, .wp-block-button.expanded, .wp-block-button.expanded .wp-block-button__link { display: block; width: 100%; margin-right: 0; margin-left: 0; }
+
+
+/*---------------------------------------------------------------------------
+Forms
+---------------------------------------------------------------------------*/
+
+/* Form Inputs */
+input[type="text"], input[type="email"], input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"], 
+input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea 
+{ 
+    width: 100%; padding: 10px !important;  border-radius: 0 !important; border: none; border-bottom: 3px solid var(--clr-1);
+    font-size: 1.2rem;  font-family: nunito, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--clr-2); background: var(--clr-white); transition: .25s ease;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+form p { margin-bottom: 5px; font-size: 1rem; color: var(--clr-2);     font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: italic; }
+/* Form FOcus */
+input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus, input[type="date"]:focus,
+input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus 
+{ border-color: var(--clr-2); background-color: rgba(0, 0, 0, 0.01);  }
+
+form label { font-weight: 700; color: var(--clr-2); font-size: 1.2rem; }
+::placeholder { color: var(--clr-2);   letter-spacing: 1px;      font-family: futura-pt, sans-serif; font-weight: 700; font-style: italic; }
+
+/* Dark Form Inputs */
+.form-2 input[type="text"], .form-2 input[type="email"], .form-2 input[type="url"], .form-2 input[type="password"], .form-2 input[type="search"], .form-2 input[type="number"], .form-2 input[type="tel"], .form-2 input[type="range"], 
+.form-2 input[type="date"], .form-2 input[type="month"], .form-2 input[type="week"], .form-2 input[type="time"],  .form-2 input[type="datetime"],  .form-2 input[type="datetime-local"],  .form-2 input[type="color"],  .form-2 textarea 
+{ color: #fff; background-color: var(--clr-2-dark-op); border-bottom: 3px solid var(--clr-1); }
+.form-2 form p { color: #fff !important; }
+/* Dark Form Focus */
+.form-2 input[type="text"]:focus, .form-2 input[type="email"]:focus, .form-2 input[type="url"]:focus, .form-2 input[type="password"]:focus, .form-2 input[type="search"]:focus, .form-2 input[type="number"]:focus,  .form-2 input[type="tel"]:focus,  .form-2 input[type="range"]:focus,  .form-2 input[type="date"]:focus,
+.form-2 input[type="month"]:focus,  .form-2 input[type="week"]:focus,  .form-2 input[type="time"]:focus,  .form-2 input[type="datetime"]:focus,  .form-2 input[type="datetime-local"]:focus,  .form-2 input[type="color"]:focus,  .form-2 textarea:focus 
+{ background-color: rgba(0, 0, 0, 0.3); }
+
+.form-2 form label { font-weight: 700; color: var(--clr-white); }
+.form-2 ::placeholder { color: #fff;}
+
+.form-2 input[type="button"], .form-2 input[type="reset"], .form-2 input[type="submit"] 
+{ background-color: white; color: #ffffff !important;}
+.form-2 input[type="button"]:hover, .form-2 input[type="reset"]:hover, .form-2 input[type="submit"]:hover, .form-2 input[type="button"]:focus, .form-2 input[type="reset"]:focus, .form-2 input[type="submit"]:focus 
+{ background-color: rgba(255, 255, 255, 0.5); color: #fff !important; }
+
+/* Mobile */
+@media all and (max-width: 700px) {
+    input[type="text"], input[type="email"], input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"], 
+    input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea 
+    { padding: 6px !important; font-size: 1rem;}
+}
+
+
+/* Conctact Form 7 */
+div.wpcf7 .ajax-loader.is-active { display: none; }
+.wpcf7 form .wpcf7-response-output { margin: 1rem 0 0 0; font-weight: 700; border-radius: 9999px; border: none; /* Blue */ }
+.wpcf7 form.sent .wpcf7-response-output { color: var(--clr-white); border-color: none; background-image: linear-gradient(45deg, var(--clr-1), var(--clr-1-dark) ); }
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output { background-color: #dc3232; /* Red */ color: var(--clr-white) ; }
+.wpcf7 form.spam .wpcf7-response-output { background-color: #f56e28; /* Orange */ color: var(--clr-white); }
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output { background-color: #ffb900; /* Yellow */ border: none ; }
+.wpcf7-not-valid-tip { color: #dc3232; font-size: .7rem; font-weight: normal; display: block; }
+
+
+.wpcf7-form-control.wpcf7-radio, .wpcf7-form-control.wpcf7-checkbox { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 5px 1rem; margin-top: 1rem; }
+.wpcf7 .wpcf7-list-item { display: block; margin: 0 0 .5rem 2.5rem; }
+.wpcf7-form .wpcf7-radio label, .wpcf7-form .wpcf7-checkbox label { position: relative; cursor: pointer; }
+
+/* Hide Defaults */ .wpcf7-form .wpcf7-radio input[type=radio], .wpcf7-form .wpcf7-checkbox input[type=checkbox] { position: absolute; visibility: hidden; opacity: 0; height: 0; width: 0; }
+.wpcf7-form .wpcf7-radio input[type=radio] + span { /*   border: 3px solid red;  */ }
+.wpcf7-form .wpcf7-radio input[type=radio] + span:before, .wpcf7-form .wpcf7-checkbox input[type=checkbox] + span:before { display: block; position: absolute; content: ''; height: 30px; width: 30px; top: 0px; left: -2.5rem; border: 3px solid var(--clr-1); }
+.wpcf7-form .wpcf7-radio input[type=radio] + span:before { border-radius: 100%; }
+.wpcf7-form .wpcf7-radio input[type=radio]:checked + span:before { background: transparent; /*     border-color: red; */ }
+.wpcf7-form .wpcf7-radio input[type=radio] + span:after { border-radius: 100%; display: block; position: absolute; content: ''; height: 16px; width: 16px; top: 7px; left: calc( -2.5rem + 7px); visibility: hidden; }
+.wpcf7-form .wpcf7-radio input[type=radio]:checked + span:after { background: var(--clr-2); visibility: visible; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox]:checked + span:before { background: transparent; /*     border-color: red; */ }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span:before { border-radius: 5px; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span { /*   border: 3px solid red;  */ }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox] + span:after { display: block; position: absolute; content: '\2713'; border-radius: 100%; height: 10px; width: 10px; top: -2px; left: calc( -2.5rem + 1px);  visibility: hidden; font-size: 36px; }
+.wpcf7-form .wpcf7-checkbox input[type=checkbox]:checked + span:after { visibility: visible; }
