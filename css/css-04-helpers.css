@@ -128,9 +128,10 @@ Lists
 ol.list-grid, ul.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 5px 2rem; }
 ol.list-grid > li, ul.list-grid > li { margin-bottom: 0px; }
 
-@media screen and (min-width: 900px) {
-        ol.list-2col, ul.list-2col { display: grid; grid-gap: 5px calc( var(--sp-rim) + 2rem); grid-template-columns: repeat(2, 1fr); }
-        ol.list-3col, ul.list-3col { display: grid; grid-gap: 5px calc( var(--sp-rim) + 2rem); grid-template-columns: repeat(3, 1fr); }
+ol.list-2col, ul.list-2col, ol.list-3col, ul.list-3col { display: grid; grid-gap: 5px calc( var(--sp-rim) + 2rem);  }
+    @media screen and (min-width: 900px) {
+        ol.list-2col, ul.list-2col { grid-template-columns: repeat(2, 1fr); }
+        ol.list-3col, ul.list-3col { grid-template-columns: repeat(3, 1fr); }
     }
 
 
