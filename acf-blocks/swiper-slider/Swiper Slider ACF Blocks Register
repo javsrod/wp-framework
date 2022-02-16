@@ -1,0 +1,34 @@
+/* ==========================================================================
+SWIPER SLIDER BLOCKS
+========================================================================== */
+
+    // Individual Swiper Slide
+    acf_register_block_type(array(
+        'name'                  => 'Swiper Slide',
+        'title'                 => __( 'Swiper Slide'),
+        'description'         => __( 'Swiper Slide. content-block-swiper-slide.php'),
+        'render_template' => 'template-parts/blocks/content-block-swiper-slide.php',
+        'category'            => 'formatting',
+        'icon'                  => 'editor-ol',
+        'supports'      => array(
+                        // 'align' => false,
+                        // 'mode' => false,
+                        'jsx' => true
+                    ),
+    ));
+
+    
+    // Individual Swiper Container
+    acf_register_block_type(array(
+        'name'                  => 'Swiper Slider Container',
+        'title'                 => __( 'Swiper Slider Container'),
+        'description'         => __( 'Swiper Slider Container. content-block-swiper-container.php'),
+        'render_template' => 'template-parts/blocks/content-block-swiper-container.php',
+        'category'            => 'formatting',
+        'icon'                  => 'editor-ol',
+        'supports'      => array(
+                        // 'align' => false,
+                        // 'mode' => false,
+                        'jsx' => true
+                    ),
+    ));
