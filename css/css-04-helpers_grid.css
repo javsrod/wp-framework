@@ -54,45 +54,6 @@ General Helpers
 ol.no-bullet, ul.no-bullet { margin-left:0; list-style:none; }
 
 /*---------------------------------------------------------------------------
-Accessibility 
----------------------------------------------------------------------------*/
-
-
-/* Text meant only for screen readers. */
-.screen-reader-text, .srt {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute !important;
-    width: 1px;
-    word-wrap: normal !important;
-}
-
-.screen-reader-text:focus, .srt:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    clip-path: none;
-    color: #21759b;
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 700;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000;
-}
-
-/*---------------------------------------------------------------------------
 Containers
 ---------------------------------------------------------------------------*/
 
@@ -166,14 +127,15 @@ Padding & Margin Helpers
 
 /* Pull top */
 .pull-top-feat { position: relative; margin-top: calc(var(--sp-feat) * -1); z-index: 1; }
-
+.pull-top-feat15 { position: relative; margin-top: calc(var(--sp-feat) * -1.5); z-index: 1; }
+.pull-top-feat2 { position: relative; margin-top: calc(var(--sp-feat) * -1.5); z-index: 1; }
 
 /*---------------------------------------------------------------------------
 CSS Grid Helpers - GRID 1fr @ 799px
 ---------------------------------------------------------------------------*/
 
 /* Rplacing Gutenberg Columns Flex to grid & GSS Auto Grid */
-.wp-block-columns, .gssauto, .gssautowpbg > .wp-block-group__inner-container { display: grid; grid-auto-columns: 1fr; grid-auto-flow: row;  margin-bottom: 0; }
+.wp-block-columns, .gssauto, .gssautowpbg > .wp-block-group__inner-container { display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;  margin-bottom: 0; }
 .wp-block-column:not(:first-child) { margin-left: 0em !important; }
 
     @media screen and (min-width: 800px) {
@@ -181,7 +143,7 @@ CSS Grid Helpers - GRID 1fr @ 799px
     }
 
 /*GSS Grid*/
-*[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid; grid-auto-columns: 1fr; grid-auto-flow: row;}
+*[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
 
     @media screen and (min-width: 800px) {
 
@@ -189,36 +151,36 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gss--1-auto { grid-template-columns: 1fr auto; }
         .gss--auto-1 { grid-template-columns: auto 1fr; }
         /* repeat grids */
-        .gss--r-2,      .gss--r-2wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr); }
-        .gss--r-3,      .gss--r-3wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr); }
-        .gss--r-4,      .gss--r-4wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr); }
-        .gss--r-5,      .gss--r-5wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr); }
-        .gss--r-6,      .gss--r-6wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr); }
-        .gss--r-12,     .gss--r-12wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr); }
+        .gss--r-2,      .gss--r-2wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr) ; }
+        .gss--r-3,      .gss--r-3wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr) ; }
+        .gss--r-4,      .gss--r-4wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr) ; }
+        .gss--r-5,      .gss--r-5wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr) ; }
+        .gss--r-6,      .gss--r-6wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr) ; }
+        .gss--r-12,     .gss--r-12wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr) ; }
         /* Set grid - Thirds */
-        .gss--1-2,      .gss--1-2wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr; }
-        .gss--2-1,      .gss--2-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr; }
+        .gss--1-2,      .gss--1-2wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr ; }
+        .gss--2-1,      .gss--2-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr ; }
         /* Set grid - Fourths */
-        .gss--1-3,      .gss--1-3wpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr; }
-        .gss--3-1,      .gss--3-1wpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr; }
-        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
-        .gss--1-2-1,    .gss--1-2-1wpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr; }
-        .gss--1-1-2,    .gss--1-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr; }
-        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
+        .gss--1-3,      .gss--1-3wpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr ; }
+        .gss--3-1,      .gss--3-1wpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr ; }
+        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr ; }
+        .gss--1-2-1,    .gss--1-2-1wpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr ; }
+        .gss--1-1-2,    .gss--1-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr ; }
+        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr ; }
         /* Set grid - Fifths */
-        .gss--1-4,      .gss--1-4wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr; }
-        .gss--4-1,      .gss--4-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr; }
-        .gss--1-1-3,    .gss--1-1-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr; }
-        .gss--1-3-1,    .gss--1-3-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr; }
-        .gss--3-1-1,    .gss--3-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr; }
-        .gss--2-2-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr; }
-        .gss--2-1-2,    .gss--2-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr; }
-        .gss--1-2-2,    .gss--1-2-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr; }
-        .gss--2-3,      .gss--2-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr; }
-        .gss--3-2,      .gss--3-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr; }
+        .gss--1-4,      .gss--1-4wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr ; }
+        .gss--4-1,      .gss--4-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr ; }
+        .gss--1-1-3,    .gss--1-1-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr ; }
+        .gss--1-3-1,    .gss--1-3-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr ; }
+        .gss--3-1-1,    .gss--3-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr ; }
+        .gss--2-2-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr ; }
+        .gss--2-1-2,    .gss--2-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr ; }
+        .gss--1-2-2,    .gss--1-2-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr ; }
+        .gss--2-3,      .gss--2-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr ; }
+        .gss--3-2,      .gss--3-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr ; }
         /* Set grid - Sixths */
-        .gss--1-5,      .gss--1-5wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr; }
-        .gss--5-1,      .gss--5-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr; }
+        .gss--1-5,      .gss--1-5wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr ; }
+        .gss--5-1,      .gss--5-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr ; }
 
         /* Grid Column Order i.e. Source Ordering */
         .gsc--order-0 { order: 0; }
@@ -232,8 +194,8 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gsc--over-lr { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); margin-right: calc(-2 * var(--sp-base)); }
         .gsc--over-t { position: relative; margin-top:  calc(-2 * var(--sp-base)); }
         /* Grid Column Push */
-        .gsc--push-r { margin-right: calc(1 * var(--sp-base)) !important; }
-        .gsc--push-l  { margin-left: calc(1 * var(--sp-base)) !important; }
+        .gsc--push-r { margin-right: calc(1 * var(--sp-base)); }
+        .gsc--push-l  { margin-left: calc(1 * var(--sp-base)); }
         /*Grid Column Span*/
         .gsc--span-0 { grid-column: 1 / -1; }
         .gsc--span-2 { grid-column: auto / span 2; }
@@ -286,10 +248,50 @@ CSS Grid Helpers - GRID 1fr @ 799px
 .gss--r-20,     .gss--r-20wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(20, 1fr) !important; }
 
 
+ @media screen and (max-width: 799px) {
+
+    /* Auto Fit Grids */
+    .gss--1-auto-small { grid-template-columns: 1fr auto; }
+    .gss--auto-1-small { grid-template-columns: auto 1fr; }
+    /* repeat grids */
+    .gss--r-2-small,      .gss--r-2-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr); }
+    .gss--r-3-small,      .gss--r-3-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr); }
+    .gss--r-4-small,      .gss--r-4-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr); }
+    .gss--r-5-small,      .gss--r-5-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr); }
+    .gss--r-6-small,      .gss--r-6-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr); }
+    .gss--r-12-small,     .gss--r-12-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr); }
+    /* Set grid - Thirds */
+    .gss--1-2-small,      .gss--1-2-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr; }
+    .gss--2-1-small,      .gss--2-1-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr; }
+    /* Set grid - Fourths */
+    .gss--1-3-small,      .gss--1-3-smallwpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr; }
+    .gss--3-1-small,      .gss--3-1-smallwpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr; }
+    .gss--2-1-1-small,    .gss--2-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
+    .gss--1-2-1-small,    .gss--1-2-1-smallwpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr; }
+    .gss--1-1-2-small,    .gss--1-1-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr; }
+    .gss--2-1-1-small,    .gss--2-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
+    /* Set grid - Fifths */
+    .gss--1-4-small,      .gss--1-4-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr; }
+    .gss--4-1-small,      .gss--4-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr; }
+    .gss--1-1-3-small,    .gss--1-1-3-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr; }
+    .gss--1-3-1-small,    .gss--1-3-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr; }
+    .gss--3-1-1-small,    .gss--3-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr; }
+    .gss--2-2-1-small,    .gss--2-1--small1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr; }
+    .gss--2-1-2-small,    .gss--2-1-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr; }
+    .gss--1-2-2-small,    .gss--1-2-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr; }
+    .gss--2-3-small,      .gss--2-3-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr; }
+    .gss--3-2-small,      .gss--3-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr; }
+    /* Set grid - Sixths */
+    .gss--1-5-small,      .gss--1-5-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr; }
+    .gss--5-1-small,      .gss--5-1-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr; }
+
+ }
+
 /* Grid Gap */
-.grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim); }
-.grid-gap,      .grid-gapwpbg      > .wp-block-group__inner-container   { grid-gap: var(--sp-base); } 
-.grid-gap-feat, .grid-gap-featwpbg > .wp-block-group__inner-container   { grid-gap: var(--sp-feat); }
+.grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim) !important; }
+.grid-gap,      .grid-gapwpbg      > .wp-block-group__inner-container   { grid-gap: var(--sp-base) !important; } 
+.grid-gap-feat, .grid-gap-featwpbg > .wp-block-group__inner-container   { grid-gap: var(--sp-feat) !important; }
+
 
 
 /*---------------------------------------------------------------------------
