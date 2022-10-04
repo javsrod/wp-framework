@@ -139,11 +139,11 @@ CSS Grid Helpers - GRID 1fr @ 799px
 .wp-block-column:not(:first-child) { margin-left: 0em !important; }
 
     @media screen and (min-width: 800px) {
-        .wp-block-columns, .gssauto, .wp-block-group.gss--autowpbg  > .wp-block-group__inner-container { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
+        .wp-block-columns, .gssauto, .wp-block-group.gss--autowpbg  > .wp-block-group__inner-container { display: grid !important; grid-gap: 0 !important; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
     }
 
 /*GSS Grid*/
-*[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
+*[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid !important; grid-gap: 0 !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
 
     @media screen and (min-width: 800px) {
 
