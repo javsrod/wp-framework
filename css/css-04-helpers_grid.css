@@ -24,8 +24,10 @@ General Helpers
 /* Hider */
 .hidden_visually { position: absolute;overflow: hidden;margin: -1px;padding: 0;width: 1px;height: 1px;border: 0;clip: rect(0 0 0 0); }
 
-/* center child */
+/* Flex Helpers child */
 .flex-center-vertically, .flex-vert, .flex-vert-child > :first-child { display: flex; justify-content: center; flex-direction: column; height: 100%; }
+.flex-start, .flex-start-child > :first-child { display: flex; justify-content: flex-start; flex-direction: column; height: 100%; }
+.flex-end, .flex-end-child > :first-child { display: flex; justify-content: flex-end; flex-direction: column; height: 100%; }
 .flex-hor, .flex-hor-child > :first-child { display: flex; justify-content: center;  }
 
 /* Make Img Cover Using <div.img-cover><picture><img>...*/
