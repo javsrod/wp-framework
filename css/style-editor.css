@@ -13,8 +13,14 @@
 .block-editor-page .edit-post-visual-editor .block-editor-default-block-appender.wp-block { padding: 0; border: none; }
 .block-editor-page .edit-post-visual-editor .wp-block.wp-block-group { border: 6px #f1f1f1 solid !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.is-reusable { border: 4px #c0c5ff solid !important; }
-.block-editor-page .edit-post-visual-editor .wp-block[data-align=wide] { max-width: 1080px; }
+.block-editor-page .edit-post-visual-editor .wp-block[data-align=wide] { max-width: 1100px; }
 .block-editor-page .edit-post-visual-editor .wp-block[data-align=full] { max-width: 100%; }
+
+/* GRID CONTAINER CLASSES - with Px widths for editor visual refference not related to actual theme sizing */
+.gcw, .gcw-child > :first-child { margin: 0 auto;  width: 100%; max-width: 1100px; }
+.gcw-m, .gcw-m-child > :first-child { margin: 0 auto;  width: 100%; max-width: 800px; }
+.gcw-s, .gcw-s-child > :first-child { margin: 0 auto;  width: 100%; max-width: 600px;}
+.gcw.fluid { width: 100%; max-width: 100% !important; }
 
 /* Backend colors for ease of use */
 .editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black) !important; }
