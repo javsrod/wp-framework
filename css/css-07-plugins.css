@@ -54,10 +54,12 @@ Swiper Slider
 
 /* Swiper Modifications
 -----------------------------------------------*/
-/* Show Hiddent lide  */
+/* Show Hiddent slides  */
+.swiper_overflow { overflow:visible !important; }
+
+/* fix Shadow Cutoff */
 .hidden_shadow_fixer { padding: 0 1rem; margin-left: -1rem ; margin-right: -1rem ; overflow: hidden; }
 .hidden_shadow_fixer > :first-child { overflow: visible; }
-.swiper-visible > .swiper { overflow: visible;  }
 
 /* Bottom Navigation */
 .swiper_bottom_nav { width:100%; position: relative; height: calc( var(--swiper-navigation-size) + 1rem ); display: flex; justify-content: center; flex-direction: column; }
