@@ -389,9 +389,6 @@ CSS Grid Helpers - GRID 1fr @ 799px
 .gss--1-5-all,      .gss--1-5-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr; }
 .gss--5-1-all,      .gss--5-1-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr; }
 
-.gss--r-20,     .gss--r-20wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(20, 1fr) !important; }
-
-
 /* GSS Grid Small
 -----------------------------------------------*/
  @media screen and (max-width: 799px) {
