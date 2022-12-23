@@ -4,13 +4,90 @@
 *****************************************************************************
 ****************************************************************************/
 
+/*---------------------------------------------------------------------------
+Band Variables
+---------------------------------------------------------------------------*/
+
+:root {
+
+    /* Colors
+    -----------------------------------------------*/
+
+    /* Hex Alpha Codes: 95% = F2, 90% = E6,  85% = D9, 80% = CC,  75% = BF, 70% = B3,  65% = A6, 60% = 99,  55% = 8C, 50% = 80,  
+                        45% = 73, 40% = 66,  35% = 59, 30% = 4D,  25% = 40, 20% = 33,  15% = 26, 10% = 1A,  5% = 0D */
+
+    --clr-body: #5b6369;
+    --clr-body-dark: #5b6369;
+    --clr-body-light: #5b6369;
+    --clr-body-op: #5b6369;
+
+    --clr-1: #83007e;
+    --clr-1-dark: #45246c;
+    --clr-1-light: #83007e;
+    --clr-1-op: #83007eBF;
+    --clr-1-hover: #45246c;
+
+    --clr-2: #62bb46;
+    --clr-2-dark: #368e33;
+    --clr-2-light: #62bb46;
+    --clr-2-op: #62bb4699;
+    --clr-2-hover: #368e33;
+
+    --clr-3: #7b7c8e;
+    --clr-3-dark: #303039;
+    --clr-3-light: #f7f7f7;
+    --clr-3-op: #30303926;
+    --clr-3-hover: #505d66;
+
+    --clr-4: #e8003d;
+    --clr-4-dark: #e8003d;
+    --clr-4-light: #e8003d;
+    --clr-4-op: #e8003d99;
+    --clr-4-hover: #e8003d;
+
+    --clr-white: #ffffff ;
+    --clr-white-op: #ffffff80 ;
+    --clr-white-hover: #ffffff5c ;
+
+    --clr-black: #000000;
+    --clr-black-op: #000000E6;
+    --clr-black-op: #0000005c ;
+
+    /* Text Shadow
+    -----------------------------------------------*/
+    --shadow-text: 1px 1px 1px rgb(39 41 46 / 24%);
+    --shadow-text-light: 1px 2px 1px rgb(255 255 150 / 80%);
+
+    /* Drop Shadow
+    -----------------------------------------------*/
+    --shadowcolor: 214, 222, 228;
+    --shadow: 0px 5px 15px  rgba(var(--shadowcolor), 100%);
+
+    --shadowcolor-dark: 69, 36, 108;
+    --shadow-dark:   0px 5px 15px  rgba(var(--shadowcolor-dark), 100%);
+
+    --shadowcolor-purp: 131, 0, 126;
+    --shadow-purp:   0px 5px 15px  rgba(var(--shadowcolor-purp), 100%);
+
+    --shadowcolor-soft: 214, 222, 228;
+    --shadow-soft:   0px 50px 40px  rgba(var(--shadowcolor-soft), 65%);
+    
+
+    /* Backdrop Blur
+    -----------------------------------------------*/
+    --backdropblur:  blur(10px);
+
+    /* Border Radius
+    -----------------------------------------------*/
+    --borderradius:  .75rem;
+}
 
 /*---------------------------------------------------------------------------
 Typography & Sizing
 ---------------------------------------------------------------------------*/
 
 :root {
-    
+
     /* Font Size Master */ /* Font size is the basis of all spacing */
     --fontSize: 16px;
 
@@ -27,9 +104,9 @@ Typography & Sizing
     --large-size: 2.4rem;
     --h1-size: 2.0rem;
     --h2-size: 1.8rem;
-    --h3-size: 1.6rem;
-    --h4-size: 1.4rem;
-    --h5-size: 1.2rem;
+    --h3-size: 1.4rem;
+    --h4-size: 1.2rem;
+    --h5-size: 1.1rem;
     --h6-size: 1.0rem;
     --small-size: 0.85rem;
     --xsmall-size: 0.8em;
@@ -41,9 +118,12 @@ Typography & Sizing
     --lead-mb: 1.2rem;
 
     /* Grid-Containers */
-    --gcw-max: 100%; 
-    --gcw-max-m: 100%; 
+    --gcw-max-xl: 100%; 
+    --gcw-max: 100%;
+    --gcw-max-m: 100%;
     --gcw-max-s: 80%;
+    --border-radius: 1rem ;
+
 }
     /* Tablet (Ipad Vert, Ipad Pro 11" Vert, )*/
     @media screen and (min-width: 750px) and (max-width: 1023px) {
@@ -51,24 +131,25 @@ Typography & Sizing
 
             /* Font Size Master */
             --fontSize: 16px;
-            
+
             /* Heading Sizing */
-            --xxxlarge-size:  4.0rem;
-            --xxlarge-size:  3.8rem;
-            --xlarge-size: 3.5rem;
-            --large-size: 3.2rem;
-            --h1-size: 3.0rem;
-            --h2-size: 2.6rem;
-            --h3-size: 2.2rem;
-            --h4-size: 1.8rem;
-            --h5-size: 1.4rem;
+            --xxxlarge-size:  3.0rem;
+            --xxlarge-size:  2.7rem;
+            --xlarge-size: 2.5rem;
+            --large-size: 2.3rem;
+            --h1-size: 2.0rem;
+            --h2-size: 1.8rem;
+            --h3-size: 1.6rem;
+            --h4-size: 1.4rem;
+            --h5-size: 1.2rem;
 
             --lead-size: 1.2rem;
 
             /* Grid-Containers */
-            --gcw-max: 100%;
-            --gcw-max-m: 100%; 
-            --gcw-max-s: 80%;
+            --gcw-max-xl:   100%; 
+            --gcw-max:      100%;
+            --gcw-max-m:    100%;
+            --gcw-max-s:    80%;
         }
     }
 
@@ -77,41 +158,42 @@ Typography & Sizing
         :root {
 
             /* Font Size Master */
-            --fontSize: 18px;
-            
+            --fontSize: 15px;
+
             /* Heading Sizing */
             --xxxlarge-size:  3.0rem;
             --xxlarge-size:  2.7rem;
             --xlarge-size: 2.5rem;
             --large-size: 2.3rem;
-            --h1-size: 2.1rem;
-            --h2-size: 1.9rem;
-            --h3-size: 1.65rem;
+            --h1-size: 2.0rem;
+            --h2-size: 1.8rem;
+            --h3-size: 1.6rem;
             --h4-size: 1.4rem;
             --h5-size: 1.2rem;
 
             --lead-size: 1.2rem;
 
             /* Grid-Containers */
-            --gcw-max: 1140px; 
-            --gcw-max-m: 850px; 
-            --gcw-max-s: 600px;
+            --gcw-max-xl:   100%; 
+            --gcw-max:      1000px;
+            --gcw-max-m:    850px;
+            --gcw-max-s:    600px;
 
         }
     }
 
     /* Laptop large (Ipad Pro Hor) */
-    @media screen and (min-width: 1300px) and (max-width: 1599px) {
+    @media screen and (min-width: 1300px) and (max-width: 1499px) {
         :root {
 
             /* Font Size Master */
-            --fontSize: 18px;
-            
+            --fontSize: 16px;
+
             /* Heading Sizing */
-            --xxxlarge-size:  3.6rem;
-            --xxlarge-size:  3.3rem;
-            --xlarge-size: 3.0rem;
-            --large-size: 2.8rem;
+            --xxxlarge-size:  3.4rem;
+            --xxlarge-size:  3.1rem;
+            --xlarge-size: 3.8rem;
+            --large-size: 2.5rem;
             --h1-size: 2.2rem;
             --h2-size: 2.0rem;
             --h3-size: 1.8rem;
@@ -121,38 +203,69 @@ Typography & Sizing
             --lead-size: 1.3rem;
 
             /* Grid-Containers */
-            --gcw-max: 1320px; 
-            --gcw-max-m: 1000px; 
-            --gcw-max-s: 700px;
+            --gcw-max-xl:   1440px; 
+            --gcw-max:      1140px;
+            --gcw-max-m:    960px;
+            --gcw-max-s:    720px;
         }
     }
 
-    /* Desktop */
-    @media screen and (min-width: 1600px) {
+    /* Desktop Medium */
+    @media screen and (min-width: 1500px) and (max-width: 1699px) {
         :root {
 
             /* Font Size Master */
             --fontSize: 18px;
-            
+
             /* Heading Sizing */
-            --xxxlarge-size:  3.6rem;
-            --xxlarge-size:  3.3rem;
-            --xlarge-size: 3.0rem;
-            --large-size: 2.8rem;
-            --h1-size: 2.6rem;
-            --h2-size: 2.4rem;
-            --h3-size: 2.2rem;
-            --h4-size: 1.8rem;
+            --xxxlarge-size:  3.4rem;
+            --xxlarge-size:  3.1rem;
+            --xlarge-size: 3.8rem;
+            --large-size: 2.5rem;
+            --h1-size: 2.2rem;
+            --h2-size: 2.0rem;
+            --h3-size: 1.8rem;
+            --h4-size: 1.6rem;
             --h5-size: 1.4rem;
 
             --lead-size: 1.4rem;
 
             /* Grid-Containers */
-            --gcw-max: 1320px; 
-            --gcw-max-m: 1000px; 
-            --gcw-max-s: 700px;
-        }   
+            --gcw-max-xl:   1440px; 
+            --gcw-max:      1140px;
+            --gcw-max-m:    960px;
+            --gcw-max-s:    720px;
+        }
     }
+
+    /* Desktop */
+    @media screen and (min-width: 1800px) {
+        :root {
+
+            /* Font Size Master */
+            --fontSize: 18px;
+
+            /* Heading Sizing */
+            --xxxlarge-size:  3.4rem;
+            --xxlarge-size:  3.1rem;
+            --xlarge-size: 3.8rem;
+            --large-size: 2.5rem;
+            --h1-size: 2.2rem;
+            --h2-size: 2.0rem;
+            --h3-size: 1.8rem;
+            --h4-size: 1.6rem;
+            --h5-size: 1.4rem;
+
+            --lead-size: 1.4rem;
+
+            /* Grid-Containers */
+            --gcw-max-xl:   1600px; 
+            --gcw-max:      1320px;
+            --gcw-max-m:    960px;
+            --gcw-max-s:    720px;
+        }
+    }
+
 
 /*---------------------------------------------------------------------------
 Spacing Variables
@@ -171,49 +284,5 @@ Spacing Variables
         }
     }
 
-
-/*---------------------------------------------------------------------------
-Branding Variables
----------------------------------------------------------------------------*/
-:root {
-    /* Hex Alpha Codes: 95% = F2, 90% = E6,  85% = D9, 80% = CC,  75% = BF, 70% = B3,  65% = A6, 60% = 99,  55% = 8C, 50% = 80,  45% = 73, 40% = 66,  35% = 59, 30% = 4D,  25% = 40, 20% = 33,  15% = 26, 10% = 1A,  5% = 0D */
-    --clr-body: #535363;
-
-    --clr-1: #10b7a8;
-    --clr-1-op: #10b7a8BF;
-    --clr-1-dark: #0b8075;
-    --clr-1-dark-op: #0b8075D9;
-    --clr-1-light: #12cebd;
-    --clr-1-light-op: #12cebdA6;
-    --clr-1-hover: #10b7a8;
- 
-    --clr-2: #222d6b;
-    --clr-2-op: #222d6bA6;
-    --clr-2-dark: #1a254f;
-    --clr-2-dark-op: #1a254fA6;
-    --clr-2-light: #222d6b;
-    --clr-2-light-op: #222d6bA6;
-    --clr-2-hover: #222d6b;
- 
-    --clr-3: #f5f6f7;
-    --clr-3-dark: #d3d6e0;
-    --clr-3-light: #f7f7f7;
-    --clr-3-op: #f5f6f7;
-    --clr-3-hover: #f5f6f7;
-
-    --clr-white: #ffffff;
-    --clr-white-op: #ffffffFC;
-    --clr-white-hover: #ffffff80;
-    --clr-black: #000000;
-    --clr-black-op: #000000E6;
-    --clr-black-hover: #00000080;
-
-    --shadow-text: 1px 1px 1px rgb(39 41 46 / 24%);
-    --shadow-text-light: 1px 2px 1px rgb(255 255 150 / 80%);
-    --shadowcolor: 0, 70, 120;
-    --shadowbox: 0px 25px 45px  rgba(var(--shadowcolor), 30%);
-    --shadowbox-btn: 0px 15px 15px rgba(var(--shadowcolor), 14%);
-    --backdropblur:  blur(10px);
-    --borderradius:  10px;
-
-}
+/* WP Admin Bar */
+:root { --wpadminbar: 46px; } /* Small */ @media screen and (max-width: 800px) { :root { --wpadminbar: 32px; } }
