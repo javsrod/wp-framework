@@ -1,32 +1,29 @@
-/****************************************************************************
-*****************************************************************************
-03 Fallbacks & Gutenberg Block Reset
-*****************************************************************************
-****************************************************************************/
+/*---------------------------------------------------------------------------
+Main Fallbacks
+---------------------------------------------------------------------------*/
+@media screen and (max-width: 600px) { #wpadminbar {position: fixed !important;}}
 
 html {
-    box-sizing: border-box;
-    font-family: nunito, sans-serif;
-    font-weight: 400;
+box-sizing: border-box;
+font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: var(--fontSize);
-    line-height: var(--lineHeight);
-    color: var(--clr-body);
-    background-color: var(--clr-3);
+    font-weight: 400;
+font-size: var(--fontSize);
+line-height: var(--lineHeight);
+background: #ffffff;
+color: var(--clr-body);
+letter-spacing: -.01em;
+-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;
 }
 *, *:before, *:after { box-sizing: inherit; }
-body { -webkit-overflow-scrolling: touch; scroll-behavior: smooth; background: transparent; }
-body, p { 
-    font-family: nunito, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: var(--fontSize); 
-    line-height: var(--lineHeight); }
+body { -webkit-overflow-scrolling: touch; scroll-behavior: smooth; background: #ffffff; }
+body, p { color: var(--clr-body); font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif;; font-style: normal; font-weight: 400; font-size: var(--fontSize); line-height: var(--lineHeight); }
 p { margin: 0 0 .85rem 0; }
 main, .main { overflow: hidden; } 
-b, strong, .bold { color: var(--clr-1); font-weight: 700; }
+b, strong, .bold { color: var(--clr-1); font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif; font-style: normal; font-weight: 700; }
+.has-white-color b, .has-white-color strong, .has-white-color .bold { color: var(--clr-1); }
 i, em, .italic { color: var(--clr-1);  font-style: italic; font-weight: 700; }
-hr { background-color: var(--clr-1); border: 0 !important; height: var(--hrThickness); margin-bottom: 1.5em; border-radius: 20px; }
+hr { background-color: var(--clr-1); border: 0 !important; height: var(--hrThickness); margin-bottom: 1.5em; border-radius: 0px; }
 ol, ul { position: relative; padding: 0; margin: 0 0 1rem 2rem; }
 ol {list-style: decimal;}
 ol li, ul li{ -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
@@ -41,7 +38,7 @@ figure {margin: 0;}
 table { margin: 0 0 1.5em; width: 100%; }
 textarea, input, button { outline: none; }
 textarea { width: 100%; }
-section { position: relative; overflow: hidden;}
+section { position: relative;}
 section:focus { outline: none !important; }
 /*code*/
 pre code { padding: 0; border: none; }
@@ -71,3 +68,5 @@ Gutenberg Block Resets
         .wp-block-latest-posts.is-grid.columns-5 { grid-template-columns: repeat(5, 1fr); }
         .wp-block-latest-posts__featured-image img { max-height: 200px; }
     }
+:where(.wp-block-group.has-background) { padding: unset; }
+:where(.wp-block-columns.is-layout-flex), :where(.is-layout-flex) { gap: unset; }
