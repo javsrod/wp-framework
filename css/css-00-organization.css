@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+
 01 Includes
 02 Root Variavles
     - Typography & Sizing
@@ -22,11 +23,15 @@
     - Colors
     - Typography
     - Links
+    - Lists
     - Buttons
     - Forms 
+    - Blockquote
 06 Components
     - Unique Brand Elements & Classes
     - Navigation
+    - Modals
+    - Search Form
     - Posts and pages
     - Comments
     - Widgets
@@ -41,8 +46,9 @@
     - learn-dash
     - WooFunnels
     - Woocoommerce
-
+    
 --------------------------------------------------------------*/
+
 
 /* --------------- NOTE MAKER LEGEND --------------- */
 
