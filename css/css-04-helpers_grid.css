@@ -1,131 +1,50 @@
 /****************************************************************************
+/****************************************************************************
 *****************************************************************************
-04 Helpers & Grids
+# Styling
 *****************************************************************************
 ****************************************************************************/
 
-/*---------------------------------------------------------------------------
-General Helpers
----------------------------------------------------------------------------*/
-
-.bkg-img { background-repeat: no-repeat; background-size: cover; }
-.clearfix:after {  content: " "; display: block;  height: 0;  clear: both; }
-.h100 { height: 100%; }
-
-/* ID link Gives Adds Space Above */
-.id-link-fix:before {  display: block;  content: " ";  margin-top: -285px;  height: 285px;  visibility: hidden;  pointer-events: none; }
-
-/* Position */
-.relative { position: relative; }
-
-/* Overflow */
-.over-hidden { overflow: hidden; }
-
-/* Hider */
-.hidden_visually { position: absolute;overflow: hidden;margin: -1px;padding: 0;width: 1px;height: 1px;border: 0;clip: rect(0 0 0 0); }
-
-/* center child */
-.flex-center-vertically, .flex-vert, .flex-vert-child > :first-child { display: flex; justify-content: center; flex-direction: column; height: 100%; }
-.flex-hor, .flex-hor-child > :first-child { display: flex; justify-content: center;  }
-
-/* Make Img Cover Using <div.img-cover><picture><img>...*/
-.img-cover { position: relative; overflow: hidden; }
-.img-cover picture { width: 100%; height: 100%; display: flex; }
-.img-cover picture img { object-fit: cover; object-position: center center; }
-
-/* Make Img Cover Using Picture Tag <div.img-cover.picture-cover><img>... */
-.img-cover.picture-cover { /*width: 100%; height: 100%; */display: flex; z-index: 0; }
-.img-cover.picture-cover  img { object-fit: cover; object-position: center center; }
-
-/* Make Image Absolute and Cover with no specific height */
-.img-cover.picture-absolute picture, .img-cover.img-absolute picture, .img-cover.img-absolute  img 
-{ position: absolute; top: 0; width: 100%; height: 100%; z-index: -1; }
-
-/* Creates overlay over position:relative parent. Forcess Full Height */
-.box-over { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 2; }
-
-/* Text Alignment Helpers */
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
-
-/* lists */
-ol.no-bullet, ul.no-bullet { margin-left:0; list-style:none; }
-
-/*---------------------------------------------------------------------------
-Spacing Helpers
----------------------------------------------------------------------------*/
-
-/* min-height */
-.minvh100 { min-height: 100vh !important; }
-
-.gcw-xl, .gcw-xl-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max-xl); }
-.gcw, .gcw-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max); }
-.gcw-m, .gcw-m-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max-m); }
-.gcw-s, .gcw-s-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max-s); }
-.gcw.fluid { width: 100%; max-width: 100% !important; }
-
-
-/*---------------------------------------------------------------------------
-Padding & Margin Helpers
----------------------------------------------------------------------------*/
-
-/* Margin */
-.mb-base { margin-bottom: var(--sp-base) !important; }
-.mb-rim { margin-bottom: var(--sp-rim) !important; }
-.mb-feat { margin-bottom: var(--sp-feat) !important; }
-.mb-0 { margin-bottom: 0px !important; }
-.mb0, .mb-0, .smb0 :last-child, .smb0-child > :first-child { margin-bottom: 0px !important; }
-
-/* Padding */
-.spv, .spv-child > :first-child { padding-top: var(--sp-base) !important; ; padding-bottom: var(--sp-base) !important; ; }
-.spb, .spb-child > :first-child { padding-bottom: var(--sp-base) !important; ; }
-.spt, .spt-child > :first-child { padding-top: var(--sp-base) !important; ; }
-.sph, .sph-child > :first-child { padding-left: var(--sp-base); padding-right: var(--sp-base) !important; ; }
-.smv, .smv-child > :first-child { margin-top: var(--sp-base) !important; ; padding-bottom: var(--sp-base) !important; ; }
-.smb, .smb-child > :first-child { margin-bottom: var(--sp-base) !important; ; }
-.smt, .smt-child > :first-child { margin-top: var(--sp-base) !important; ; }
-.smh, .smh-child > :first-child { margin-left: var(--sp-base); padding-right: var(--sp-base) !important; ; }
-
-/* Padding Rim */
-.spv-rim, .spv-rim-child > :first-child { padding-top: var(--sp-rim) !important; ; padding-bottom: var(--sp-rim) !important; ; }
-.spb-rim, .spb-rim-child > :first-child { padding-bottom: var(--sp-rim) !important; ; }
-.spt-rim, .spt-rim-child > :first-child { padding-top: var(--sp-rim) !important; ; }
-.sph-rim, .sph-rim-child > :first-child { padding-left: var(--sp-rim); padding-right: var(--sp-rim) !important; ; }
-.smv-rim, .smv-rim-child > :first-child { margin-top: var(--sp-rim) !important; ; margin-bottom: var(--sp-rim) !important; ; }
-.smb-rim, .smb-rim-child > :first-child { margin-bottom: var(--sp-rim) !important; ; }
-.smt-rim, .smt-rim-child > :first-child { margin-top: var(--sp-rim) !important; ; }
-.smh-rim, .smh-rim-child > :first-child { margin-left: var(--sp-rim); padding-right: var(--sp-rim) !important; ; }
-
-/* Padding Feature */
-.spv-feat, .spv-feat-child > :first-child { padding-top: var(--sp-feat) !important; ; padding-bottom: var(--sp-feat) !important; ; }
-.spb-feat, .spb-feat-child > :first-child { padding-bottom: var(--sp-feat) !important; ; }
-.spt-feat, .spt-feat-child > :first-child { padding-top: var(--sp-feat) !important; ; }
-.sph-feat, .sph-feat-child > :first-child { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; ; }
-.smv-feat, .smv-feat-child > :first-child { margin-top: var(--sp-feat) !important; ; padding-bottom: var(--sp-feat) !important; ; }
-.smb-feat, .smb-feat-child > :first-child { margin-bottom: var(--sp-feat) !important; ; }
-.smt-feat, .smt-feat-child > :first-child { margin-top: var(--sp-feat) !important; ; }
-.smh-feat, .smh-feat-child > :first-child { margin-left: var(--sp-feat); padding-right: var(--sp-feat) !important; ; }
-
-
-/* Padding Edge i.e. only on screen near container width or less */
-@media screen and (max-width: 1650px) {
-    .sph-edge, .sph-edge-child > :first-child { padding-left: var(--sp-base); padding-right: var(--sp-base) !important; }
-    .sph-rim-edge, .sph-rim-edge-child > :first-child  { padding-left: var(--sp-rim); padding-right: var(--sp-rim) !important; }
-    .sph-feat-edge, .sph-feat-edge-child > :first-child   { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; }
+:root {
+    --gcw-max-xl:   85%; 
+    --gcw-max:      1100px;
+    --gcw-max-m:    800px;
+    --gcw-max-s:    600px;
+    --sp-feat: 10rem;
+    --sp-base: 3rem;
+    --sp-rim: 1.25rem;
 }
+.block-editor-page .wp-block, .wp-block-column.is-vertically-aligned-bottom, .wp-block-column.is-vertically-aligned-center, .wp-block-column.is-vertically-aligned-top  { max-width: 100%; width: unset; }
+.block-editor-page .editor-block-list__layout { max-width: 100%; }
+.block-editor-page .edit-post-visual-editor .wp-block  { padding: 5px; margin: 5px !important; border: 3px #f1f1f1 solid !important;}
+.block-editor-page .edit-post-visual-editor .wp-block[class*="wp-block-acf"] { background: #bafff3; }
+.block-editor-page .edit-post-visual-editor .block-list-appender.wp-block,
+.block-editor-page .edit-post-visual-editor .block-editor-default-block-appender.wp-block { padding: 0; border: none; }
+.block-editor-page .edit-post-visual-editor .wp-block.wp-block-group { border: 6px #f1f1f1 solid !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.is-reusable { border: 4px #c0c5ff solid !important; }
+.block-editor-page .edit-post-visual-editor .wp-block[data-align=wide] { max-width: 1100px; }
+.block-editor-page .edit-post-visual-editor .wp-block[data-align=full] { max-width: 100%; }
 
-/* Children Padding & Margin For Css Grids*/
-.cp > div, .cp > article { padding: var(--sp-base) }
-.cpr > div, .cpr > article { padding: var(--sp-rim) }
-.cpf > div, .cpf > article { padding: var(--sp-feat) }
-.csmb0 > div :last-child, .csmb0 > article :last-child { margin-bottom: 0px !important; }
+/* Remove default Gap */
+.editor-styles-wrapper :where(.wp-block-columns.is-layout-flex),
+.editor-styles-wrapper :where(.is-layout-flex) { gap: 0 !important; }
 
-/* Pull top */
-.pull-top-feat { position: relative; margin-top: calc(var(--sp-feat) * -1); z-index: 1; }
-.pull-top-feat15 { position: relative; margin-top: calc(var(--sp-feat) * -1.5); z-index: 1; }
-.pull-top-feat2 { position: relative; margin-top: calc(var(--sp-feat) * -1.5); z-index: 1; }
+/* GRID CONTAINER CLASSES - with Px widths for editor visual refference not related to actual theme sizing */
+.block-editor-page .edit-post-visual-editor .wp-block.gcw, .gcw-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-xl) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw, .gcw-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw-m, .gcw-m-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-m) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw-s, .gcw-s-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-s) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw.fluid { width: 100%; max-width: 100% !important; }
+
+/* Backend colors for ease of use */
+.editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black) !important; }
+.is-style-outline>.wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color) { background: transparent !important; }
+
+/****************************************************************************
+*****************************************************************************
+# Grid Helpers (Copy from main CSS)
+*****************************************************************************
+****************************************************************************/
 
 /*---------------------------------------------------------------------------
 CSS Grid Helpers - GRID 1fr @ 799px
@@ -139,8 +58,7 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .wp-block-columns, .gssauto, .wp-block-group.gss--autowpbg  > .wp-block-group__inner-container { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
     }
 
-/* GSS Grid 1fr @ 799px
------------------------------------------------*/
+/*GSS Grid*/
 *[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
 
     @media screen and (min-width: 800px) {
@@ -208,9 +126,6 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gsc--span-11 { grid-column: auto / span 11; }
     }
 
-/* GSS Grid All
------------------------------------------------*/
-
 /* Auto Fit Grids */
 .gss--1-auto-all { grid-template-columns: 1fr auto; }
 .gss--auto-1-all { grid-template-columns: auto 1fr; }
@@ -249,8 +164,6 @@ CSS Grid Helpers - GRID 1fr @ 799px
 .gss--r-20,     .gss--r-20wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(20, 1fr) !important; }
 
 
-/* GSS Grid Small
------------------------------------------------*/
  @media screen and (max-width: 799px) {
 
     /* Auto Fit Grids */
@@ -290,118 +203,51 @@ CSS Grid Helpers - GRID 1fr @ 799px
 
  }
 
-/* Grid Gap
------------------------------------------------*/
+/* Grid Gap */
 .grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim) !important; }
 .grid-gap,      .grid-gapwpbg      > .wp-block-group__inner-container   { grid-gap: var(--sp-base) !important; } 
 .grid-gap-feat, .grid-gap-featwpbg > .wp-block-group__inner-container   { grid-gap: var(--sp-feat) !important; }
 
 /*---------------------------------------------------------------------------
-Menu Helpers (Thanks Zurb!)
+Flex Columns Helpers - 100% Width @ 799px
 ---------------------------------------------------------------------------*/
 
-.menu { padding: 0; margin: 0; list-style: none; position: relative; display: flex; flex-wrap: wrap; }
-.menu, .menu.horizontal { flex-wrap: wrap; flex-direction: row; }
-.align-right { justify-content: flex-end; }
-.align-center { justify-content: center; }
-.menu.expanded li { flex: 1 1 0px; }
-.menu a, .menu .button { line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
-.menu.vertical { flex-wrap: nowrap; flex-direction: column; }
+*[class*="fcls--"] {  display: flex !important; flex-wrap: wrap !important;  justify-content: center; flex: 0 0 100% !important; }
 
-@media screen and (max-width: 800px) {
-    *[class*="menu-small-"] { display: flex !important; flex-flow: row wrap !important; }
-    *[class*="menu-small-"] > li {  ]flex: 0 0 auto; min-height: 0; min-width: 0; width: 100%; }
-    .menu-small-4 > li {  width: 25% !important; }
-    .menu-small-3 > li {  width: 33.3333% !important; }
-    .menu-small-2 > li {  width: 50% !important; }
-    .menu-small-1 > li {  width: 100% !important; }
-}
+.fcls--6,
+.fcls--5,
+.fcls--4,
+.fcls--3,
+.fcls--2 { margin: 0 !important; gap: 0; }
 
-/*---------------------------------------------------------------------------
-Form Layout Helpers
----------------------------------------------------------------------------*/
+.fcls--6-rim,
+.fcls--5-rim,
+.fcls--4-rim,
+.fcls--3-rim,
+.fcls--2-rim { margin: 0 calc( var(--sp-rim) * -0.5 ) !important; gap: var(--sp-rim); }
 
-.form_wrap { padding: var(--sp-base); background-color: var(--clr-white) !important; box-shadow: var(--shadowbox-btn); }
-.form-control { display: grid; grid-template-columns: repeat(12, 1fr); grid-gap: 20px; }
-.form-control p , .form-control [data-class="wpcf7cf_group"] { grid-column: 1 / -1; margin: 0; }
-.form-control p input[type="submit"] { margin-bottom: 0; }
-.form-control p.half { grid-column: auto / span 6; }
-.form-control p.third { grid-column: auto / span 4; }
-.form-control p.fourth { grid-column: auto / span 3; }
-.form-control p.three_fourth { grid-column: auto / span 9; }
-    /* Mobile Break */
-    @media screen and (max-width: 700px) {
-        .form-control { grid-gap: 10px; }
-        .form-control p.half, .form-control p.third, .form-control p.fourth, .form-control p.three_fourth { grid-column: 1 / -1; }
-    }  
+.fcls--6-base,
+.fcls--5-base,
+.fcls--4-base,
+.fcls--3-base,
+.fcls--2-base { margin: 0 calc( var(--sp-base) * -0.5 ) !important; gap: var(--sp-base); }
 
-/*---------------------------------------------------------------------------
-Icon Helper Classes
----------------------------------------------------------------------------*/
-
-/* Navicons
------------------------------------------------*/  
-.navicon { display:flex !important; flex-direction: column; align-items: center; justify-content: center; height: 100%;background: transparent; border: none; display: block; margin: 0; padding: 0; transition: 0.3s;  line-height: 1; font-size: 1rem; color: var(--clr-2);}
-.navicon:hover,.navicon:focus { background: none !important;  opacity: .3; }
-.navicon svg { color: var(--clr-1); }
-.navicon:hover svg,.navicon:focus svg  {  }
-
-/* Social Icons
------------------------------------------------*/  
-ul.sicons { margin: 0; }
-ul.sicons li { list-style: none; }
-
-
-/* Icon Lists Grids
------------------------------------------------*/   
-:root { 
-    --icon_list_icon_small_size: 1rem + .25rem ;
-    --icon_list_icon_size: calc( var(--h2-size) + .25rem ) ;
-    --icon_heading_icon_size: calc( var(--h1-size) + 2rem );
-}
     @media screen and (min-width: 800px) {
-        :root { 
-            --icon_list_icon_small_size: 1rem; 
-            --icon_list_icon_size: calc( var(--h2-size) + .25rem );
-            --icon_heading_icon_size: calc( var(--h1-size) + 3rem );
-        }
+        .fcls--6 > * {  flex: 0 0 16.666666% !important; }
+        .fcls--5 > * {  flex: 0 0 20% !important; }
+        .fcls--4 > * {  flex: 0 0 25% !important; }
+        .fcls--3 > * {  flex: 0 0 33.333333% !important; }
+        .fcls--2 > * {  flex: 0 0 50% !important; }
+
+        .fcls--6-rim > * {  flex: 0 0 calc(16.666666% - var(--sp-rim)) !important; }
+        .fcls--5-rim > * {  flex: 0 0 calc(20% - var(--sp-rim)) !important; }
+        .fcls--4-rim > * {  flex: 0 0 calc(25% - var(--sp-rim)) !important; }
+        .fcls--3-rim > * {  flex: 0 0 calc(33.333333% - var(--sp-rim)) !important; }
+        .fcls--2-rim > * {  flex: 0 0 calc(50% - var(--sp-rim)) !important; }
+
+        .fcls--6-base > * {  flex: 0 0 calc(16.666666% - var(--sp-base)) !important; }
+        .fcls--5-base > * {  flex: 0 0 calc(20% - var(--sp-base)) !important; }
+        .fcls--4-base > * {  flex: 0 0 calc(25% - var(--sp-base)) !important; }
+        .fcls--3-base > * {  flex: 0 0 calc(33.333333% - var(--sp-base)) !important; }
+        .fcls--2-base > * {  flex: 0 0 calc(50% - var(--sp-base)) !important; }
     }
-
-/* Icon Lists Global */
-.icon_list_grid-small, .icon_list_grid, .icon_list_grid-heading { display: grid; }
-.icon_list_grid-small > :first-child , .icon_list_grid > :first-child , .icon_list_grid-heading > :first-child  { display: flex; justify-content: center; width: 100%; }
-.icon_list_grid-small > :last-child , .icon_list_grid > :last-child , .icon_list_grid-heading > :last-child { display: flex; justify-content: center; flex-direction: column; height: 100%; }
-.icon_list_grid-small :last-child > :last-child, .icon_list_grid > :last-child > :last-child, .icon_list_grid-heading :last-child > :last-child { margin-bottom: 0px !important; }
-.icon_list_grid-icon { display: block; }
-
-/* Icon Lists Small */
-.icon_list_grid-small { grid-gap: var(--sp-rim); grid-template-columns: var(--icon_list_icon_small_size) 1fr; }
-.icon_list_grid-small svg { font-size:1.5rem; }
-
-/* Icon Lists Normal*/
-.icon_list_grid { grid-gap: var(--sp-rim); grid-template-columns: var(--icon_list_icon_size) 1fr; }
-.icon_list_grid svg { font-size:var(--h2-size); }
-
-/* Icon Lists Heading*/
-.icon_list_grid-heading { grid-template-columns:  var(--icon_heading_icon_size) 1fr; grid-gap: calc( var(--sp-rim) + 1rem); margin-bottom: var(--sp-rim); }
-.icon_list_grid-heading svg { font-size: var(--icon_heading_icon_size); }
-.icon_list_grid-heading-heading { font-size: var(--h1-size); margin-bottom:.25rem; transition: all 250ms ease;}
-.icon_list_grid-heading-heading svg { font-size: var(--h2-size); }
-.icon_list_grid-heading-link .icon_list_grid-heading-heading:hover  { color: var(--clr-1); color: var(--brand-clr-primary); }
-    @media screen and (max-width: 700px) {
-        .icon_list_grid-heading-link .icon_list_grid-heading-heading { display:grid ;grid-template-columns: 1fr auto; grid-gap: var(--sp-rim); }
-    }
-
-
-/*---------------------------------------------------------------------------
-Accessibility Helpers
----------------------------------------------------------------------------*/
-
-/* Text meant only for screen readers. */
-.screen-reader-text, .srt { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
-.screen-reader-text:focus, .srt:focus 
-    { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; clip-path: none; color: #21759b; 
-    display: block; font-size: 0.875rem; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000;}
-
-/* Do not show the outline on the skip link target. */
-#primary[tabindex="-1"]:focus { outline: 0; }
