@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-
 01 Includes
 02 Root Variavles
     - Branding Variables
@@ -22,6 +21,7 @@
     - Absolute Positioning Helpers
     - CSS Grid Helpers - GRID 1fr @ 799px
     - Flex Columns Helpers - 100% Width @ 799px
+    - Gap Helpers for CSS Gird & Flexbox
     - Menu Helpers
     - Form Layout Helpers
 05 Base Styling
@@ -51,7 +51,6 @@
     - learn-dash
     - WooFunnels
     - Woocoommerce
-    
 --------------------------------------------------------------*/
 
 
