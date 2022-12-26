@@ -211,7 +211,7 @@ Typography & Sizing
     }
 
     /* Desktop Medium */
-    @media screen and (min-width: 1500px) and (max-width: 1699px) {
+    @media screen and (min-width: 1500px) and (max-width: 1799px) {
         :root {
 
             /* Font Size Master */
