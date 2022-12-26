@@ -25,7 +25,7 @@
 .block-editor-page .edit-post-visual-editor .wp-block[data-align=wide] { max-width: 1100px; }
 .block-editor-page .edit-post-visual-editor .wp-block[data-align=full] { max-width: 100%; }
 
-/* Remove default Gap */
+/* Remove default Gutenberg Crap */
 .editor-styles-wrapper :where(.wp-block-columns.is-layout-flex),
 .editor-styles-wrapper :where(.is-layout-flex) { gap: 0 !important; }
 
@@ -34,10 +34,11 @@
 .block-editor-page .edit-post-visual-editor .wp-block.gcw, .gcw-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw-m, .gcw-m-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-m) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw-s, .gcw-s-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-s) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw-xl, .gcw-xl-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-xl) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw.fluid { width: 100%; max-width: 100% !important; }
 
 /* Backend colors for ease of use */
-.editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black) !important; }
+.editor-styles-wrapper .has-white-background-color { color: #000 !important; }
 .is-style-outline>.wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color) { background: transparent !important; }
 
 /****************************************************************************
@@ -55,7 +56,7 @@ CSS Grid Helpers - GRID 1fr @ 799px
 .wp-block-column:not(:first-child) { margin-left: 0em !important; }
 
     @media screen and (min-width: 800px) {
-        .wp-block-columns, .gssauto, .wp-block-group.gss--auto-child  > * { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
+        .wp-block-columns, .gssauto, .gssauto-child > * { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
     }
 
 /* GSS Grid 1fr @ 799px
@@ -65,8 +66,9 @@ CSS Grid Helpers - GRID 1fr @ 799px
     @media screen and (min-width: 800px) {
 
         /* Auto Fit Grids */
-        .gss--1-auto { grid-template-columns: 1fr auto; }
-        .gss--auto-1 { grid-template-columns: auto 1fr; }
+        .gss--1-auto, .gss--1-auto-child > * { grid-template-columns: 1fr auto; }
+        .gss--auto-1, .gss--auto-1-child > * { grid-template-columns: auto 1fr; }
+        
         /* repeat grids */
         .gss--r-2,      .gss--r-2-child > * { grid-template-columns: repeat(2, 1fr) ; }
         .gss--r-3,      .gss--r-3-child > * { grid-template-columns: repeat(3, 1fr) ; }
@@ -74,27 +76,34 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gss--r-5,      .gss--r-5-child > * { grid-template-columns: repeat(5, 1fr) ; }
         .gss--r-6,      .gss--r-6-child > * { grid-template-columns: repeat(6, 1fr) ; }
         .gss--r-12,     .gss--r-12-child > * { grid-template-columns: repeat(12, 1fr) ; }
+        
         /* Set grid - Thirds */
         .gss--1-2,      .gss--1-2-child > *     { grid-template-columns: 1fr 2fr ; }
         .gss--2-1,      .gss--2-1-child > *     { grid-template-columns: 2fr 1fr ; }
+        
         /* Set grid - Fourths */
         .gss--1-3,      .gss--1-3-child > *    { grid-template-columns: 1fr 3fr ; }
         .gss--3-1,      .gss--3-1-child > *    { grid-template-columns: 3fr 1fr ; }
+        
         .gss--2-1-1,    .gss--2-1-1-child > *  { grid-template-columns: 2fr 1fr 1fr ; }
-        .gss--1-2-1,    .gss--1-2-1-child > *   { grid-template-columns: 1fr 2fr 1fr ; }
+        .gss--1-2-1,    .gss--1-2-1-child > *  { grid-template-columns: 1fr 2fr 1fr ; }
         .gss--1-1-2,    .gss--1-1-2-child > *  { grid-template-columns: 1fr 1fr 2fr ; }
-        .gss--2-1-1,    .gss--2-1-1-child > *  { grid-template-columns: 2fr 1fr 1fr ; }
+
         /* Set grid - Fifths */
         .gss--1-4,      .gss--1-4-child > *  { grid-template-columns: 1fr 4fr ; }
         .gss--4-1,      .gss--4-1-child > *  { grid-template-columns: 4fr 1fr ; }
-        .gss--1-1-3,    .gss--1-1-3-child > *  { grid-template-columns: 1fr 1fr 3fr ; }
-        .gss--1-3-1,    .gss--1-3-1-child > *  { grid-template-columns: 1fr 3fr 1fr ; }
-        .gss--3-1-1,    .gss--3-1-1-child > *  { grid-template-columns: 3fr 1fr 1fr ; }
-        .gss--2-2-1,    .gss--2-1-1-child > *  { grid-template-columns: 2fr 2fr 1fr ; }
-        .gss--2-1-2,    .gss--2-1-2-child > *  { grid-template-columns: 2fr 1fr 2fr ; }
-        .gss--1-2-2,    .gss--1-2-2-child > *  { grid-template-columns: 1fr 2fr 2fr ; }
+
         .gss--2-3,      .gss--2-3-child > *  { grid-template-columns: 2fr 3fr ; }
         .gss--3-2,      .gss--3-2-child > *  { grid-template-columns: 3fr 2fr ; }
+        
+        .gss--1-2-2,    .gss--1-2-2-child > *  { grid-template-columns: 1fr 2fr 2fr ; }
+        .gss--2-1-2,    .gss--2-1-2-child > *  { grid-template-columns: 2fr 1fr 2fr ; }
+        .gss--2-2-1,    .gss--2-2-1-child > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+        .gss--3-1-1,    .gss--3-1-1-child > *  { grid-template-columns: 3fr 1fr 1fr ; }
+        .gss--1-3-1,    .gss--1-3-1-child > *  { grid-template-columns: 1fr 3fr 1fr ; }
+        .gss--1-1-3,    .gss--1-1-3-child > *  { grid-template-columns: 1fr 1fr 3fr ; }
+               
         /* Set grid - Sixths */
         .gss--1-5,      .gss--1-5-child > *     { grid-template-columns: 1fr 5fr ; }
         .gss--5-1,      .gss--5-1-child > *     { grid-template-columns: 5fr 1fr ; }
@@ -110,9 +119,11 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gsc--over-l { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); }
         .gsc--over-lr { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); margin-right: calc(-2 * var(--sp-base)); }
         .gsc--over-t { position: relative; margin-top:  calc(-2 * var(--sp-base)); }
+        
         /* Grid Column Push */
         .gsc--push-r { margin-right: calc(1 * var(--sp-base)); }
         .gsc--push-l  { margin-left: calc(1 * var(--sp-base)); }
+        
         /*Grid Column Span*/
         .gsc--span-0 { grid-column: 1 / -1; }
         .gsc--span-2 { grid-column: auto / span 2; }
@@ -131,80 +142,97 @@ CSS Grid Helpers - GRID 1fr @ 799px
 -----------------------------------------------*/
 
 /* Auto Fit Grids */
-.gss--1-auto-all { grid-template-columns: 1fr auto; }
-.gss--auto-1-all { grid-template-columns: auto 1fr; }
+.gss--1-auto-all, .gss--1-auto-child-all > * { grid-template-columns: 1fr auto; }
+.gss--auto-1-all, .gss--auto-1-child-all > * { grid-template-columns: auto 1fr; }
+
 /* repeat grids */
-.gss--r-2-all,      .gss--r-2-all-child > * { grid-template-columns: repeat(2, 1fr); }
-.gss--r-3-all,      .gss--r-3-all-child > * { grid-template-columns: repeat(3, 1fr); }
-.gss--r-4-all,      .gss--r-4-all-child > * { grid-template-columns: repeat(4, 1fr); }
-.gss--r-5-all,      .gss--r-5-all-child > * { grid-template-columns: repeat(5, 1fr); }
-.gss--r-6-all,      .gss--r-6-all-child > * { grid-template-columns: repeat(6, 1fr); }
-.gss--r-12-all,     .gss--r-12-all-child > * { grid-template-columns: repeat(12, 1fr); }
+.gss--r-2-all,      .gss--r-2-child-all > * { grid-template-columns: repeat(2, 1fr) ; }
+.gss--r-3-all,      .gss--r-3-child-all > * { grid-template-columns: repeat(3, 1fr) ; }
+.gss--r-4-all,      .gss--r-4-child-all > * { grid-template-columns: repeat(4, 1fr) ; }
+.gss--r-5-all,      .gss--r-5-child-all > * { grid-template-columns: repeat(5, 1fr) ; }
+.gss--r-6-all,      .gss--r-6-child-all > * { grid-template-columns: repeat(6, 1fr) ; }
+.gss--r-12-all,     .gss--r-12-child-all > * { grid-template-columns: repeat(12, 1fr) ; }
+
 /* Set grid - Thirds */
-.gss--1-2-all,      .gss--1-2-all-child > *     { grid-template-columns: 1fr 2fr; }
-.gss--2-1-all,      .gss--2-1-all-child > *     { grid-template-columns: 2fr 1fr; }
+.gss--1-2-all,      .gss--1-2-child-all > *     { grid-template-columns: 1fr 2fr ; }
+.gss--2-1-all,      .gss--2-1-child-all > *     { grid-template-columns: 2fr 1fr ; }
+
 /* Set grid - Fourths */
-.gss--1-3-all,      .gss--1-3-all-child > *    { grid-template-columns: 1fr 3fr; }
-.gss--3-1-all,      .gss--3-1-all-child > *    { grid-template-columns: 3fr 1fr; }
-.gss--2-1-1-all,    .gss--2-1-1-all-child > *  { grid-template-columns: 2fr 1fr 1fr; }
-.gss--1-2-1-all,    .gss--1-2-1-all-child > *   { grid-template-columns: 1fr 2fr 1fr; }
-.gss--1-1-2-all,    .gss--1-1-2-all-child > *  { grid-template-columns: 1fr 1fr 2fr; }
-.gss--2-1-1-all,    .gss--2-1-1-all-child > *  { grid-template-columns: 2fr 1fr 1fr; }
+.gss--1-3-all,      .gss--1-3-child-all > *    { grid-template-columns: 1fr 3fr ; }
+.gss--3-1-all,      .gss--3-1-child-all > *    { grid-template-columns: 3fr 1fr ; }
+
+.gss--2-1-1-all,    .gss--2-1-1-child-all > *  { grid-template-columns: 2fr 1fr 1fr ; }
+.gss--1-2-1-all,    .gss--1-2-1-child-all > *  { grid-template-columns: 1fr 2fr 1fr ; }
+.gss--1-1-2-all,    .gss--1-1-2-child-all > *  { grid-template-columns: 1fr 1fr 2fr ; }
+
 /* Set grid - Fifths */
-.gss--1-4-all,      .gss--1-4-all-child > *  { grid-template-columns: 1fr 4fr; }
-.gss--4-1-all,      .gss--4-1-all-child > *  { grid-template-columns: 4fr 1fr; }
-.gss--1-1-3-all,    .gss--1-1-3-all-child > *  { grid-template-columns: 1fr 1fr 3fr; }
-.gss--1-3-1-all,    .gss--1-3-1-all-child > *  { grid-template-columns: 1fr 3fr 1fr; }
-.gss--3-1-1-all,    .gss--3-1-1-all-child > *  { grid-template-columns: 3fr 1fr 1fr; }
-.gss--2-2-1-all,    .gss--2-1--all1-child > *  { grid-template-columns: 2fr 2fr 1fr; }
-.gss--2-1-2-all,    .gss--2-1-2-all-child > *  { grid-template-columns: 2fr 1fr 2fr; }
-.gss--1-2-2-all,    .gss--1-2-2-all-child > *  { grid-template-columns: 1fr 2fr 2fr; }
-.gss--2-3-all,      .gss--2-3-all-child > *  { grid-template-columns: 2fr 3fr; }
-.gss--3-2-all,      .gss--3-2-all-child > *  { grid-template-columns: 3fr 2fr; }
+.gss--1-4-all,      .gss--1-4-child-all > *  { grid-template-columns: 1fr 4fr ; }
+.gss--4-1-all,      .gss--4-1-child-all > *  { grid-template-columns: 4fr 1fr ; }
+
+.gss--2-3-all,      .gss--2-3-child-all > *  { grid-template-columns: 2fr 3fr ; }
+.gss--3-2-all,      .gss--3-2-child-all > *  { grid-template-columns: 3fr 2fr ; }
+
+.gss--1-2-2-all,    .gss--1-2-2-child-all > *  { grid-template-columns: 1fr 2fr 2fr ; }
+.gss--2-1-2-all,    .gss--2-1-2-child-all > *  { grid-template-columns: 2fr 1fr 2fr ; }
+.gss--2-2-1-all,    .gss--2-2-1-child-all > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+.gss--3-1-1-all,    .gss--3-1-1-child-all > *  { grid-template-columns: 3fr 1fr 1fr ; }
+.gss--1-3-1-all,    .gss--1-3-1-child-all > *  { grid-template-columns: 1fr 3fr 1fr ; }
+.gss--1-1-3-all,    .gss--1-1-3-child-all > *  { grid-template-columns: 1fr 1fr 3fr ; }
+       
 /* Set grid - Sixths */
-.gss--1-5-all,      .gss--1-5-all-child > *     { grid-template-columns: 1fr 5fr; }
-.gss--5-1-all,      .gss--5-1-all-child > *     { grid-template-columns: 5fr 1fr; }
+.gss--1-5-all,      .gss--1-5-child-all > *     { grid-template-columns: 1fr 5fr ; }
+.gss--5-1-all,      .gss--5-1-child-all > *     { grid-template-columns: 5fr 1fr ; }
+
 
 /* GSS Grid Small
 -----------------------------------------------*/
- @media screen and (max-width: 799px) {
+@media screen and (max-width: 799px) {
 
     /* Auto Fit Grids */
-    .gss--1-auto-small { grid-template-columns: 1fr auto; }
-    .gss--auto-1-small { grid-template-columns: auto 1fr; }
-    /* repeat grids */
-    .gss--r-2-small,      .gss--r-2-small-child > * { grid-template-columns: repeat(2, 1fr); }
-    .gss--r-3-small,      .gss--r-3-small-child > * { grid-template-columns: repeat(3, 1fr); }
-    .gss--r-4-small,      .gss--r-4-small-child > * { grid-template-columns: repeat(4, 1fr); }
-    .gss--r-5-small,      .gss--r-5-small-child > * { grid-template-columns: repeat(5, 1fr); }
-    .gss--r-6-small,      .gss--r-6-small-child > * { grid-template-columns: repeat(6, 1fr); }
-    .gss--r-12-small,     .gss--r-12-small-child > * { grid-template-columns: repeat(12, 1fr); }
-    /* Set grid - Thirds */
-    .gss--1-2-small,      .gss--1-2-small-child > *     { grid-template-columns: 1fr 2fr; }
-    .gss--2-1-small,      .gss--2-1-small-child > *     { grid-template-columns: 2fr 1fr; }
-    /* Set grid - Fourths */
-    .gss--1-3-small,      .gss--1-3-small-child > *    { grid-template-columns: 1fr 3fr; }
-    .gss--3-1-small,      .gss--3-1-small-child > *    { grid-template-columns: 3fr 1fr; }
-    .gss--2-1-1-small,    .gss--2-1-1-small-child > *  { grid-template-columns: 2fr 1fr 1fr; }
-    .gss--1-2-1-small,    .gss--1-2-1-small-child > *   { grid-template-columns: 1fr 2fr 1fr; }
-    .gss--1-1-2-small,    .gss--1-1-2-small-child > *  { grid-template-columns: 1fr 1fr 2fr; }
-    .gss--2-1-1-small,    .gss--2-1-1-small-child > *  { grid-template-columns: 2fr 1fr 1fr; }
-    /* Set grid - Fifths */
-    .gss--1-4-small,      .gss--1-4-small-child > *  { grid-template-columns: 1fr 4fr; }
-    .gss--4-1-small,      .gss--4-1-small-child > *  { grid-template-columns: 4fr 1fr; }
-    .gss--1-1-3-small,    .gss--1-1-3-small-child > *  { grid-template-columns: 1fr 1fr 3fr; }
-    .gss--1-3-1-small,    .gss--1-3-1-small-child > *  { grid-template-columns: 1fr 3fr 1fr; }
-    .gss--3-1-1-small,    .gss--3-1-1-small-child > *  { grid-template-columns: 3fr 1fr 1fr; }
-    .gss--2-2-1-small,    .gss--2-1--small1-child > *  { grid-template-columns: 2fr 2fr 1fr; }
-    .gss--2-1-2-small,    .gss--2-1-2-small-child > *  { grid-template-columns: 2fr 1fr 2fr; }
-    .gss--1-2-2-small,    .gss--1-2-2-small-child > *  { grid-template-columns: 1fr 2fr 2fr; }
-    .gss--2-3-small,      .gss--2-3-small-child > *  { grid-template-columns: 2fr 3fr; }
-    .gss--3-2-small,      .gss--3-2-small-child > *  { grid-template-columns: 3fr 2fr; }
-    /* Set grid - Sixths */
-    .gss--1-5-small,      .gss--1-5-small-child > *     { grid-template-columns: 1fr 5fr; }
-    .gss--5-1-small,      .gss--5-1-small-child > *     { grid-template-columns: 5fr 1fr; }
+    .gss--1-auto-small, .gss--1-auto-child-small > * { grid-template-columns: 1fr auto; }
+    .gss--auto-1-small, .gss--auto-1-child-small > * { grid-template-columns: auto 1fr; }
 
- }
+    /* repeat grids */
+    .gss--r-2-small,      .gss--r-2-child-small > * { grid-template-columns: repeat(2, 1fr) ; }
+    .gss--r-3-small,      .gss--r-3-child-small > * { grid-template-columns: repeat(3, 1fr) ; }
+    .gss--r-4-small,      .gss--r-4-child-small > * { grid-template-columns: repeat(4, 1fr) ; }
+    .gss--r-5-small,      .gss--r-5-child-small > * { grid-template-columns: repeat(5, 1fr) ; }
+    .gss--r-6-small,      .gss--r-6-child-small > * { grid-template-columns: repeat(6, 1fr) ; }
+    .gss--r-12-small,     .gss--r-12-child-small > * { grid-template-columns: repeat(12, 1fr) ; }
+
+    /* Set grid - Thirds */
+    .gss--1-2-small,      .gss--1-2-child-small > *     { grid-template-columns: 1fr 2fr ; }
+    .gss--2-1-small,      .gss--2-1-child-small > *     { grid-template-columns: 2fr 1fr ; }
+
+    /* Set grid - Fourths */
+    .gss--1-3-small,      .gss--1-3-child-small > *    { grid-template-columns: 1fr 3fr ; }
+    .gss--3-1-small,      .gss--3-1-child-small > *    { grid-template-columns: 3fr 1fr ; }
+
+    .gss--2-1-1-small,    .gss--2-1-1-child-small > *  { grid-template-columns: 2fr 1fr 1fr ; }
+    .gss--1-2-1-small,    .gss--1-2-1-child-small > *  { grid-template-columns: 1fr 2fr 1fr ; }
+    .gss--1-1-2-small,    .gss--1-1-2-child-small > *  { grid-template-columns: 1fr 1fr 2fr ; }
+
+    /* Set grid - Fifths */
+    .gss--1-4-small,      .gss--1-4-child-small > *  { grid-template-columns: 1fr 4fr ; }
+    .gss--4-1-small,      .gss--4-1-child-small > *  { grid-template-columns: 4fr 1fr ; }
+
+    .gss--2-3-small,      .gss--2-3-child-small > *  { grid-template-columns: 2fr 3fr ; }
+    .gss--3-2-small,      .gss--3-2-child-small > *  { grid-template-columns: 3fr 2fr ; }
+
+    .gss--1-2-2-small,    .gss--1-2-2-child-small > *  { grid-template-columns: 1fr 2fr 2fr ; }
+    .gss--2-1-2-small,    .gss--2-1-2-child-small > *  { grid-template-columns: 2fr 1fr 2fr ; }
+    .gss--2-2-1-small,    .gss--2-2-1-child-small > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+    .gss--3-1-1-small,    .gss--3-1-1-child-small > *  { grid-template-columns: 3fr 1fr 1fr ; }
+    .gss--1-3-1-small,    .gss--1-3-1-child-small > *  { grid-template-columns: 1fr 3fr 1fr ; }
+    .gss--1-1-3-small,    .gss--1-1-3-child-small > *  { grid-template-columns: 1fr 1fr 3fr ; }
+           
+    /* Set grid - Sixths */
+    .gss--1-5-small,      .gss--1-5-child-small > *     { grid-template-columns: 1fr 5fr ; }
+    .gss--5-1-small,      .gss--5-1-child-small > *     { grid-template-columns: 5fr 1fr ; }
+
+}
 
 /*---------------------------------------------------------------------------
 Flex Columns Helpers - 100% Width @ 799px
@@ -238,6 +266,7 @@ Flex Columns Helpers - 100% Width @ 799px
 .fcls--2-base, .fcls--2-base-child  > *
 { margin: 0 calc( var(--sp-base) * -0.5 ) !important; gap: var(--sp-base); }
 
+
     @media screen and (min-width: 800px) {
 
         .fcls--6 > *, .fcls--6-child > * > * {  flex: 0 0 16.666666% !important; }
@@ -259,7 +288,6 @@ Flex Columns Helpers - 100% Width @ 799px
         .fcls--2-base > *, .fcls--2-base-child > * > * {  flex: 0 0 calc(50% - var(--sp-base) ) !important; }
 
     }
-
 
 /*---------------------------------------------------------------------------
 Gap Helpers for CSS Gird & Flexbox
