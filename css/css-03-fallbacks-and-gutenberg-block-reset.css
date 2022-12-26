@@ -69,4 +69,6 @@ Gutenberg Block Resets
         .wp-block-latest-posts__featured-image img { max-height: 200px; }
     }
 :where(.wp-block-group.has-background) { padding: unset; }
+:where(.wp-block-columns.has-background) { padding: unset; }
 :where(.wp-block-columns.is-layout-flex), :where(.is-layout-flex) { gap: unset; }
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {  margin-left: unset; !important;  margin-right: unset; !important; }
