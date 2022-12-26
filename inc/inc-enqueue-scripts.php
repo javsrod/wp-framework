@@ -31,5 +31,5 @@ add_action( 'enqueue_block_editor_assets', 'tbc_editor_styles' );
 
 function tbc_editor_styles() {
     /* Enqueue theme CSS in the Editor only */
-    wp_enqueue_style(  'tbc-gb-editor-css', get_stylesheet_directory_uri() . '/css/style-editor5.css', [ 'wp-edit-blocks' ] );
+    wp_enqueue_style(  'tbc-gb-editor-css', get_stylesheet_directory_uri() . '/css/style-editor.css', [ 'wp-edit-blocks' ] );
 }
