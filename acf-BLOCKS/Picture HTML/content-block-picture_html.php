@@ -1,7 +1,7 @@
 <?php
 /**
  * Block: Picture HTML
- * template-parts/blocks/content-block-picture_html.php
+ * content-block-picture_html.php
  *
  * @package JJROD
  */
