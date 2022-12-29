@@ -40,9 +40,9 @@ Swiper Slider
 .swiper-button-next.swiper-button-disabled:after, .swiper-button-prev.swiper-button-disabled:after { color: var(--clr-3-dark-op); }
 
 /* Navigation Bullets */
-.swiper-pagination-bullet { width: 14px; height: 14px; border-radius: 100%; background: var(--clr-2); opacity: 1; }
+.swiper-pagination-bullet { width: var(--swiper-bullet-size); height: var(--swiper-bullet-size); border-radius: 100%; background: var(--clr-2); opacity: 1; }
 .swiper-pagination-bullet-active { opacity: 1; background: var(--clr-1); }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction { bottom: -10px;}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction { bottom: 0;}
 
 /* Navigation Scrollbar */
 .swiper-scrollbar { background: var(--clr-3-dark-op);     height: 7px; }
@@ -62,7 +62,8 @@ Swiper Slider
 
 /* Bottom Navigation */
 .swiper_bottom_nav { width:100%; position: relative; height: calc( var(--swiper-navigation-size) + 1rem ); margin-top: 1rem; display: flex; justify-content: center; flex-direction: column; }
-.swiper_bottom_nav.swiper_bottom_nav-no_arrows { height: calc( var(--swiper-bullet-size) + 0rem ); margin-top: 0.5rem; }
+.swiper_bottom_nav .swiper-pagination { position:relative; }
+.swiper_bottom_nav.swiper_bottom_nav-no_arrows { height: unset; margin-top: 0.5rem; }
 .swiper_bottom_nav-scrollbar { width: 80% ; display: block; margin: 0 auto; }
 .swiper_bottom_nav-scrollbar .swiper-scrollbar.swiper-scrollbar-horizontal { position:relative; }
     /* Large and up */
@@ -95,7 +96,7 @@ Swiper Slider
     }
 
 /* Swiper Outside Arrows. Do not place arrows in .swiper_bottom_nav container, Place Arrows right after .swiper-wrapper */
-.swiper-outside-arrows { padding: var(--sp-base); }
+.swiper-outside-arrows { padding: 0 var(--sp-base); }
 .swiper-outside-arrows  .swiper-button-prev { left: 0.7rem; }
 .swiper-outside-arrows .swiper-button-next { right: 0.7rem; }
 
