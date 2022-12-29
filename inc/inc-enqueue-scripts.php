@@ -19,7 +19,8 @@ function site_scripts() {
     wp_enqueue_script( 'main_js', get_template_directory_uri() . '/assets/scripts/main.js', array( 'jquery' ), filemtime(get_template_directory() . '/assets/scripts'), true );
        
     // Register main stylesheet
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    // wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), false);
 
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
