@@ -1,37 +1,94 @@
 <?php
-	
-// Adding WP Functions & Theme Support
+/**
+ * inc/theme-support.php
+ */
+
+
 function joints_theme_support() {
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
 
-	// Add WP Thumbnail Support
-	add_theme_support( 'post-thumbnails' );
-	
-	// Default thumbnail size
-	set_post_thumbnail_size(125, 125, true);
+	// Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-	// Add RSS Support
-	add_theme_support( 'automatic-feed-links' );
-	
-	// Add Support for WP Controlled Title Tag
-	add_theme_support( 'title-tag' );
-	
-	// Add HTML5 Support
-	add_theme_support( 'html5', 
-	         array( 
-	         	'comment-list', 
-	         	'comment-form', 
-	         	'search-form', 
-	         ) 
-	);
-	
-	add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 400,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-description' ),
-	) );
-	
+	/*
+     * Let WordPress manage the document title.
+     * By adding theme support, we declare that this theme does not use a
+     * hard-coded <title> tag in the document head, and expect WordPress to
+     * provide it for us.
+     */
+    add_theme_support( 'title-tag' );
+
+    /*
+     * Enable support for Post Thumbnails on posts and pages.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+     */
+    add_theme_support( 'post-thumbnails' );
+
+    /*
+     * Switch default core markup for search form, comment form, and comments
+     * to output valid HTML5.
+     */
+    add_theme_support( 'html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+    ) );
+
+
+    // Menus
+    add_theme_support( 'menus' );
+
+    // Default thumbnail size
+    set_post_thumbnail_size(125, 125, true);
+    add_image_size( 'gallery-thumb', 300, 450, true ); // 220 pixels wide by 180 pixels tall, soft proportional crop mode
+
+    // Add theme support for selective refresh for widgets.
+    add_theme_support( 'customize-selective-refresh-widgets' );
+
+    // Add support for responsive embeds.
+    add_theme_support( 'responsive-embeds' );
+
+    // Add support for custom background color and image
+    add_theme_support( "custom-background" );
+
+
+    /**
+     * Gutenberg Support
+     *
+     */
+
+    // Add support for core block visual styles.
+    add_theme_support( 'wp-block-styles' );
+
+    // Add support for editor styles
+    add_theme_support( 'editor-styles' );
+
+    // Add support for full and wide align images.
+    // add_theme_support( 'align-wide' );
+
+    // Remove Gutenberg layout Styles
+    add_theme_support( 'disable-layout-styles' );
+
+
+    /**
+    * Woocommerce Suport
+    *
+    */
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+
+
 	// Adding post format support
 	 add_theme_support( 'post-formats',
 		array(
@@ -45,46 +102,24 @@ function joints_theme_support() {
 			'audio',             // audio
 			'chat'               // chat transcript
 		)
-	); 
-	
-
-	// Add Support for Woocommerce
-	add_theme_support( 'woocommerce' );
-	//add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
-
+	);
 
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
-	$GLOBALS['content_width'] = apply_filters( 'joints_theme_support', 1200 );	
-	
-    // Page Exerpt
-    add_post_type_support( 'page', 'excerpt' );
+	$GLOBALS['content_width'] = apply_filters( 'joints_theme_support', 2560 );
 
 } /* end theme support */
-
 
 add_action( 'after_setup_theme', 'joints_theme_support' );
 
 
 
+/* ACF Image scrset max width */
+add_filter( 'max_srcset_image_width', 'awesome_acf_max_srcset_image_width', 10 , 2 );
 
-/**
- * Set max srcset image width to 1800px
- */
-function remove_max_srcset_image_width( $max_width ) {
-    $max_width = 2560;
-    return $max_width;
+// set the max image width
+function awesome_acf_max_srcset_image_width() {
+    return 2560;
 }
-add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
-
-// Posts
-
-    function wpt_excerpt_length( $length ) {
-        return 16;
-    }
-    add_filter( 'excerpt_length', 'wpt_excerpt_length', 999 );
-
 
 // CPT UI Tags Support
 function my_cptui_add_post_types_to_archives( $query ) {
