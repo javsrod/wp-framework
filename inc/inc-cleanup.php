@@ -96,8 +96,6 @@ function joints_get_the_author_posts_link() {
 	return $link;
 }
 
-
-
 /*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */
 function wps_deregister_styles() {
     wp_dequeue_style( 'global-styles' );
