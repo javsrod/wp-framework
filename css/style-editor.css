@@ -30,7 +30,7 @@
 .editor-styles-wrapper :where(.is-layout-flex) { gap: 0 !important; }
 
 /* GRID CONTAINER CLASSES - with Px widths for editor visual refference not related to actual theme sizing */
-.block-editor-page .edit-post-visual-editor .wp-block.gcw, .gcw-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-xl) !important; }
+.block-editor-page .edit-post-visual-editor .wp-block.gcw-xl, .gcw-xl-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-xl) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw, .gcw-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw-m, .gcw-m-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-m) !important; }
 .block-editor-page .edit-post-visual-editor .wp-block.gcw-s, .gcw-s-child > :first-child { margin: 0 auto !important;  width: 100%; max-width: var(--gcw-max-s) !important; }
