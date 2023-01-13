@@ -1,17 +1,50 @@
 <?php
-// Widget Areas
-function wpt_create_widget( $name, $id, $description ) {
+// SIDEBARS AND WIDGETIZED AREAS
+function joints_register_sidebars() {
+	register_sidebar(array(
+		'id' => 'sidebar-1',
+		'name' => __('Default Sidebar', 'jointswp'),
+		'description' => __('The Default sidebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-    register_sidebar(array(
-        'name' => __( $name ),   
-        'id' => $id, 
-        'description' => __( $description ),
-        'before_widget' => '<div class="widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4 class="module-heading">',
-        'after_title' => '</h4>'
-    ));
+	register_sidebar(array(
+		'id' => 'sidebar-legal',
+		'name' => __('Legal Sidebar', 'jointswp'),
+		'description' => __('Legal sidebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-}
+	/*
+	to add more sidebars or widgetized areas, just copy
+	and edit the above sidebar code. In order to call
+	your new sidebar just use the following code:
 
-wpt_create_widget( 'Default Sidebar', '', 'Displays on the side of pages with a sidebar' );
+	Just change the name to whatever your new
+	sidebar's id is, for example:
+
+	register_sidebar(array(
+		'id' => 'sidebar2',
+		'name' => __('Sidebar 2', 'jointswp'),
+		'description' => __('The second (secondary) sidebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	To call the sidebar in your template, you can just copy
+	the sidebar.php file and rename it to your sidebar's name.
+	So using the above example, it would be:
+	sidebar-sidebar2.php
+
+	*/
+} /* end register sidebars */
+
+add_action( 'widgets_init', 'joints_register_sidebars' );
