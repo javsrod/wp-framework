@@ -51,52 +51,61 @@ CSS Grid Helpers - GRID 1fr @ 799px
 ---------------------------------------------------------------------------*/
 
 /* Rplacing Gutenberg Columns Flex to grid & GSS Auto Grid */
-.wp-block-columns, .gssauto, .gssautowpbg > .wp-block-group__inner-container { display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;  margin-bottom: 0; }
-.wp-block-column:not(:first-child) { margin-left: 0em !important; }
+.wp-block-columns, .gssauto, .gssauto-child > * { display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;  margin-bottom: 0; }
+.wp-block-column:not(:first-child) { margin-left: 0em; }
 
     @media screen and (min-width: 800px) {
-        .wp-block-columns, .gssauto, .wp-block-group.gss--autowpbg  > .wp-block-group__inner-container { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
+        .wp-block-columns, .gssauto, .gssauto-child > * { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column;  margin-bottom: 0; }
     }
 
-/*GSS Grid*/
-*[class*="gss--"], *[class*="gss--"] > .wp-block-group__inner-container  {  display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
+/* GSS Grid 1fr @ 799px
+-----------------------------------------------*/
+*[class*="gss--"], *[class*="gsschild--"] > *  {  display: grid !important; grid-auto-columns: 1fr; grid-auto-flow: row;}
 
     @media screen and (min-width: 800px) {
 
         /* Auto Fit Grids */
-        .gss--1-auto { grid-template-columns: 1fr auto; }
-        .gss--auto-1 { grid-template-columns: auto 1fr; }
+        .gss--1-auto, .gsschild----1-auto > * { display: grid !important;grid-template-columns: 1fr auto; }
+        .gss--auto-1, .gsschild--auto-1 > * { grid-template-columns: auto 1fr; }
+
         /* repeat grids */
-        .gss--r-2,      .gss--r-2wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr) ; }
-        .gss--r-3,      .gss--r-3wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr) ; }
-        .gss--r-4,      .gss--r-4wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr) ; }
-        .gss--r-5,      .gss--r-5wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr) ; }
-        .gss--r-6,      .gss--r-6wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr) ; }
-        .gss--r-12,     .gss--r-12wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr) ; }
+        .gss--r-2,      .gsschild--r-2 > * { grid-template-columns: repeat(2, 1fr) ; }
+        .gss--r-3,      .gsschild--r-3 > * { grid-template-columns: repeat(3, 1fr) ; }
+        .gss--r-4,      .gsschild--r-4 > * { grid-template-columns: repeat(4, 1fr) ; }
+        .gss--r-5,      .gsschild--r-5 > * { grid-template-columns: repeat(5, 1fr) ; }
+        .gss--r-6,      .gsschild--r-6 > * { grid-template-columns: repeat(6, 1fr) ; }
+        .gss--r-12,     .gsschild--r-12 > * { grid-template-columns: repeat(12, 1fr) ; }
+
         /* Set grid - Thirds */
-        .gss--1-2,      .gss--1-2wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr ; }
-        .gss--2-1,      .gss--2-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr ; }
+        .gss--1-2,      .gsschild--1-2 > *     { grid-template-columns: 1fr 2fr ; }
+        .gss--2-1,      .gsschild--2-1 > *     { grid-template-columns: 2fr 1fr ; }
+
         /* Set grid - Fourths */
-        .gss--1-3,      .gss--1-3wpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr ; }
-        .gss--3-1,      .gss--3-1wpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr ; }
-        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr ; }
-        .gss--1-2-1,    .gss--1-2-1wpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr ; }
-        .gss--1-1-2,    .gss--1-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr ; }
-        .gss--2-1-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr ; }
+        .gss--1-3,      .gsschild--1-3 > *    { grid-template-columns: 1fr 3fr ; }
+        .gss--3-1,      .gsschild--3-1 > *    { grid-template-columns: 3fr 1fr ; }
+
+        .gss--2-1-1,    .gsschild--2-1-1 > *  { grid-template-columns: 2fr 1fr 1fr ; }
+        .gss--1-2-1,    .gsschild--1-2-1 > *  { grid-template-columns: 1fr 2fr 1fr ; }
+        .gss--1-1-2,    .gsschild--1-1-2 > *  { grid-template-columns: 1fr 1fr 2fr ; }
+
         /* Set grid - Fifths */
-        .gss--1-4,      .gss--1-4wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr ; }
-        .gss--4-1,      .gss--4-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr ; }
-        .gss--1-1-3,    .gss--1-1-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr ; }
-        .gss--1-3-1,    .gss--1-3-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr ; }
-        .gss--3-1-1,    .gss--3-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr ; }
-        .gss--2-2-1,    .gss--2-1-1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr ; }
-        .gss--2-1-2,    .gss--2-1-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr ; }
-        .gss--1-2-2,    .gss--1-2-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr ; }
-        .gss--2-3,      .gss--2-3wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr ; }
-        .gss--3-2,      .gss--3-2wpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr ; }
+        .gss--1-4,      .gsschild--1-4 > *  { grid-template-columns: 1fr 4fr ; }
+        .gss--4-1,      .gsschild--4-1 > *  { grid-template-columns: 4fr 1fr ; }
+
+        .gss--2-3,      .gsschild--2-3 > *  { grid-template-columns: 2fr 3fr ; }
+        .gss--3-2,      .gsschild--3-2 > *  { grid-template-columns: 3fr 2fr ; }
+
+        .gss--1-2-2,    .gsschild--1-2-2 > *  { grid-template-columns: 1fr 2fr 2fr ; }
+        .gss--2-1-2,    .gsschild--2-1-2 > *  { grid-template-columns: 2fr 1fr 2fr ; }
+        .gss--2-2-1,    .gsschild--2-2-1 > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+        .gss--3-1-1,    .gsschild--3-1-1 > *  { grid-template-columns: 3fr 1fr 1fr ; }
+        .gss--1-3-1,    .gsschild--1-3-1 > *  { grid-template-columns: 1fr 3fr 1fr ; }
+        .gss--1-1-3,    .gsschild--1-1-3 > *  { grid-template-columns: 1fr 1fr 3fr ; }
+
         /* Set grid - Sixths */
-        .gss--1-5,      .gss--1-5wpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr ; }
-        .gss--5-1,      .gss--5-1wpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr ; }
+        .gss--1-5,      .gsschild--1-5 > *     { grid-template-columns: 1fr 5fr ; }
+        .gss--5-1,      .gsschild--5-1 > *     { grid-template-columns: 5fr 1fr ; }
 
         /* Grid Column Order i.e. Source Ordering */
         .gsc--order-0 { order: 0; }
@@ -105,14 +114,19 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gsc--order-3 { order: 3; }
 
         /* Grid Column Over i.e. Overlap/Pull */
-        .gsc--over-r { position: relative; z-index: 10; margin-right: calc(-1 * var(--sp-base)); }
-        .gsc--over-l { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); }
-        .gsc--over-lr { position: relative; z-index: 10; margin-left:  calc(-1 * var(--sp-base)); margin-right: calc(-2 * var(--sp-base)); }
-        .gsc--over-t { position: relative; margin-top:  calc(-2 * var(--sp-base)); }
+        .gsc--over-r { position: relative; z-index: 10; margin-right:   calc(-1 * var(--sp-base)) !important; }
+        .gsc--over-l { position: relative; z-index: 10; margin-left:    calc(-1 * var(--sp-base)) !important; }
+        .gsc--over-h { position: relative; z-index: 10; margin-left:    calc(-1 * var(--sp-base)) !important; margin-right: calc(-1 * var(--sp-base)) !important; }
+        .gsc--over-t { position: relative; z-index: 10; margin-top:     calc(-1 * var(--sp-base)) !important; }
+        .gsc--over-b { position: relative; z-index: 10; margin-bottom:  calc(-1 * var(--sp-base)) !important; }
+        .gsc--over-v { position: relative; z-index: 10; margin-top:     calc(-1 * var(--sp-base)) !important; margin-bottom: calc(-1 * var(--sp-base)) !important; }
+
+
         /* Grid Column Push */
         .gsc--push-r { margin-right: calc(1 * var(--sp-base)); }
         .gsc--push-l  { margin-left: calc(1 * var(--sp-base)); }
-        /*Grid Column Span*/
+
+        /* Grid Column Span */
         .gsc--span-0 { grid-column: 1 / -1; }
         .gsc--span-2 { grid-column: auto / span 2; }
         .gsc--span-3 { grid-column: auto / span 3; }
@@ -126,82 +140,101 @@ CSS Grid Helpers - GRID 1fr @ 799px
         .gsc--span-11 { grid-column: auto / span 11; }
     }
 
+/* GSS Grid All
+-----------------------------------------------*/
+
 /* Auto Fit Grids */
-.gss--1-auto-all { grid-template-columns: 1fr auto; }
-.gss--auto-1-all { grid-template-columns: auto 1fr; }
+.gss--1-auto-all, .gsschild--1-auto-all > * { grid-template-columns: 1fr auto; }
+.gss--auto-1-all, .gsschild--auto-1-all > * { grid-template-columns: auto 1fr; }
+
 /* repeat grids */
-.gss--r-2-all,      .gss--r-2-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr); }
-.gss--r-3-all,      .gss--r-3-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr); }
-.gss--r-4-all,      .gss--r-4-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr); }
-.gss--r-5-all,      .gss--r-5-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr); }
-.gss--r-6-all,      .gss--r-6-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr); }
-.gss--r-12-all,     .gss--r-12-allwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr); }
+.gss--r-2-all,      .gsschild--r-2-all > * { grid-template-columns: repeat(2, 1fr) ; }
+.gss--r-3-all,      .gsschild--r-3-all > * { grid-template-columns: repeat(3, 1fr) ; }
+.gss--r-4-all,      .gsschild--r-4-all > * { grid-template-columns: repeat(4, 1fr) ; }
+.gss--r-5-all,      .gsschild--r-5-all > * { grid-template-columns: repeat(5, 1fr) ; }
+.gss--r-6-all,      .gsschild--r-6-all > * { grid-template-columns: repeat(6, 1fr) ; }
+.gss--r-12-all,     .gsschild--r-12-all > * { grid-template-columns: repeat(12, 1fr) ; }
+
 /* Set grid - Thirds */
-.gss--1-2-all,      .gss--1-2-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr; }
-.gss--2-1-all,      .gss--2-1-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr; }
+.gss--1-2-all,      .gsschild--1-2-all > *     { grid-template-columns: 1fr 2fr ; }
+.gss--2-1-all,      .gsschild--2-1-all > *     { grid-template-columns: 2fr 1fr ; }
+
 /* Set grid - Fourths */
-.gss--1-3-all,      .gss--1-3-allwpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr; }
-.gss--3-1-all,      .gss--3-1-allwpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr; }
-.gss--2-1-1-all,    .gss--2-1-1-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
-.gss--1-2-1-all,    .gss--1-2-1-allwpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr; }
-.gss--1-1-2-all,    .gss--1-1-2-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr; }
-.gss--2-1-1-all,    .gss--2-1-1-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
+.gss--1-3-all,      .gsschild--1-3-all > *    { grid-template-columns: 1fr 3fr ; }
+.gss--3-1-all,      .gsschild--3-1-all > *    { grid-template-columns: 3fr 1fr ; }
+
+.gss--2-1-1-all,    .gsschild--2-1-1-all > *  { grid-template-columns: 2fr 1fr 1fr ; }
+.gss--1-2-1-all,    .gsschild--1-2-1-all > *  { grid-template-columns: 1fr 2fr 1fr ; }
+.gss--1-1-2-all,    .gsschild--1-1-2-all > *  { grid-template-columns: 1fr 1fr 2fr ; }
+
 /* Set grid - Fifths */
-.gss--1-4-all,      .gss--1-4-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr; }
-.gss--4-1-all,      .gss--4-1-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr; }
-.gss--1-1-3-all,    .gss--1-1-3-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr; }
-.gss--1-3-1-all,    .gss--1-3-1-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr; }
-.gss--3-1-1-all,    .gss--3-1-1-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr; }
-.gss--2-2-1-all,    .gss--2-1--all1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr; }
-.gss--2-1-2-all,    .gss--2-1-2-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr; }
-.gss--1-2-2-all,    .gss--1-2-2-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr; }
-.gss--2-3-all,      .gss--2-3-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr; }
-.gss--3-2-all,      .gss--3-2-allwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr; }
+.gss--1-4-all,      .gsschild--1-4-all > *  { grid-template-columns: 1fr 4fr ; }
+.gss--4-1-all,      .gsschild--4-1-all > *  { grid-template-columns: 4fr 1fr ; }
+
+.gss--2-3-all,      .gsschild--2-3-all > *  { grid-template-columns: 2fr 3fr ; }
+.gss--3-2-all,      .gsschild--3-2-all > *  { grid-template-columns: 3fr 2fr ; }
+
+.gss--1-2-2-all,    .gsschild--1-2-2-all > *  { grid-template-columns: 1fr 2fr 2fr ; }
+.gss--2-1-2-all,    .gsschild--2-1-2-all > *  { grid-template-columns: 2fr 1fr 2fr ; }
+.gss--2-2-1-all,    .gsschild--2-2-1-all > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+.gss--3-1-1-all,    .gsschild--3-1-1-all > *  { grid-template-columns: 3fr 1fr 1fr ; }
+.gss--1-3-1-all,    .gsschild--1-3-1-all > *  { grid-template-columns: 1fr 3fr 1fr ; }
+.gss--1-1-3-all,    .gsschild--1-1-3-all > *  { grid-template-columns: 1fr 1fr 3fr ; }
+
 /* Set grid - Sixths */
-.gss--1-5-all,      .gss--1-5-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr; }
-.gss--5-1-all,      .gss--5-1-allwpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr; }
-
-.gss--r-20,     .gss--r-20wpbg > .wp-block-group__inner-container { grid-template-columns: repeat(20, 1fr) !important; }
+.gss--1-5-all,      .gsschild--1-5-all > *     { grid-template-columns: 1fr 5fr ; }
+.gss--5-1-all,      .gsschild--5-1-all > *     { grid-template-columns: 5fr 1fr ; }
 
 
- @media screen and (max-width: 799px) {
+/* GSS Grid Small
+-----------------------------------------------*/
+@media screen and (max-width: 799px) {
 
     /* Auto Fit Grids */
-    .gss--1-auto-small { grid-template-columns: 1fr auto; }
-    .gss--auto-1-small { grid-template-columns: auto 1fr; }
-    /* repeat grids */
-    .gss--r-2-small,      .gss--r-2-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(2, 1fr); }
-    .gss--r-3-small,      .gss--r-3-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(3, 1fr); }
-    .gss--r-4-small,      .gss--r-4-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(4, 1fr); }
-    .gss--r-5-small,      .gss--r-5-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(5, 1fr); }
-    .gss--r-6-small,      .gss--r-6-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(6, 1fr); }
-    .gss--r-12-small,     .gss--r-12-smallwpbg > .wp-block-group__inner-container { grid-template-columns: repeat(12, 1fr); }
-    /* Set grid - Thirds */
-    .gss--1-2-small,      .gss--1-2-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 2fr; }
-    .gss--2-1-small,      .gss--2-1-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 2fr 1fr; }
-    /* Set grid - Fourths */
-    .gss--1-3-small,      .gss--1-3-smallwpbg > .wp-block-group__inner-container    { grid-template-columns: 1fr 3fr; }
-    .gss--3-1-small,      .gss--3-1-smallwpbg > .wp-block-group__inner-container    { grid-template-columns: 3fr 1fr; }
-    .gss--2-1-1-small,    .gss--2-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
-    .gss--1-2-1-small,    .gss--1-2-1-smallwpbg > .wp-block-group__inner-container   { grid-template-columns: 1fr 2fr 1fr; }
-    .gss--1-1-2-small,    .gss--1-1-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 2fr; }
-    .gss--2-1-1-small,    .gss--2-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 1fr; }
-    /* Set grid - Fifths */
-    .gss--1-4-small,      .gss--1-4-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 4fr; }
-    .gss--4-1-small,      .gss--4-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 4fr 1fr; }
-    .gss--1-1-3-small,    .gss--1-1-3-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 1fr 3fr; }
-    .gss--1-3-1-small,    .gss--1-3-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 3fr 1fr; }
-    .gss--3-1-1-small,    .gss--3-1-1-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 1fr 1fr; }
-    .gss--2-2-1-small,    .gss--2-1--small1wpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 2fr 1fr; }
-    .gss--2-1-2-small,    .gss--2-1-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 1fr 2fr; }
-    .gss--1-2-2-small,    .gss--1-2-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 1fr 2fr 2fr; }
-    .gss--2-3-small,      .gss--2-3-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 2fr 3fr; }
-    .gss--3-2-small,      .gss--3-2-smallwpbg > .wp-block-group__inner-container  { grid-template-columns: 3fr 2fr; }
-    /* Set grid - Sixths */
-    .gss--1-5-small,      .gss--1-5-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 1fr 5fr; }
-    .gss--5-1-small,      .gss--5-1-smallwpbg > .wp-block-group__inner-container     { grid-template-columns: 5fr 1fr; }
+    .gss--1-auto-small, .gsschild--1-auto-small > * { grid-template-columns: 1fr auto; }
+    .gss--auto-1-small, .gsschild--auto-1-small > * { grid-template-columns: auto 1fr; }
 
- }
+    /* repeat grids */
+    .gss--r-2-small,      .gsschild--r-2-small > * { grid-template-columns: repeat(2, 1fr) ; }
+    .gss--r-3-small,      .gsschild--r-3-small > * { grid-template-columns: repeat(3, 1fr) ; }
+    .gss--r-4-small,      .gsschild--r-4-small > * { grid-template-columns: repeat(4, 1fr) ; }
+    .gss--r-5-small,      .gsschild--r-5-small > * { grid-template-columns: repeat(5, 1fr) ; }
+    .gss--r-6-small,      .gsschild--r-6-small > * { grid-template-columns: repeat(6, 1fr) ; }
+    .gss--r-12-small,     .gsschild--r-12-small > * { grid-template-columns: repeat(12, 1fr) ; }
+
+    /* Set grid - Thirds */
+    .gss--1-2-small,      .gsschild--1-2-small > *     { grid-template-columns: 1fr 2fr ; }
+    .gss--2-1-small,      .gsschild--2-1-small > *     { grid-template-columns: 2fr 1fr ; }
+
+    /* Set grid - Fourths */
+    .gss--1-3-small,      .gsschild--1-3-small > *    { grid-template-columns: 1fr 3fr ; }
+    .gss--3-1-small,      .gsschild--3-1-small > *    { grid-template-columns: 3fr 1fr ; }
+
+    .gss--2-1-1-small,    .gsschild--2-1-1-small > *  { grid-template-columns: 2fr 1fr 1fr ; }
+    .gss--1-2-1-small,    .gsschild--1-2-1-small > *  { grid-template-columns: 1fr 2fr 1fr ; }
+    .gss--1-1-2-small,    .gsschild--1-1-2-small > *  { grid-template-columns: 1fr 1fr 2fr ; }
+
+    /* Set grid - Fifths */
+    .gss--1-4-small,      .gsschild--1-4-small > *  { grid-template-columns: 1fr 4fr ; }
+    .gss--4-1-small,      .gsschild--4-1-small > *  { grid-template-columns: 4fr 1fr ; }
+
+    .gss--2-3-small,      .gsschild--2-3-small > *  { grid-template-columns: 2fr 3fr ; }
+    .gss--3-2-small,      .gsschild--3-2-small > *  { grid-template-columns: 3fr 2fr ; }
+
+    .gss--1-2-2-small,    .gsschild--1-2-2-small > *  { grid-template-columns: 1fr 2fr 2fr ; }
+    .gss--2-1-2-small,    .gsschild--2-1-2-small > *  { grid-template-columns: 2fr 1fr 2fr ; }
+    .gss--2-2-1-small,    .gsschild--2-2-1-small > *  { grid-template-columns: 2fr 2fr 1fr ; }
+
+    .gss--3-1-1-small,    .gsschild--3-1-1-small > *  { grid-template-columns: 3fr 1fr 1fr ; }
+    .gss--1-3-1-small,    .gsschild--1-3-1-small > *  { grid-template-columns: 1fr 3fr 1fr ; }
+    .gss--1-1-3-small,    .gsschild--1-1-3-small > *  { grid-template-columns: 1fr 1fr 3fr ; }
+
+    /* Set grid - Sixths */
+    .gss--1-5-small,      .gsschild--1-5-small > *     { grid-template-columns: 1fr 5fr ; }
+    .gss--5-1-small,      .gsschild--5-1-small > *     { grid-template-columns: 5fr 1fr ; }
+
+}
 
 /* Grid Gap */
 .grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim) !important; }
