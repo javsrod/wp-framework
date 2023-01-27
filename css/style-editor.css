@@ -236,11 +236,6 @@ CSS Grid Helpers - GRID 1fr @ 799px
 
 }
 
-/* Grid Gap */
-.grid-gap-rim,  .grid-gap-rimwpbg  > .wp-block-group__inner-container   { grid-gap: var(--sp-rim) !important; }
-.grid-gap,      .grid-gapwpbg      > .wp-block-group__inner-container   { grid-gap: var(--sp-base) !important; } 
-.grid-gap-feat, .grid-gap-featwpbg > .wp-block-group__inner-container   { grid-gap: var(--sp-feat) !important; }
-
 /*---------------------------------------------------------------------------
 Flex Columns Helpers - 100% Width @ 799px
 ---------------------------------------------------------------------------*/
@@ -284,3 +279,18 @@ Flex Columns Helpers - 100% Width @ 799px
         .fcls--3-base > * {  flex: 0 0 calc(33.333333% - var(--sp-base)) !important; }
         .fcls--2-base > * {  flex: 0 0 calc(50% - var(--sp-base)) !important; }
     }
+
+/*---------------------------------------------------------------------------
+Gap Helpers for CSS Gird & Flexbox
+---------------------------------------------------------------------------*/
+.grid-gap-rim,  .grid-gap-rim-child  > *   { gap: var(--sp-rim) !important; }
+.grid-gap,      .grid-gap-child      > *   { gap: var(--sp-base) !important; }
+.grid-gap-feat, .grid-gap-feat-child > *   { gap: var(--sp-feat) !important; }
+
+.row-gap-rim,  .row-gap-rim-child  > *   { row-gap: var(--sp-rim) !important; }
+.row-gap,      .row-gap-child      > *   { row-gap: var(--sp-base) !important; }
+.row-gap-feat, .row-gap-feat-child > *   { row-gap: var(--sp-feat) !important; }
+
+.col-gap-rim,  .col-gap-rim-child  > *   { column-gap: var(--sp-rim) !important; }
+.col-gap,      .col-gap-child      > *   { column-gap: var(--sp-base) !important; }
+.col-gap-feat, .col-gap-feat-child > *   { column-gap: var(--sp-feat) !important; }
