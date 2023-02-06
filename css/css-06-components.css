@@ -141,8 +141,12 @@ header.masthead .utility-masthead { display: none; }
 
 /* Modal Colors
 -----------------------------------------------*/
-.fullscrnmodal.modal_light { background-color: rgb(255,255,255); background-color: rgba(255,255,255,0.9); }
-.fullscrnmodal.modal_dark { background-color: rgb(0,15,30); background-color: rgba(0,15,30,0.9);}
+.fullscrnmodal.modal_light { background-color: rgb(255,255,255); }
+.fullscrnmodal.modal_dark { background-color: rgb(0,15,30); }
+    @media screen and (min-width: 1024px) {
+        .fullscrnmodal.modal_light { background-color: rgba(255,255,255,0.9); }
+        .fullscrnmodal.modal_dark { background-color: rgba(0,15,30,0.9);}
+    }
 .modal_light .modal_close_btn svg { color: var(--clr-1); }
 .modal_light .modal_close_btn svg:hover, .modal_light .modal_close_btn svg:focus { color: var(--clr-1);}
 .modal_dark .modal_close_btn svg { color: var(--clr-2); }
