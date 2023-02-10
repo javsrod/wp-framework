@@ -78,6 +78,7 @@
 
     /* Mobile Large */
     @media screen and (min-width: 570px) and (max-width: 799px) {}
+
     /* Tablet */
     @media screen and (min-width: 800px) and (max-width: 1023px) {}
 
