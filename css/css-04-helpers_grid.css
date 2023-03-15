@@ -51,6 +51,67 @@ General Helpers
 ol.no-bullet, ul.no-bullet { margin-left:0; list-style:none; }
 
 /*---------------------------------------------------------------------------
+Accessibility Helpers
+---------------------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text, .srt, .hidden_visually { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
+/* Hider */
+.screen-reader-text:focus, .srt:focus,  .hidden_visually:focus 
+    { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; clip-path: none; color: #21759b; 
+    display: block; font-size: 0.875rem; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000;}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus { outline: 0; }
+
+
+/*---------------------------------------------------------------------------
+Menu Helpers
+---------------------------------------------------------------------------*/
+
+.menu { padding: 0; margin: 0; list-style: none; position: relative; display: flex; flex-wrap: wrap; }
+.menu, .menu.horizontal { flex-wrap: wrap; flex-direction: row; }
+.align-right { justify-content: flex-end; }
+.align-center { justify-content: center; }
+.menu.expanded li { flex: 1 1 0px; }
+.menu a, .menu .button { line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
+.menu.vertical { flex-wrap: nowrap; flex-direction: column; }
+
+/*---------------------------------------------------------------------------
+Form Layout Helpers
+---------------------------------------------------------------------------*/
+
+.form_wrap { padding: var(--sp-base); background-color: var(--clr-white) !important; box-shadow: var(--shadowbox-btn); }
+.form-control { display: grid; grid-template-columns: repeat(12, 1fr); grid-gap: 20px; }
+.form-control p , .form-control [data-class="wpcf7cf_group"] { grid-column: 1 / -1; margin: 0; }
+.form-control p input[type="submit"] { margin-bottom: 0; }
+.form-control p.half { grid-column: auto / span 6; }
+.form-control p.third { grid-column: auto / span 4; }
+.form-control p.fourth { grid-column: auto / span 3; }
+.form-control p.three_fourth { grid-column: auto / span 9; }
+    /* Mobile Break */
+    @media screen and (max-width: 700px) {
+        .form-control { grid-gap: 10px; }
+        .form-control p.half, .form-control p.third, .form-control p.fourth, .form-control p.three_fourth { grid-column: 1 / -1; }
+    }  
+
+/*---------------------------------------------------------------------------
+Icon Helper Classes
+---------------------------------------------------------------------------*/
+
+/* Navicons
+-----------------------------------------------*/  
+.navicon { display:flex !important; flex-direction: column; align-items: center; justify-content: center; height: 100%;background: transparent; border: none; display: block; margin: 0; padding: 0; transition: 0.3s;  line-height: 1; font-size: 1rem; color: var(--clr-2); text-decoration: none; }
+.navicon:hover,.navicon:focus { background: none !important;  opacity: .3; }
+.navicon svg { color: var(--clr-1); }
+.navicon:hover svg,.navicon:focus svg  {  }
+
+/* Social Icons
+-----------------------------------------------*/  
+ul.sicons { margin: 0; }
+ul.sicons li { list-style: none; }
+
+/*---------------------------------------------------------------------------
 Spacing Helpers
 ---------------------------------------------------------------------------*/
 
@@ -114,7 +175,7 @@ Padding & Margin Helpers
 .pull-top-feat2 { position: relative; margin-top: calc(var(--sp-feat) * -2); z-index: 1; }
 
 /*---------------------------------------------------------------------------
-Absolute Positioning Helpers
+Absolute Positioning Helpers (Make these their own file)
 ---------------------------------------------------------------------------*/
 
 :root {
@@ -259,7 +320,7 @@ Absolute Positioning Helpers
     *[class*="abs--l"].abspo > :first-child { margin-left: calc( var(--abs_pull_factor) * -1 ); }
     
 /*---------------------------------------------------------------------------
-CSS Grid Helpers - GRID 1fr @ 799px
+CSS Grid Helpers - GRID 1fr @ 799px (Serperate CSS & Flex Grids to own file)
 ---------------------------------------------------------------------------*/
 
 /* Rplacing Gutenberg Columns Flex to grid & GSS Auto Grid */
@@ -518,53 +579,15 @@ Gap Helpers for CSS Gird & Flexbox
 .col-gap,      .col-gap-child      > *   { column-gap: var(--sp-base) !important; } 
 .col-gap-feat, .col-gap-feat-child > *   { column-gap: var(--sp-feat) !important; }
 
-/*---------------------------------------------------------------------------
-Menu Helpers
----------------------------------------------------------------------------*/
 
-.menu { padding: 0; margin: 0; list-style: none; position: relative; display: flex; flex-wrap: wrap; }
-.menu, .menu.horizontal { flex-wrap: wrap; flex-direction: row; }
-.align-right { justify-content: flex-end; }
-.align-center { justify-content: center; }
-.menu.expanded li { flex: 1 1 0px; }
-.menu a, .menu .button { line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
-.menu.vertical { flex-wrap: nowrap; flex-direction: column; }
+
 
 /*---------------------------------------------------------------------------
-Form Layout Helpers
+Move Bellow out for future
 ---------------------------------------------------------------------------*/
 
-.form_wrap { padding: var(--sp-base); background-color: var(--clr-white) !important; box-shadow: var(--shadowbox-btn); }
-.form-control { display: grid; grid-template-columns: repeat(12, 1fr); grid-gap: 20px; }
-.form-control p , .form-control [data-class="wpcf7cf_group"] { grid-column: 1 / -1; margin: 0; }
-.form-control p input[type="submit"] { margin-bottom: 0; }
-.form-control p.half { grid-column: auto / span 6; }
-.form-control p.third { grid-column: auto / span 4; }
-.form-control p.fourth { grid-column: auto / span 3; }
-.form-control p.three_fourth { grid-column: auto / span 9; }
-    /* Mobile Break */
-    @media screen and (max-width: 700px) {
-        .form-control { grid-gap: 10px; }
-        .form-control p.half, .form-control p.third, .form-control p.fourth, .form-control p.three_fourth { grid-column: 1 / -1; }
-    }  
 
-/*---------------------------------------------------------------------------
-Icon Helper Classes
----------------------------------------------------------------------------*/
-
-/* Navicons
------------------------------------------------*/  
-.navicon { display:flex !important; flex-direction: column; align-items: center; justify-content: center; height: 100%;background: transparent; border: none; display: block; margin: 0; padding: 0; transition: 0.3s;  line-height: 1; font-size: 1rem; color: var(--clr-2); text-decoration: none; }
-.navicon:hover,.navicon:focus { background: none !important;  opacity: .3; }
-.navicon svg { color: var(--clr-1); }
-.navicon:hover svg,.navicon:focus svg  {  }
-
-/* Social Icons
------------------------------------------------*/  
-ul.sicons { margin: 0; }
-ul.sicons li { list-style: none; }
-
-/* Icon Lists Grids
+/* Icon Lists Grids (Move to Comomponents since these do change drastically in sizing depending on theme)
 -----------------------------------------------*/   
 :root { 
     --icon_list_icon_small_size: 1rem + .25rem ;
@@ -603,17 +626,3 @@ ul.sicons li { list-style: none; }
     @media screen and (max-width: 700px) {
         .icon_list_grid-heading-link .icon_list_grid-heading-heading { display:grid ;grid-template-columns: 1fr auto; grid-gap: var(--sp-rim); }
     }
-
-/*---------------------------------------------------------------------------
-Accessibility Helpers
----------------------------------------------------------------------------*/
-
-/* Text meant only for screen readers. */
-.screen-reader-text, .srt, .hidden_visually { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; }
-/* Hider */
-.screen-reader-text:focus, .srt:focus,  .hidden_visually:focus 
-    { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; clip-path: none; color: #21759b; 
-    display: block; font-size: 0.875rem; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000;}
-
-/* Do not show the outline on the skip link target. */
-#primary[tabindex="-1"]:focus { outline: 0; }
