@@ -3,16 +3,16 @@
  * Block: Swiper Block Slide
  *
  * @package JJROD
+ * 
  */
 ?>
 
 <!-- ***************************** -->
 <!-- Slide -->
 <!-- ***************************** -->
-<div class="swiper-slide">
+<div class="swiper-slide img-cover picture-cover relavite" >
 
-    <?php if( get_field('swiper_slide_pic_alt') ): ?><h1 class="hidden_visually"><?php the_field('swiper_slide_pic_alt'); ?></h1><?php endif; ?>
-
+    <!-- Slide Link -->
     <?php 
     $link = get_field('swiper_slide_link');
     if( $link ): 
@@ -22,23 +22,44 @@
         ?>
         <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><div class="slide-link"></div></a>
     <?php endif; ?>
+    <!-- END Slide Link -->
 
-
+    <!-- Slide Image -->
     <?php if( get_field('swiper_slide_pic_desktop') ): ?>
         <picture>
 
+            <?php if( get_field('swiper_slide_pic_mobile') ): ?>
             <source
                 media="(max-width: 800px)"
-                <?php if( get_field('swiper_slide_pic_mobile') ): ?><?php awesome_acf_responsive_image(get_field( 'swiper_slide_pic_mobile' ),'full','1000px'); ?><?php endif; ?>
+                src="<?php echo wp_get_attachment_image_url( get_field( 'swiper_slide_pic_mobile' ), 'full' ); ?>"
+                srcset="<?php echo wp_get_attachment_image_srcset( get_field( 'swiper_slide_pic_mobile' ), 'full' ); ?>"
+                sizes="(max-width: 1000px) 100vw, 1000px"
             >
+            <?php endif; ?>
 
             <source
-                <?php awesome_acf_responsive_image(get_field( 'swiper_slide_pic_desktop' ),'full','2560px'); ?>
+              src="<?php echo wp_get_attachment_image_url( get_field( 'swiper_slide_pic_desktop' ), 'full' ); ?>"
+              srcset="<?php echo wp_get_attachment_image_srcset( get_field( 'swiper_slide_pic_desktop' ), 'full' ); ?>"
+              sizes="(max-width: 2560px) 100vw, 2560px"
             >
 
-            <img src="<?php awesome_acf_responsive_image(get_field( 'swiper_slide_pic_desktop' ),'',''); ?>" alt="<?php if( get_field('swiper_slide_pic_alt') ): ?><?php the_field('swiper_slide_pic_alt'); ?><?php endif; ?>">
+            <img src="<?php echo wp_get_attachment_image_url( get_field( 'swiper_slide_pic_desktop' ), 'full' ); ?>" alt="<?php echo get_post_meta(get_field( 'swiper_slide_pic_desktop' ) , '_wp_attachment_image_alt', true); ?>">
         </picture>
-    <?php endif; ?>        
+    <?php endif; ?>
+    <!-- END Slide Image -->
 
+    <!-- Slide Content -->
+    <div class="box-over flex-vert">
+
+          <div class="slide-content-wrapper">
+
+                <div class="slide-content-wrapper-inner"> <InnerBlocks />
+
+                </div><!-- slide-content-wrapper-inner -->
+
+          </div><!-- slide-content-wrappe -->
+
+    </div><!-- box-over -->
+    <!-- ENDSlide Content -->
+ 
 </div><!-- swiper-slide -->
-
