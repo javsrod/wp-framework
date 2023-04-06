@@ -157,11 +157,9 @@ header.masthead .utility-masthead { display: none; }
 ---------------------------------------------------------------------------*/
 
 .main_search_form { text-align: center; }
-.main_search_form form label { font-weight: 700; color: var(--clr-3); font-size: 2em; }
+.main_search_form form label { font-weight: 700; color: var(--clr-2); font-size: 2em; text-transform: unset; letter-spacing: unset; display: flex; justify-content: center; gap: 1rem; }
 .main_search_form form label svg { color: var(--clr-1); }
 .main_search_form input.search-field { margin: var(--sp-base) 0; }
-
-
 
 /*---------------------------------------------------------------------------
  Post & Pages
