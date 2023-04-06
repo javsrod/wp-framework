@@ -51,6 +51,24 @@ General Helpers
 ol.no-bullet, ul.no-bullet { margin-left:0; list-style:none; }
 
 /*---------------------------------------------------------------------------
+Common Effect Helpers
+---------------------------------------------------------------------------*/
+
+/* Text Shadow */
+.tshad { text-shadow: var(--shadow-text); }
+.tshad-light { text-shadow: var(--shadow-text-light); }
+
+/* Box Shadows */
+.shad { box-shadow: var(--shadowbox); }
+.shad-btn { box-shadow: var(--shadowbox); }
+
+/* Border Radius */
+.brnd { border-radius: var(--border-radius); overflow: hidden;}
+
+/* Backdrop Blur */
+.bblur {     backdrop-filter: var(--backdropblur); }
+
+/*---------------------------------------------------------------------------
 Accessibility Helpers
 ---------------------------------------------------------------------------*/
 
