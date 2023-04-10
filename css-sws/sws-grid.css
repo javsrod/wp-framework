@@ -1,0 +1,154 @@
+/*---------------------------------------------------------------------------
+Swiss Grid Helper Classes
+---------------------------------------------------------------------------*/
+
+/* Swiss Variables
+-----------------------------------------------*/
+:root{
+    --sws-gap: 1rem;
+    --sws-col-total: 2;
+    --sws-col-total-gaps:       calc( var(--sws-col-total) - 1); /* Gets Interior Columns Number */
+
+    --sws-max-rel:              calc( 100vw - var(--sp-base) - var(--sp-base ) ) ; /* Full width minus side margins */
+    --sws-gap-space-total:      calc( var(--sws-col-total-gaps) * var(--sws-gap) ); /* Calculates total space taken up by the column gaps */
+    --sws-col-space-total:      calc( var(--sws-max-rel) - var(--sws-gap-space-total) ); /* Calculates total space left after column gaps removed */
+    --sws-col-rel:              calc( calc( var(--sws-col-space-total) / var(--sws-col-total) * 1) ); /* Calculates Absolute size of one column dividing space left by number of columns set. */
+}
+
+    /* Mobile Large (SWS 3 Cols)*/
+    @media screen and (min-width: 570px) and (max-width: 799px) {
+        :root{
+            --sws-col-total: 3;
+        }
+    }
+
+    /* Tablet and UP */
+    @media screen and (min-width: 800px) {
+        :root{
+            --sws-gap: 2rem;
+            --sws-max-rel: calc( 100vw - var(--sp-base) - var(--sp-base ) - 1.5rem ) ; /* Full width minus side margins */
+        }
+    }
+
+    /* Tablet - Laptop Med END  */
+    @media screen and (min-width: 800px) and (max-width: 1299px) {
+        :root{
+            --sws-gap: 1.5rem;
+            --sws-col-total: 4;
+        }
+    }
+
+    /* Laptop Large - Desktop Medium END */
+    @media screen and (min-width: 1300px) and (max-width: 1699px) {
+        :root{
+            --sws-col-total: 6;
+        }
+    }
+
+    /* Desktop Medium and UP */
+    @media screen and (min-width: 1500px) {
+        :root{
+            --sws-gap: 2rem;
+            --sws-gcw: calc( var(--sws-max-rel) - calc( var(--sws-col-rel) * 2 ) -  calc( var(--sws-gap) * 2 ) );
+        }
+    }
+
+    /* Desktop and up */
+    @media screen and (min-width: 1700px) {
+        :root{
+            --sws-col-total: 8;
+        }
+    }
+
+    /* --sws-gcw-2k has side margins */
+    @media screen and (min-width: 2200px) {
+        :root{
+            --sws-gcw-2k: calc( var(--sws-max-rel) - calc( var(--sws-col-rel) * 4 ) -  calc( var(--sws-gap) * 4 ) );
+        }
+    }
+
+
+/* Swiss GRID Classes
+-----------------------------------------------*/
+.sws-wrapper, .sws-wrapper-child > * { width: 100%; max-width: var(--sws-max-rel) !important; margin: 0 auto !important; }
+.sws-gcw, .sws-gcw-child > * { width: 100%; max-width: var(--sws-gcw) !important; margin: 0 auto !important; }
+.sws { display: grid; grid-template-columns:repeat( var(--sws-col-total), var(--sws-col-rel) ); gap: var(--sws-gap); }
+.sws-smart, .sws-smart-child > *, ul.sws-smart, .sws-smart-s3, ul.sws-smart-s3 { display: grid; gap: var(--sws-gap); grid-template-columns: repeat(auto-fill, var(--sws-col-rel) ); }
+.sws-row-gap { row-gap: calc( var(--sws-gap) * .5 ) !important; }
+.sws-leader { grid-column: 1 / -1; }
+.sws-1a, .sws-2a, .sws-a2, .sws-3a, .sws-4a, .sws-5a { display: grid; grid-auto-flow: row; grid-template-areas: "sws-side" "sws-content"; grid-auto-columns: 1fr; grid-auto-flow: row; gap: var(--sws-gap); }
+.sws-1a > :first-child, .sws-2a > :first-child   { grid-area: sws-side; }
+.sws-1a > :nth-child(2), .sws-2a > :nth-child(2)  { grid-area: sws-content; }
+
+.sws-smart-flex-end {  display: flex; justify-content: end; gap: var(--sws-gap); flex-wrap: wrap;}
+.sws-smart-flex-end > *  { flex: 0 0 var(--sws-col-rel); }
+
+/* Swiss GRID Column Spans */
+.swsc-0 { grid-column: 1 / -1; }
+.swsc-auto { grid-column: auto / -1; }
+
+    /* Tablet - Laptop Med END (i.e. SWS-S 4 columns)  */
+    @media screen and (min-width: 800px) and (max-width: 1299px) {
+        .swsc-0-s { grid-column: 1 / -1; }
+        .swsc-2-s { grid-column: auto / span 2; }
+        .swsc-3-s { grid-column: auto / span 3; }
+        .swsc-4-s { grid-column: auto / span 4; }
+    }
+
+    /* Laptop Large - Desktop Medium END (i.e. SWS-M 6 Columns) */
+    @media screen and (min-width: 1300px) {
+        .swsc-0-m { grid-column: 1 / -1; }
+        .swsc-2-m { grid-column: auto / span 2; }
+        .swsc-3-m { grid-column: auto / span 3; }
+        .swsc-4-m { grid-column: auto / span 4; }
+        .swsc-5-m { grid-column: auto / span 5; }
+        .swsc-6-m { grid-column: auto / span 6; }
+        
+        .sws-1a { grid-template-areas: "sws-side sws-content"; grid-template-columns: var(--sws-col-rel) auto; grid-auto-flow: column; }
+        .sws-2a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( var(--sws-col-rel) + var(--sws-gap) + var(--sws-col-rel) ) auto; grid-auto-flow: column; }
+        .sws-a2 { grid-template-areas: "sws-side sws-content"; grid-template-columns: auto calc( var(--sws-col-rel) + var(--sws-gap) + var(--sws-col-rel) ); grid-auto-flow: column; }
+        .sws-3a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( var(--sws-col-rel) + var(--sws-gap) + var(--sws-col-rel) + var(--sws-gap) + var(--sws-col-rel) ) auto; grid-auto-flow: column; }
+        .sws-4a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( calc( var(--sws-col-rel) * 4 ) + calc( var(--sws-gap) * 3 ) ) auto; grid-auto-flow: column; }
+        .sws-5a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( calc( var(--sws-col-rel) * 3 ) + calc( var(--sws-gap) * 2 ) ) auto; grid-auto-flow: column; }
+    }
+
+    /* Desktop & UP  (i.e. SWS-L 8 Columns) */
+    @media screen and (min-width: 1700px) {
+        .swsc-0-l { grid-column: 1 / -1; }
+        .swsc-2-l { grid-column: auto / span 2; }
+        .swsc-3-l { grid-column: auto / span 3; }
+        .swsc-4-l { grid-column: auto / span 4; }
+        .swsc-5-l { grid-column: auto / span 5; }
+        .swsc-6-l { grid-column: auto / span 6; }
+        .swsc-7-l { grid-column: auto / span 7; }
+        .swsc-8-l { grid-column: auto / span 8; }
+        .sws-5a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( calc( var(--sws-col-rel) * 5 ) + calc( var(--sws-gap) * 4 ) ) auto; grid-auto-flow: column; }
+    }
+
+    /* Desktop 1440P & UP  */
+    @media screen and (min-width: 2200px) {
+        .sws-5a { grid-template-areas: "sws-side sws-content"; grid-template-columns: calc( calc( var(--sws-col-rel) * 5 ) + calc( var(--sws-gap) * 4 ) ) auto; grid-auto-flow: column; }
+    }
+
+
+/* Swiss GRID Archive Page
+-----------------------------------------------*/
+.archive .sws-1a { grid-template-areas: "sws-content" "sws-side"; gap: var(--sws-gap); }
+.archive .sws-1a > :first-child   { grid-area: sws-content; }
+.archive .sws-1a > :nth-child(2)  { grid-area: sws-side; }
+/*.archive .sws-wrapper { padding: 0 calc( var(--sp-base) * 0.5); }*/
+.archive .sws-1a > :first-child   { /*padding: calc( var(--sp-base) * 0.5)*/ }
+.archive .sws-1a > :nth-child(2)  { background-color: var(--clr-3); position: relative; padding: var(--sp-base) 0; }
+.archive .sws-1a > :nth-child(2):before { content: ""; position: absolute; top: 0; width: 300%; height: 100%; z-index: -1; left: -290%; background-color: var(--clr-3); }
+.archive .sws-1a > :nth-child(2):after { content: ""; position: absolute; top: 0; width: 300%; height: 100%; z-index: -1; right: -290%; background-color: var(--clr-3); }
+
+    @media screen and (min-width: 1400px) {
+        .archive .sws-1a { grid-template-areas: "sws-side sws-content"; grid-template-columns: var(--sws-col-rel) auto; }
+        .archive .sws-1a > :first-child { padding-top: 1rem; }
+        .archive .sws-1a > :nth-child(2) { padding-top: 1rem; }
+        .archive .sws-1a > :nth-child(2):after { display:none; }
+
+    }
+    @media screen and (min-width: 1400px) {
+        .archive .sws-1a .category_card { width: calc(100% - var(--sws-gap)); }
+    }
