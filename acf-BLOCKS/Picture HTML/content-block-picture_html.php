@@ -4,7 +4,15 @@
  *
  * @package JJROD
  */
+
+// Create class attribute allowing for custom "className" values.
+$className = '';
+if( !empty($block['className']) ) {
+    $className .= ' ' . $block['className'];
+}
+
 ?>
+
 
 <?php if( get_field('pic_desktop') ): ?>
 
@@ -18,7 +26,7 @@
             <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
     <?php endif; ?>
 
-    <picture>
+    <picture class="<?php echo esc_attr($className); ?>">
 
         <?php if( get_field('pic_mobile') ): ?>
             <source
