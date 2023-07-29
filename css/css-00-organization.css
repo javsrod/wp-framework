@@ -1,8 +1,20 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-01 Includes
-02 Root Variavles
+00 Includes
+    - Framework
+        - Resets
+        - Main Fallbacks & Gutenberg Block Resets
+        - Helpers
+            - Spacing Helpers
+            - Padding & Margin Helpers
+            - Menu Helpers
+            - Form Layout Helpers
+            - Absolute Positioning Helpers
+        - Grids
+        - Plugin Helpers
+    - Theme Specific Includes
+01 Root Variavles
     - Branding Variables
         - Colors
         - Text Shadow
@@ -11,20 +23,7 @@
         - Border Radius
     - Typography & Sizing
     - Spacing Variables
-03 Fallbacks 
-    - Main Fallbacks
-    - Gutenberg Block Reset
-04 Helpers & Grids
-    - General Helpers
-    - Spacing Helpers
-    - Padding & Margin Helpers
-    - Absolute Positioning Helpers
-    - CSS Grid Helpers - GRID 1fr @ 799px
-    - Flex Columns Helpers - 100% Width @ 799px
-    - Gap Helpers for CSS Gird & Flexbox
-    - Menu Helpers
-    - Form Layout Helpers
-05 Base Styling
+02 Base Styling
     - Colors
     - Typography
     - Links
@@ -32,13 +31,14 @@
     - Buttons
     - Forms 
     - Blockquote
-06 Components
+03 Components
     - Unique Brand Elements & Classes
     - Navigation
     - Modals
     - Search Form
-    - Blog & Posts
     - Pages
+    - Blog & Posts
+    - Custom Posts
     - Comments
     - Widgets
     - Media
@@ -46,7 +46,7 @@
     - Galleries
     - Blocks
     - Footer
-07 Plugins
+04 Plugins
     - Swiper
     - Scroll Reveal
     - learn-dash
