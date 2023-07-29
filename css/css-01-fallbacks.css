@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------
+Main Fallbacks
+---------------------------------------------------------------------------*/
+
+html {
+box-sizing: border-box;
+font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+font-size: var(--fontSize);
+line-height: var(--lineHeight);
+background: #ffffff;
+color: var(--clr-body);
+letter-spacing: -.01em;
+-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;
+}
+*, *:before, *:after { box-sizing: inherit; }
+body { -webkit-overflow-scrolling: touch; scroll-behavior: smooth; background: #ffffff; }
+body, p { color: var(--clr-body); font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif;; font-style: normal; font-weight: 400; font-size: var(--fontSize); line-height: var(--lineHeight); }
+p { margin: 0 0 .85rem 0; }
+main, .main { overflow: hidden; } 
+b, strong, .bold { color: var(--clr-1); font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif; font-style: normal; font-weight: 700; }
+.has-white-color b, .has-white-color strong, .has-white-color .bold { color: var(--clr-1); }
+i, em, .italic { color: var(--clr-1);  font-style: italic; font-weight: 700; }
+hr { background-color: var(--clr-1); border: 0 !important; height: var(--hrThickness); margin-bottom: 1.5em; border-radius: 0px; }
+ol, ul { position: relative; padding: 0; margin: 0 0 1rem 2rem; }
+ol {list-style: decimal;}
+ol li, ul li{ -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
+li > ul, li > ol { margin-bottom: 0; margin-left: 1.5em;}
+dt { font-weight: bold;}
+dd { margin: 0 1.5em 1.5em;}
+img { height: auto; max-width: 100%; width: 100%; vertical-align: bottom; }
+  /* Make sure images are scaled correctly. */
+  /* Adhere to container width. */
+figure {margin: 0;}
+  /* Extra wide images within figure tags don't overflow the content area. */
+table { margin: 0 0 1.5em; width: 100%; }
+textarea, input, button { outline: none; }
+textarea { width: 100%; }
+section { position: relative;}
+section:focus { outline: none !important; }
+/*code*/
+pre code { padding: 0; border: none; }
+pre[class*="language-"] { padding: .5em !important; }
+code[class*="language-"], pre[class*="language-"] { font-size: .85em !important; line-height: .9em !important; }
+code { padding: .125rem .3125rem .0625rem; border: 1px solid #cacaca; background-color: #e6e6e6; 
+    font-family: Consolas,"Liberation Mono",Courier,monospace; font-weight: 400; color: var(--clr-black); font-size: .5rem; }
