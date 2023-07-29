@@ -1,0 +1,42 @@
+/****************************************************************************
+*****************************************************************************
+00 Includes
+*****************************************************************************
+****************************************************************************/
+
+/*---------------------------------------------------------------------------
+Framework
+---------------------------------------------------------------------------*/
+@import url("css/frm-00-include_base.css");
+@import url("css/frm-03-fallbacks_guttenberg_resets.css");
+@import url("css/frm-04a-gen_helpers.css");
+@import url("css/frm-04b-gss_grid.css");
+/*---------------------------------------------------------------------------
+Theme Specific
+---------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'lolapeluzablack';
+    src: url('assets/fonts/lolapeluza-black-webfont.woff2') format('woff2'),
+         url('assets/fonts/lolapeluza-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'qanelasblack';
+    src: url('assets/fonts/qanelasblack-webfont.woff2') format('woff2'),
+         url('assets/fonts/qanelasblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'qanelasregular';
+    src: url('assets/fonts/qanelasregular-webfont.woff2') format('woff2'),
+         url('assets/fonts/qanelasregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
