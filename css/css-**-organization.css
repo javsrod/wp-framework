@@ -23,15 +23,17 @@
         - Border Radius
     - Typography & Sizing
     - Spacing Variables
-02 Base Styling
+02 Fallbacks
+03 Base Styling
     - Colors
     - Typography
     - Links
-    - Lists
     - Buttons
     - Forms 
     - Blockquote
-03 Components
+    - Lists
+    - Icon Headings
+04 Components
     - Unique Brand Elements & Classes
     - Navigation
     - Modals
@@ -46,7 +48,7 @@
     - Galleries
     - Blocks
     - Footer
-04 Plugins
+05 Plugins
     - Swiper
     - Scroll Reveal
     - learn-dash
