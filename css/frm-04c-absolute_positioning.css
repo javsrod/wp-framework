@@ -1,0 +1,144 @@
+/*---------------------------------------------------------------------------
+Absolute Positioning Helpers
+---------------------------------------------------------------------------*/
+
+:root {
+    --gcw-max-xl-half: calc( var(--gcw-max-xl) * .5 ); 
+    --gcw-max-half: calc( var(--gcw-max) * .5 ); 
+    --gcw-max-m-half: calc( var(--gcw-max-m) * .5 ); 
+    --gcw-max-s-half: calc( var(--gcw-max-s) * .5 ); 
+    --abs-edge_factor: -1.2;
+}
+
+*[class*="abs--"] { position: absolute; z-index: 5; }
+.abs--rt-gcw-edge, .abs--rt-gcw-plus-edge, .abs--rt-gcw-s-edge, .abs--rt-gcw-s-plus-edge, .abs--rt-gcw-m-edge, .abs--rt-gcw-m-plus-edge,
+.abs--rb-gcw-edge, .abs--rb-gcw-plus-edge, .abs--rb-gcw-s-edge, .abs--rb-gcw-s-plus-edge, .abs--rb-gcw-m-edge, .abs--rb-gcw-m-plus-edge,
+.abs--lt-gcw-edge, .abs--lt-gcw-plus-edge, .abs--lt-gcw-s-edge, .abs--lt-gcw-s-plus-edge, .abs--lt-gcw-m-edge, .abs--lt-gcw-m-plus-edge,
+.abs--lb-gcw-edge, .abs--lb-gcw-plus-edge, .abs--lb-gcw-s-edge, .abs--lb-gcw-s-plus-edge, .abs--lb-gcw-m-edge, .abs--lb-gcw-m-plus-edge { position: absolute; z-index: 15; }
+
+/* Right Top */
+.abs--rt                    { top:0;                                                    bottom: auto;       left:auto;      right: 0; }
+.abs--rt-gcw                { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rt-gcw-s              { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-m              { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+
+.abs--rt-edge               { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: 0; }
+.abs--rt-gcw-edge           { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rt-gcw-s-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-m-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+
+/* Right Center */
+.abs--rc                    { top:50%;      bottom: auto;       left:auto;      right: 0;                                       transform: translateY(-50%); }
+.abs--rc-gcw                { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%,  -50%); }
+.abs--rc-gcw-s              { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%,  -50%); }
+.abs--rc-gcw-m              { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%,  -50%); }
+ 
+/* Right Bottom */
+.abs--rb                    { top: auto;    bottom: 0;      left:auto;      right: 0; }
+.abs--rb-gcw                { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rb-gcw-s              { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rb-gcw-m              { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+    
+.abs--rb-edge               { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: 0; }
+.abs--rb-gcw-edge           { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-half) ); transform: translate(100%, 0); }
+.abs--rb-gcw-s-edge         { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-s-half) ); transform: translate(100%, 0); }
+.abs--rb-gcw-m-edge         { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-m-half) ); transform: translate(100%, 0); }
+
+/* Left Top */
+.abs--lt                    { top:0;                                                    bottom: auto;   right:auto;     left: 0; }
+.abs--lt-gcw                { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-s              { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-m              { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+
+.abs--lt-edge               { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: 0; }
+.abs--lt-gcw-edge           { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-s-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-m-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+
+ 
+/* Left Center */
+.abs--lc                    { top:50%;              bottom: auto;   right:auto;     left: 0;                                        transform: translateY(-50%); }
+.abs--lc-gcw                { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) );        transform: translate(-100%,  -50%); }
+.abs--lc-gcw-s              { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) );      transform: translate(-100%,  -50%); }
+.abs--lc-gcw-m              { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) );      transform: translate(-100%,  -50%); }
+ 
+/* Left Bottom */
+.abs--lb                    { top:auto;     bottom: 0;                                                      right:auto;     left: 0; }
+.abs--lb-gcw                { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-s              { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-m              { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+
+.abs--lb-edge               { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: 0; }   
+.abs--lb-gcw-edge           { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-s-edge         { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-m-edge         { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+    
+
+/* Absolute Image Sizes 
+-----------------------------------------------*/
+:root {
+    --abssize: 300px;
+    --abssize-m: 200px;
+    --abs_pull_factor: 0rem
+}
+    /* Tablet */
+    @media screen and (min-width: 800px) and (max-width: 1023px) {:root {
+            --abssize: 300px;
+            --abssize-m: 200px;
+            --abs_pull_factor: 5rem
+        }
+    }
+    /* Laptop Med  */
+    @media screen and (min-width: 1024px) and (max-width: 1299px) {
+        :root {
+            --abssize: 400px;
+            --abssize-m: 350px;
+            --abs_pull_factor: 6rem;
+        }
+    }
+
+    /* Laptop Large  */
+    @media screen and (min-width: 1300px) and (max-width: 1499px) { 
+        :root {
+            --abssize: 500px;
+            --abssize-m: 400px;
+            --abs_pull_factor: 8rem;
+        }
+    }
+
+    
+    /* Desktop Medium */
+    @media screen and (min-width: 1500px) and (max-width: 1699px) {  
+        :root {
+            --abssize: 450px;
+            --abssize-m: 320px;
+            --abs_pull_factor: 5rem;
+        }
+    }
+
+    /* Desktop */
+   @media screen and (min-width: 1700px) and (max-width: 1999px) {  
+        :root {
+            --abssize: 550px;
+            --abssize-m: 380px;
+            --abs_pull_factor: 5rem;
+        }
+    }
+
+    /* Desktop Extra Wide */
+    @media screen and (min-width: 2000px) { 
+        :root {
+            --abssize: 650px;
+            --abssize-m: 470px;
+            --abs_pull_factor: 5rem;
+        }
+    }
+
+    .abssize { width: var(--abssize); }
+    .abssize-m { width: var(--abssize-m); }
+    .abssize-200 { width: 200px; }
+    .z100 { z-index: 100; position:relative; }
+    *[class*="abs--r"].abspi  > :first-child { margin-left: calc( var(--abs_pull_factor) * -1 ); }
+    *[class*="abs--r"].abspo > :first-child { margin-left: calc( var(--abs_pull_factor) * 1 ); }
+    *[class*="abs--l"].abspi  > :first-child { margin-left: calc( var(--abs_pull_factor) * 1 ); }
+    *[class*="abs--l"].abspo > :first-child { margin-left: calc( var(--abs_pull_factor) * -1 ); }
