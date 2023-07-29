@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------------------
+Wordpress Resets
+---------------------------------------------------------------------------*/ 
+
+@media screen and (max-width: 600px) { #wpadminbar {position: fixed !important;} }
+
+/*---------------------------------------------------------------------------
+Gutenberg Block Resets
+---------------------------------------------------------------------------*/
+.wp-block-image { margin: 0; }
+.wp-block-file { margin-bottom: 1.5em; display: grid; text-align: center; }
+.wp-block-file .wp-block-file__button { background: unset; border-radius: unset; color: unset; font-size: unset; padding: unset; }
+
+.wp-block-latest-posts.is-grid { display: grid; grid-gap: var(--sp-rim); }
+.wp-block-latest-posts__featured-image img { height: auto; width: 100%; max-width: 100%; object-fit: cover; max-height: 150px; }
+.wp-block-latest-posts.wp-block-latest-posts__list { margin: 0; }
+.wp-block-latest-posts.wp-block-latest-posts__list li { background-color: var(--clr-white);  margin: 0; width: 100%; box-shadow: var(--shadowbox-btn); transition: all 0.2s ease-in-out; }
+.wp-block-latest-posts.wp-block-latest-posts__list li:hover { box-shadow: var(--shadowbox); }
+.wp-block-latest-posts.wp-block-latest-posts__list li > a { font-family: futura-pt, sans-serif; font-weight: 700; font-style: italic; padding: calc( var(--sp-rim) * 0.5 ) var(--sp-rim);  display: block; }
+.wp-block-latest-posts__featured-image a { width: 100%;}
+    @media screen and (min-width: 800px) {
+        .wp-block-latest-posts.is-grid.columns-2 { grid-template-columns: repeat(2, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-3 { grid-template-columns: repeat(3, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-4 { grid-template-columns: repeat(4, 1fr); }
+        .wp-block-latest-posts.is-grid.columns-5 { grid-template-columns: repeat(5, 1fr); }
+        .wp-block-latest-posts__featured-image img { max-height: 200px; }
+    }
+:where(.wp-block-group.has-background) { padding: unset; }
+:where(.wp-block-columns.has-background) { padding: unset; }
+:where(.wp-block-columns.is-layout-flex), :where(.is-layout-flex) { gap: unset; }
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {  margin-left: unset; !important;  margin-right: unset; !important; }
