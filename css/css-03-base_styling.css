@@ -80,10 +80,15 @@ h6, .h6 { font-size: var(--h6-size); margin-bottom: 1rem; }
 .legal-content h3 { font-size: calc(var(--h3-size) * 0.6); }
 .legal-content h4 { font-size: calc(var(--h4-size) * 0.6); }
 
+/* Header top space after Paragraph or Lists applied to Heading after "+" */
+p + h1, ul + h1, ol + h1  {  padding-top: 2rem; }
+h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6 {  padding-top: .75rem; }
 
-/* Header space after Paragraph */
-p + h1, p + h2, p + h3, p + h4 {  padding-top: .75rem; } 
-p + h5, p + h6 {  padding-top: .75rem; } 
+p + h2, ul + h2, ol + h2,
+p + h3, ul + h3, ol + h3,
+p + h4, ul + h4, ol + h4,
+p + h5, ul + h5, ol + h5,
+p + h6, ul + h6, ol + h6 {  padding-top: .5rem; } 
 
 /* large headers */
 h1.large, .h1.large { font-size: var(--large-size); }
