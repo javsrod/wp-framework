@@ -10,11 +10,11 @@ Absolute Positioning Helpers
     --abs-edge_factor: -1.2;
 }
 
-*[class*="abs--"] { position: absolute; z-index: 20; }
-.abs--rt-gcw-edge, .abs--rt-gcw-plus-edge, .abs--rt-gcw-s-edge, .abs--rt-gcw-s-plus-edge, .abs--rt-gcw-m-edge, .abs--rt-gcw-m-plus-edge,
-.abs--rb-gcw-edge, .abs--rb-gcw-plus-edge, .abs--rb-gcw-s-edge, .abs--rb-gcw-s-plus-edge, .abs--rb-gcw-m-edge, .abs--rb-gcw-m-plus-edge,
-.abs--lt-gcw-edge, .abs--lt-gcw-plus-edge, .abs--lt-gcw-s-edge, .abs--lt-gcw-s-plus-edge, .abs--lt-gcw-m-edge, .abs--lt-gcw-m-plus-edge,
-.abs--lb-gcw-edge, .abs--lb-gcw-plus-edge, .abs--lb-gcw-s-edge, .abs--lb-gcw-s-plus-edge, .abs--lb-gcw-m-edge, .abs--lb-gcw-m-plus-edge { position: absolute; z-index: 15; }
+*[class*="abs--"] { position: absolute; z-index: 5; }
+.abs--rt-gcw-edge, .abs--rt-gcw-plus-edge, .abs--rt-gcw-s-edge, .abs--rt-gcw-s-plus-edge, .abs--rt-gcw-m-edge, .abs--rt-gcw-m-plus-edge, .abs--rt-gcw-xl-edge, 
+.abs--rb-gcw-edge, .abs--rb-gcw-plus-edge, .abs--rb-gcw-s-edge, .abs--rb-gcw-s-plus-edge, .abs--rb-gcw-m-edge, .abs--rb-gcw-m-plus-edge, .abs--rb-gcw-xl-edge,
+.abs--lt-gcw-edge, .abs--lt-gcw-plus-edge, .abs--lt-gcw-s-edge, .abs--lt-gcw-s-plus-edge, .abs--lt-gcw-m-edge, .abs--lt-gcw-m-plus-edge, .abs--lt-gcw-xl-edge,
+.abs--lb-gcw-edge, .abs--lb-gcw-plus-edge, .abs--lb-gcw-s-edge, .abs--lb-gcw-s-plus-edge, .abs--lb-gcw-m-edge, .abs--lb-gcw-m-plus-edge, .abs--lb-gcw-xl-edge { position: absolute; z-index: 15; }
 
 /* Right Top */
 .abs--rt                    { top:0;                                                    bottom: auto;       left:auto;      right: 0; }
@@ -89,13 +89,12 @@ Absolute Positioning Helpers
 :root {
     --abssize: 300px;
     --abssize-m: 200px;
-    --abs_pull_factor: 0rem
+    --abs_pull_factor: 1.5rem
 }
     /* Tablet */
     @media screen and (min-width: 800px) and (max-width: 1023px) {:root {
             --abssize: 300px;
             --abssize-m: 200px;
-            --abs_pull_factor: 5rem
         }
     }
     /* Laptop Med  */
@@ -103,7 +102,6 @@ Absolute Positioning Helpers
         :root {
             --abssize: 400px;
             --abssize-m: 350px;
-            --abs_pull_factor: 6rem;
         }
     }
 
@@ -112,7 +110,6 @@ Absolute Positioning Helpers
         :root {
             --abssize: 500px;
             --abssize-m: 400px;
-            --abs_pull_factor: 8rem;
         }
     }
 
@@ -122,7 +119,6 @@ Absolute Positioning Helpers
         :root {
             --abssize: 450px;
             --abssize-m: 320px;
-            --abs_pull_factor: 5rem;
         }
     }
 
@@ -131,7 +127,6 @@ Absolute Positioning Helpers
         :root {
             --abssize: 550px;
             --abssize-m: 380px;
-            --abs_pull_factor: 5rem;
         }
     }
 
@@ -140,14 +135,12 @@ Absolute Positioning Helpers
         :root {
             --abssize: 650px;
             --abssize-m: 470px;
-            --abs_pull_factor: 5rem;
         }
     }
 
     .abssize { width: var(--abssize); }
     .abssize-m { width: var(--abssize-m); }
     .abssize-200 { width: 200px; }
-    .z100 { z-index: 100; position:relative; }
     *[class*="abs--r"].abspi  > :first-child { margin-left: calc( var(--abs_pull_factor) * -1 ); }
     *[class*="abs--r"].abspo > :first-child { margin-left: calc( var(--abs_pull_factor) * 1 ); }
     *[class*="abs--l"].abspi  > :first-child { margin-left: calc( var(--abs_pull_factor) * 1 ); }
