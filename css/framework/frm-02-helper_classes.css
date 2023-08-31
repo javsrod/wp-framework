@@ -9,8 +9,53 @@ General Helpers
 /* ID link Gives Adds Space Above */
 .id-link-fix:before {  display: block;  content: " ";  margin-top: -285px;  height: 285px;  visibility: hidden;  pointer-events: none; }
 
-/* Position */
+/* Position & Index */
 .relative, .relative-child > :first-child { position: relative; }
+.z-0   { position:relative; z-index: -0; }
+.z-1   { position:relative; z-index: -1; }
+.z-2   { position:relative; z-index: -2; }
+.z-3   { position:relative; z-index: -3; }
+.z-4   { position:relative; z-index: -4; }
+.z-5   { position:relative; z-index: -5; }
+.z-6   { position:relative; z-index: -6; }
+.z-7   { position:relative; z-index: -7; }
+.z-8   { position:relative; z-index: -8; }
+.z-9   { position:relative; z-index: -9; }
+.z-10  { position:relative; z-index: -10; }
+.z0    { position:relative; z-index: 0; }
+.z1    { position:relative; z-index: 1; }
+.z2    { position:relative; z-index: 2; }
+.z3    { position:relative; z-index: 3; }
+.z4    { position:relative; z-index: 4; }
+.z5    { position:relative; z-index: 5; }
+.z6    { position:relative; z-index: 6; }
+.z7    { position:relative; z-index: 7; }
+.z8    { position:relative; z-index: 8; }
+.z9    { position:relative; z-index: 9; }
+.z10   { position:relative; z-index: 10; }
+.z15   { position:relative; z-index: 15; }
+.z20   { position:relative; z-index: 20; }
+.z25   { position:relative; z-index: 25; }
+.z30   { position:relative; z-index: 30; }
+.z35   { position:relative; z-index: 35; }
+.z40   { position:relative; z-index: 40; }
+.z45   { position:relative; z-index: 45; }
+.z50   { position:relative; z-index: 50; }
+.z55   { position:relative; z-index: 55; }
+.z60   { position:relative; z-index: 60; }
+.z65   { position:relative; z-index: 65; }
+.z70   { position:relative; z-index: 70; }
+.z75   { position:relative; z-index: 75; }
+.z80   { position:relative; z-index: 80; }
+.z85   { position:relative; z-index: 85; }
+.z90   { position:relative; z-index: 90; }
+.z95   { position:relative; z-index: 95; }
+.z100   { position:relative; z-index: 100; }
+.z150   { position:relative; z-index: 150; }
+.z200   { position:relative; z-index: 20;0 }
+.z250   { position:relative; z-index: 25; 0}
+.z300   { position:relative; z-index: 30; 0}
+.z350   { position:relative; z-index: 35; 0}
 
 /* Overflow */
 .overhid, .over-hidden { overflow: hidden; }
