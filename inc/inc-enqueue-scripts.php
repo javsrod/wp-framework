@@ -1,16 +1,18 @@
 <?php
+/**
+ *  Register JS, CSS & Backend CSS
+ *  FONTS & FONT ICONS scripts - are dded in Header via: /template-parts/head-tag.php
+ * 
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
+ */
+
+////////////////////////////////////////
+// MAIN THEME CSS & JS
+////////////////////////////////////////
 function site_scripts() {
   global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
-
-    ////////////////////////////////////////
-    // FONTS & FONT ICONS
-    ////////////////////////////////////////
-
-    // Added in Header via: /template-parts/nav-head.php
-
-    ////////////////////////////////////////
-    // MAIN THEME CSS & JS
-    ////////////////////////////////////////
 
     // Adding scripts file in the header
     wp_enqueue_script( 'header_plugins_js', get_template_directory_uri() . '/assets/scripts/header_plugins.js', array( ), filemtime(get_template_directory() . '/assets/scripts'), false );
@@ -25,9 +27,9 @@ function site_scripts() {
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
 
-/**
- * Enqueue Gutenberg CSS
-*/
+////////////////////////////////////////
+// Enqueue GUTENBERG CSS
+////////////////////////////////////////
 add_action( 'enqueue_block_editor_assets', 'tbc_editor_styles' );
 
 function tbc_editor_styles() {

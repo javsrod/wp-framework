@@ -1,8 +1,11 @@
 <?php
 /**
- * inc/theme-support.php
+ * Enable theme support and fundamental aspects
+ * 
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
  */
-
 
 function joints_theme_support() {
     /**
@@ -111,16 +114,6 @@ function joints_theme_support() {
 
 add_action( 'after_setup_theme', 'joints_theme_support' );
 
-
-
-/* ACF Image scrset max width */
-add_filter( 'max_srcset_image_width', 'awesome_acf_max_srcset_image_width', 10 , 2 );
-
-// set the max image width
-function awesome_acf_max_srcset_image_width() {
-    return 2560;
-}
-
 // CPT UI Tags Support
 function my_cptui_add_post_types_to_archives( $query ) {
     // We do not want unintended consequences.
@@ -141,3 +134,15 @@ function my_cptui_add_post_types_to_archives( $query ) {
     }
 }
 add_filter( 'pre_get_posts', 'my_cptui_add_post_types_to_archives' ); 
+
+
+
+
+/* ACF Image scrset max width */
+add_filter( 'max_srcset_image_width', 'awesome_acf_max_srcset_image_width', 10 , 2 );
+
+// set the max image width
+function awesome_acf_max_srcset_image_width() {
+    return 2560;
+}
+

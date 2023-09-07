@@ -1,4 +1,11 @@
-<?php
+<?php   
+/**
+ * General Cleanup
+ * 
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
+ */
 
 // Fire all our initial functions at the start
 add_action('after_setup_theme','joints_start', 16);
@@ -95,16 +102,3 @@ function joints_get_the_author_posts_link() {
 	);
 	return $link;
 }
-
-/*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */ 
-
-function wps_deregister_styles() {
-    wp_dequeue_style( 'global-styles' ); // REMOVE global-styles-inline-css
-    wp_dequeue_style( 'wp-block-library-theme' );  // REMOVE wp-block-library-theme-inline-css
-    // wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
-}
-add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
-
-
-// New Gutenberg Clean up
-add_theme_support( 'disable-layout-styles' );
