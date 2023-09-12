@@ -29,7 +29,7 @@ get_header(); ?>
                 <!-- Search Posts -->
                 <!-- ***************************** -->
                 
-                <article id="post-<?php the_ID(); ?>" <?php post_class('search-article-card'); ?> role="article">
+                <article id="post-<?php the_ID(); ?>" <?php post_class('search-article'); ?> role="article">
 
                     <header>
                         <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
