@@ -1,9 +1,12 @@
 <?php
 /**
- * The template part for displaying a post article
-
+ * The template part for displaying a post article card
+ * 
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
  */
- ?>
+?>
 		
 <article id="post-<?php the_ID(); ?>" <?php post_class('article-card'); ?> role="article">
     <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
