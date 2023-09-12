@@ -1,0 +1,61 @@
+/*---------------------------------------------------------------------------
+04-07 Blog & Posts
+---------------------------------------------------------------------------*/
+    
+/* BLOG Home Page
+--------------------------------------------------------------*/
+.blog-header { padding: var(--sp-base) 0 0 0; background: linear-gradient( 90deg, var(--clr-1), var(--clr-1-dark) ); padding: calc( var(--sp-base) * 2 ) var(--sp-base) calc( var(--sp-feat) * 2 ) var(--sp-base); }
+.blog-header h1 { color: var(--clr-white); }
+.blog-header .tagline { color: #7b7c8e; }
+.blog-header .tagline a { color: var(--clr-1) !important; }
+.blog-home .blog-archive-grid {  margin-top: calc( var(--sp-feat) * -2 );  overflow: visible;  z-index: 10;  position: relative; }
+
+/* BLOG Archive Grid
+--------------------------------------------------------------*/
+.blog-archive-grid { display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: var(--sp-base); }
+    @media screen and (min-width: 900px) {
+        .blog-archive-grid{ grid-template-columns: repeat(3, 1fr); } 
+        article.article-card .article-content p { font-size: .75rem }
+    }
+
+/* BLOG Article Card
+--------------------------------------------------------------*/
+article.article-card { background-color: var(--clr-3-light); }
+article.article-card .article-content{ padding: 1rem; }
+.article-header .title { font-size: 1rem }
+.article-header .title a { text-decoration: none; }
+    @media screen and (min-width: 800px) {  
+        article.article-card .article-content p { font-size: .75rem }
+    }
+
+/* BLOG Archive Pagination
+--------------------------------------------------------------*/
+.page-navigation { margin-top: calc( var(--sp-base) * 2); text-align: center; }
+.pagination { margin-left: 0; margin-bottom: 1rem; }
+.pagination a, .pagination button, .pagination .current { font-weight: 700; font-size: 1.2rem; border-radius: 5px; border: solid 3px var(--clr-2); color: var(--clr-3); }
+.pagination a, .pagination button { display: block; padding: .1em 1.2em; background: var(--clr-2); }
+.pagination a:hover, .pagination button:hover { background: transparent; border-color: var(--clr-1); color: var(--clr-1); }
+.pagination .current { padding: .28em 1.2em; background: var(--clr-1); border-color: var(--clr-1); color: var(--clr-white); cursor: default; }
+.pagination::after, .pagination::before { display: table; content: ' '; flex-basis: 0; order: 1; }
+.pagination li { margin-right: .0625rem; border-radius: unset; font-size: unset; display: none; }
+.pagination li:first-child, .pagination li:last-child { display: inline-block; }
+    @media print, screen and (min-width: 700px) {
+        .pagination li { display: inline-block; }
+    }
+
+/* BLOG Single Post
+-----------------------------------------------*/
+/* Single Post Header */
+.single-post-header { display: grid; grid-template-columns: 1fr; padding-bottom: var(--sp-base); grid-gap: 1rem; }
+    @media screen and (min-width: 800px) {
+        .single-post-header { grid-template-columns: 2fr 3fr; }
+    }
+
+/* Single Author Card */
+.single-author_card { background-color: var(--clr-3-light); padding: var(--sp-base) 6rem var(--sp-base) var(--sp-base); margin-bottom: var(--sp-base); background-image: url(img/mov-logo-franchise-berry-mono.svg); background-repeat: no-repeat; background-position: calc(100% - 0.5rem) bottom; background-size: 6rem auto; }
+.single-author_card p { font-size: .875rem; }
+
+/* Single Post Nav */
+.post-navigation .nav-links { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column; margin-bottom: 0; grid-gap: var(--sp-base); }
+.post-navigation .nav-links .nav-previous { text-align:left; }
+.post-navigation .nav-links .nav-next { text-align:right; }
