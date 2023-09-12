@@ -36,7 +36,7 @@ get_header(); ?>
            <div class="blog-archive-grid">
 
                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                   <?php get_template_part( 'template-parts/blog/blog', 'archive' ); ?>
+                   <?php get_template_part( 'template-parts/blog/blog', 'loop' ); ?>
                <?php endwhile; ?>  
                
            </div><!-- blog-archive-grid -->
