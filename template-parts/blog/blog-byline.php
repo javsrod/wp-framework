@@ -1,7 +1,13 @@
 <?php
 /**
  * The template part for displaying an author byline
+ * 
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
  */
+?>
+
 ?>
 
 <?php 
