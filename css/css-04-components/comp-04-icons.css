@@ -1,0 +1,55 @@
+/*---------------------------------------------------------------------------
+04-04 Icons
+---------------------------------------------------------------------------*/
+
+/* Icon Lists Grids
+-----------------------------------------------*/
+:root {
+    --icon_list_icon_small_size: 2rem ;
+    --icon_list_icon_size: calc( var(--h2-size) + .5rem  ) ;
+    --icon_heading_icon_size: calc( var(--h2-size) + 1.75rem );
+}
+    @media screen and (min-width: 800px) {
+        :root {
+            --icon_list_icon_small_size: 2rem;
+            --icon_list_icon_size: calc( var(--h1-size) + 1.5rem  );
+            --icon_heading_icon_size: calc( var(--h1-size) + .5rem );
+        }
+    }
+
+/* Icon Lists Global */
+.icon_list_grid-small, .icon_list_grid, .icon_list_grid-heading { display: grid; grid-auto-flow: column; }
+.icon_list_grid-small > :first-child , .icon_list_grid > :first-child , .icon_list_grid-heading > :first-child  { display: flex; justify-content: center; width: 100%; height:100%; }
+.icon_list_grid-small > :last-child , .icon_list_grid > :last-child , .icon_list_grid-heading > :last-child { display: flex; justify-content: center; flex-direction: column; height:100%; }
+.icon_list_grid-small :last-child > :last-child, .icon_list_grid > :last-child > :last-child, .icon_list_grid-heading :last-child > :last-child { margin-bottom: 0px !important; }
+.icon_list_grid-icon { display: block; }
+
+/* Icon Lists Small */
+.icon_list_grid-small { grid-gap: .5rem; grid-template-columns: var(--icon_list_icon_small_size) 1fr; }
+.icon_list_grid-small svg { font-size: var(--icon_list_icon_small_size); width: 1rem !important; }
+
+/* Icon Lists Normal*/
+.icon_list_grid { grid-gap: var(--sp-rim); grid-template-columns: calc( var(--icon_list_icon_size) 1 .5rem ) 1fr; padding-bottom: var(--sp-rim); margin-bottom: var(--sp-rim); }
+.icon_list_grid.light { border-bottom: solid 2px var(--clr-white-op); }
+.icon_list_grid svg { font-size: var(--icon_list_icon_size); }
+
+
+/* Icon Lists Heading*/
+.icon_list_grid-heading { grid-template-columns:  var(--icon_heading_icon_size) 1fr; grid-gap: calc( var(--sp-rim) + .0rem); margin-bottom: var(--sp-rim); }
+.icon_list_grid-heading svg { font-size: var(--icon_heading_icon_size); }
+.icon_list_grid-heading-heading { font-size: var(--h1-size); margin-bottom:.25rem; transition: all 250ms ease;}
+.icon_list_grid-heading-heading svg { font-size: var(--h2-size); }
+.icon_list_grid-heading-link .icon_list_grid-heading-heading:hover  { color: var(--clr-1); color: var(--brand-clr-primary); }
+
+.icon_list_grid-heading.stats .icon_list_grid-heading-heading {  font-weight: 700; font-size: 1rem; color: var(--clr-body); letter-spacing: 2px; margin-bottom: 0.1rem; line-height: 1;  }
+.icon_list_grid-heading.stats .icon_list_grid-heading-sub_heading { line-height: 1; font-size: 2rem; color: var(--clr-1); }
+    @media screen and (min-width: 800px) {
+        .icon_list_grid-heading.stats .icon_list_grid-heading-heading { font-size: .7rem; }
+        .icon_list_grid-heading.stats .icon_list_grid-heading-sub_heading { font-size: 1.75rem; }
+    }
+
+/* Icon Lists Colors */
+.icon_list_grid-small svg, .icon_list_grid svg, .icon_list_grid-heading svg { color: var(--clr-1-dark); }
+.icon_list_grid-small.light svg, .icon_list_grid.light svg, .icon_list_grid-heading.light svg { color: var(--clr-white); }
+.icon_list_grid-small.green-icon svg, .icon_list_grid.green-icon svg, .icon_list_grid-heading.green-icon svg { color: var(--clr-2); !important; }
+.icon_list_grid.green-icon strong { color: var(--clr-2); !important; }
