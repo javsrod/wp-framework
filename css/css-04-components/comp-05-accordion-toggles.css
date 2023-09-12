@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------------------
+04-05 Accordions & Toggles
+---------------------------------------------------------------------------*/
+
+/* Accordion
+-----------------------------------------------*/
+.faq_accordion { width: 100%; padding-bottom: var(--sp-rim); }
+.faq_accordion .faq_acc_container { position: relative; padding: 20px 20px 15px; background-color: var(--clr-white); transition: all 0.2s ease; border-bottom: solid 2px var(--clr-3); transition: all 350ms ease-in-out !important; }
+.faq_accordion .faq_acc_container:last-of-type { border: none; }
+.faq_accordion .faq_acc_container.open_acc { background-color: var(--clr-white); }
+.faq_accordion .faq_acc_trigg  { position: relative; display: flex; justify-content: flex-start; gap: var(--sp-base); align-items: center; cursor: pointer; }
+.faq_accordion .faq_acc_trigg svg { transition: all 0.4s ease; vertical-align: middle; font-size: 1.1rem; color: var(--clr-1); }
+.faq_accordion .open_acc .faq_acc_trigg svg { transform: rotate(-45deg); color: var(--clr-1); }
+.faq_accordion .faq_acc_trigg p { font-size: 1.2rem; font-weight: 700; transition: all 350ms ease-in-out !important; }
+.faq_accordion .faq_acc_trigg:hover p { color: var(--clr-1); }
+.faq_accordion .open_acc .faq_acc_trigg p { color: var(--clr-1); }
+.faq_accordion_content { position: relative; display: none; padding-top: 10px; }
