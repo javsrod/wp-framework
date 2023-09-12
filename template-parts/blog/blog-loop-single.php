@@ -1,6 +1,6 @@
 <?php
 /**
- * Basic Blog Post
+ * The template part for displaying the single post content
  * 
  * @author JJROD Framework
  * @see https://github.com/javsrod/wp-framework
