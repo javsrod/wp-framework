@@ -34,7 +34,7 @@ require_once(get_template_directory().'/inc/inc-enqueue-scripts.php');
 require_once(get_template_directory().'/inc/inc-menu.php');
 
 // Replace 'older/newer' post links with numbered navigation
-require_once(get_template_directory().'/inc/inc-page-navi.php');
+require_once(get_template_directory().'/inc/inc-pagination.php');
 
 // Theme editor options
 require_once(get_template_directory().'/inc/inc-theme-editor.php');
