@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------
-04-03 Search Elements
----------------------------------------------------------------------------*/
-
 /* Search Form
 -----------------------------------------------*/
     
@@ -10,4 +6,9 @@
 /* Search.php
 -----------------------------------------------*/
 
-  /* Using Component Defaults */
+/* Search Article */
+article.search-article { margin-bottom: var(--sp-base); padding-bottom: 1rem; border-bottom: 2px solid var(--clr-3); }
+    @media screen and (min-width: 800px) {
+        article.search-article { display: grid; grid-gap: 1rem; grid-template-columns: 1fr 2fr }
+    }
+    
