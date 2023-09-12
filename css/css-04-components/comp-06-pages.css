@@ -1,0 +1,18 @@
+/*---------------------------------------------------------------------------
+04-06 Pages
+---------------------------------------------------------------------------*/
+
+/* Default Page
+--------------------------------------------------------------*/
+.entry-header { padding: var(--sp-base) 0 0 0; background-color: var(--clr-1); position: relative; background-repeat: no-repeat; background-size: cover; z-index: 1; }
+.entry-header h1 { color: var(--clr-white); }
+.entry-header .tagline { color: #7b7c8e; }
+.entry-header .tagline a { color: var(--clr-1) !important; }
+.entry-header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(60deg,var(--clr-1),var(--clr-1-dark)); opacity: 1; z-index: -1; mix-blend-mode: normal; }
+.entry-header > div { z-index: 100; }
+.entry-header .grass {
+    height: 70px !important;
+    background-position: 50% 0%;
+    background-image: url(img/grass-footer-prup-dark.png) !important;
+    background-repeat: repeat-x;
+}
