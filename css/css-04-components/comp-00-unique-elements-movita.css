@@ -1,0 +1,64 @@
+/*---------------------------------------------------------------------------
+Unique Brand Elements & Classes
+---------------------------------------------------------------------------*/
+
+/* Shadows
+------------------------------------------*/
+.shad { box-shadow: var(--shadow); }
+.shad-dark { box-shadow: var(--shadow-dark); }
+.shad-purp { box-shadow: var(--shadow-purp); }
+.shad-soft { box-shadow: var(--shadow-soft); }
+
+/* Mov Box
+------------------------------------------*/
+*[class*="m-box"] { width: 100%; background-color: #fff; box-sizing: border-box; border-box; box-shadow: var(--shadow-soft); overflow: visible; }
+.m-box-pad { margin-bottom: 6rem; }
+    @media screen and (max-width: 700px) {
+        .m-box-space { margin-bottom: 6rem; }
+    }
+
+/* Border Radius
+------------------------------------------*/
+.brnd { border-radius: var(--borderradius); overflow: hidden;}
+
+/* Eddge tear
+------------------------------------------*/
+:root { --tear_space: 5rem; }
+    @media screen and (max-width: 700px) {
+        :root { --tear_space: 5rem; }
+    }
+
+*[class*="tbfr"], *[class*="taft"] { position:relative; }
+*[class*="tbfr"]:before, *[class*="taft"]:after  { content: ''; display: block; width: 100%; height: var(--tear_space); background-size: auto var(--tear_space); z-index: 1; background-position:  center top; background-repeat: repeat-x; position:absolute; }
+*[class*="tbfr"]:before { z-index:1; }
+*[class*="taft"]:after{ z-index:10; }
+*[class*="tbfr"]:before { top: -1px; left: 0; }
+*[class*="taft"]:after { bottom: -1px; left: 0; }
+
+.tbfr:before {  background-image: url(img/tear__bfr.png); }
+.tbfr-w:before {  background-image: url(img/tear__bfr-white.png); }
+.taft:after {background-image: url(img/tear__aft.png); }
+.taft-w:after {background-image: url(img/tear__aft-white.png); }
+.tp-bfr { padding-top: calc( var(--tear_space) + .5rem) !important; }
+.tp-aft { padding-bottom: calc( var(--tear_space) + .5rem) !important; }
+
+/* Loader
+------------------------------------------*/
+.one-smoothie .os-name { line-height: 1.2; }
+.one-smoothie .os-ingredients .green-button { margin-top: 10px;  }
+#circular-effect { position: absolute; top: 50%!important; left: 50%!important; width: 200vw; height: 200vw; border-radius: 200vw; z-index: 4; transition: 0.75s; transition-timing-function: linear; background: #fff; transform: translate(-50%,-50%); }
+@media all and (min-width: 1200px) { transition:1.2s; }
+#circular-effect.effect { width: 300px; height: 300px; border-radius: 300px; }
+
+@media all and (max-width: 400px) {
+    #circular-effect.effect { width: 200px; height: 200px; border-radius: 200px; }
+}
+#overlay { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: #892890; z-index: 10000; }
+#overlay { background: #892890; }
+#overlay > div:not(#circular-effect) { padding: 15px; position: absolute; top: 50%; left: 50%; z-index: 5; transform: translate(-50%,-50%); }
+#overlay img { width: 280px; height: auto; }
+
+@keyframes expand {
+    from { width: 0px; }
+    to { width: 800px; }
+}
