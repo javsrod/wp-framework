@@ -53,10 +53,10 @@ get_header();
             <!-- END Blog Posts -->
             <!-- ***************************** -->
 
-            <?php get_search_form(); ?>
+            <div class="spv"><?php get_search_form(); ?></div>
 
-        </div><!-- spv sph -->
-    </div><!-- gcw -->
+        </div><!-- gcw -->
+    </div><!-- sph spt spb-feat -->
 
 </main><!-- #main -->
 
