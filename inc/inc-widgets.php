@@ -22,8 +22,7 @@ function wpt_create_widget( $name, $id, $description ) {
 
 }
 
-// wpt_create_widget( 'Home Search Widget', 'home_search_widget_area', 'WPSL Front Page widget area' );
-wpt_create_widget( 'Blog Sidebar', '', 'Displays on the side of pages in the blog section' );
+wpt_create_widget( 'Blog Sidebar', 'primary', 'Displays on the side of pages in the blog section' );
 
 
 // Search Widget Areas
