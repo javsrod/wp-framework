@@ -5,15 +5,19 @@
 ****************************************************************************/
 
 /*---------------------------------------------------------------------------
-Framework
+00-00 Framework
 ---------------------------------------------------------------------------*/
-@import url("css/frm-00-include_base.css");
-@import url("css/frm-03-fallbacks_guttenberg_resets.css");
-@import url("css/frm-04a-gen_helpers.css");
-@import url("css/frm-04b-gss_grid.css");
+@import url("css/framework/frm-00-normalize.css");
+@import url("css/framework/frm-01-wordpress-and-gutenberg-block-reset.css");
+@import url("css/framework/frm-02-helper_classes.css");
+@import url("css/framework/frm-03a-gss_and_flex_grid_helpers.css");
+@import url("css/framework/frm-03b-absolut_positioning_helpers.css");
+@import url("css/framework/frm-04-components.css");
+@import url("css/framework/frm-07-plugins-stickysidebar.css");
+@import url("css/framework/frm-07-plugins-swiper.css");
 
 /*---------------------------------------------------------------------------
-Theme Specific
+00-01 Theme Specific
 ---------------------------------------------------------------------------*/
 @font-face {
     font-family: 'lolapeluzablack';
@@ -21,7 +25,6 @@ Theme Specific
          url('assets/fonts/lolapeluza-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -39,5 +42,4 @@ Theme Specific
          url('assets/fonts/qanelasregular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
