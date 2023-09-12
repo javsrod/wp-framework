@@ -462,14 +462,20 @@ background-repeat: repeat-x; bottom: 0; content: ""; left: 0; position: absolute
 .act-purchase-info > :first-child { padding: var(--sp-base); background-color: #fff;     box-shadow: var(--shadowbox-btn); }
 
 /*---------------------------------------------------------------------------
-Widgets
+04-08 Custom Post Types
 ---------------------------------------------------------------------------*/
+
+   /* No Custom Post Types in use */
 
 /*---------------------------------------------------------------------------
-Blocks
+04-09 Widgets
 ---------------------------------------------------------------------------*/
 
+   /* Using Component Defaults */
 
+/*---------------------------------------------------------------------------
+04-10 Blocks
+---------------------------------------------------------------------------*/
 
 /* video-call to action
 -----------------------------------------------*/
@@ -752,13 +758,11 @@ Blocks
         .testimonial_blocquote.testimonial_blocquote_slider .swiper-slide blockquote .blockquote_inner:after {bottom: -123px; }
     }
 
+/*---------------------------------------------------------------------------
+04-11 Footer
+---------------------------------------------------------------------------*/
 
-
-/* Footer
------------------------------------------------ */
 footer.main-footer  { background-color: var(--clr-2); padding: var(--sp-base); background-image: url(img/logo-footer-gem.svg); background-size: 90% auto; background-repeat: no-repeat; background-position: 165% 103%; }
-
-
 footer.main-footer .mchimp_heading { font-size: 2rem; }
 footer.main-footer .footer-main { display: grid; grid-gap: var(--sp-base); }
 footer.main-footer .footer-main-content { display: grid; grid-gap: var(--sp-base);  }
