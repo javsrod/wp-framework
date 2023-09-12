@@ -14,33 +14,47 @@ get_header(); ?>
     <div class="spv sph">
         <div class="gcw">
 
-            <header class="page-header archive-header">
+            <header class="archive-header">
                 <div class="container">
                     <h1 class="page-title"><?php
                     /* translators: %s: search query. */
                     printf( esc_html__( 'Search Results for: %s', 'tbcparent' ), '<span>' . get_search_query() . '</span>' );?></h1>
 
                 </div>
-            </header><!-- .page-header -->
-
-            <!-- ***************************** -->
-            <!-- Blog Posts -->
-            <!-- ***************************** -->
+            </header><!-- .archive-header -->
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php get_template_part( 'template-parts/content', 'search' ); ?>
+
+                <!-- ***************************** -->
+                <!-- Search Posts -->
+                <!-- ***************************** -->
+                
+                <article id="post-<?php the_ID(); ?>" <?php post_class('search-article-card'); ?> role="article">
+
+                    <header>
+                        <h3 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                    </header>   
+
+                    <?php the_excerpt(); ?>
+                        
+                </article> <!-- end article -->
+
+                <!-- ***************************** -->
+                <!-- Search Posts -->
+                <!-- ***************************** -->
+
+
             <?php endwhile; ?>  
 
             <?php joints_page_navi(); ?>
 
-            <?php else : ?>                     
+            <?php else : ?>     
+
                 <?php get_template_part( 'template-parts/content', 'missing' ); ?>   
+
             <?php endif; ?>
 
-            <!-- ***************************** -->
-            <!-- Blog Posts -->
-            <!-- ***************************** -->
-
+            
         </div><!-- gcw -->
     </div><!-- spv sph -->
 
