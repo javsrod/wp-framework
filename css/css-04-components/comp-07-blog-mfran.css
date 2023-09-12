@@ -32,17 +32,17 @@ article.article-card .article-content{ padding: 1rem; }
 --------------------------------------------------------------*/
 .page-navigation { margin-top: calc( var(--sp-base) * 2); text-align: center; }
 .pagination { margin-left: 0; margin-bottom: 1rem; }
-.pagination a, .pagination button, .pagination .current { font-weight: 700; font-size: 1.2rem; border-radius: 5px; border: solid 3px var(--clr-2); color: var(--clr-3); }
-.pagination a, .pagination button { display: block; padding: .1em 1.2em; background: var(--clr-2); }
+.pagination a, .pagination button, .pagination .current { font-weight: 700; font-size: 1.2rem; border-radius: 5px; border: solid 3px var(--clr-3); color: var(--clr-3); text-decoration: none; }
+.pagination a, .pagination button { display: block; padding: .1em 1.2em; background: transparent; }
 .pagination a:hover, .pagination button:hover { background: transparent; border-color: var(--clr-1); color: var(--clr-1); }
 .pagination .current { padding: .28em 1.2em; background: var(--clr-1); border-color: var(--clr-1); color: var(--clr-white); cursor: default; }
 .pagination::after, .pagination::before { display: table; content: ' '; flex-basis: 0; order: 1; }
 .pagination li { margin-right: .0625rem; border-radius: unset; font-size: unset; display: none; }
 .pagination li:first-child, .pagination li:last-child { display: inline-block; }
-    @media print, screen and (min-width: 700px) {
+    @media print, screen and (min-width: 800px) {
         .pagination li { display: inline-block; }
     }
-
+    
 /* BLOG Single Post
 -----------------------------------------------*/
 /* Single Post Header */
