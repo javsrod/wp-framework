@@ -2,7 +2,6 @@
 /**
  * Default single post template
  *
- *
  * @author JJROD Framework
  * @see https://github.com/javsrod/wp-framework
  * @version 1.0
