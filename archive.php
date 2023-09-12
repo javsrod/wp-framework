@@ -12,10 +12,13 @@
 get_header();
 ?>
 
-        
 <main>
     <div class="sph spt spb-feat">
         <div class="gcw">
+
+            <!-- ***************************** -->
+            <!-- Archive Header -->
+            <!-- ***************************** -->
 
             <header class="page-header">
                 <?php
@@ -26,20 +29,37 @@ get_header();
                  <?php get_search_form(); ?>
             </header><!-- .page-header -->
 
-            <div class="blog-archive-grid">
-
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php get_template_part( 'template-parts/blog/blog', 'loop-archive' ); ?>
-                <?php endwhile; ?>  
+            <!-- ***************************** -->
+            <!-- END Archive Header -->
+            <!-- ***************************** -->
         
-            </div><!-- container -->
-            
-            <?php joints_page_navi(); ?>
-            
-            <?php else : ?>                     
-                <?php get_template_part( 'template-parts/content', 'missing' ); ?>   
-            <?php endif; ?>
+            <!-- ***************************** -->
+            <!-- Blog Posts -->
+            <!-- ***************************** -->
 
+            <div class="sph spt spb-feat">
+                <div class="gcw">
+                    
+                    <div class="blog-archive-grid">
+
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <?php get_template_part( 'template-parts/blog/blog', 'archive' ); ?>
+                        <?php endwhile; ?>  
+                        
+                    </div><!-- blog-archive-grid -->
+
+                    <?php joints_page_navi(); ?>
+
+                    <?php else : ?>                     
+                        <?php get_template_part( 'template-parts/content', 'missing' ); ?>   
+                    <?php endif; ?>
+
+                </div><!-- gcw -->
+            </div><!-- sph-edge -->
+
+            <!-- ***************************** -->
+            <!-- END Blog Posts -->
+            <!-- ***************************** -->
 
         </div><!-- spv sph -->
     </div><!-- gcw -->
