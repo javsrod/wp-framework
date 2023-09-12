@@ -20,11 +20,11 @@
         <?php the_post_thumbnail( 'full' ); ?>
     </header>
 
-        <div class="single-post-content gcw-s ">
+        <div class="single-post-content gcw-s">
             <?php the_content( ); ?>
         </div><!-- single-post-content -->
 
-    <footer class="article-footer container gcw-s spb-feat">
+    <footer class="single-post-content gcw-s spt spb-feat">
         <p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'jointswp' ) . '</span> ', ', ', ''); ?></p>  
         
         <?php 
