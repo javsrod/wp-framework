@@ -1,11 +1,11 @@
 /****************************************************************************
 *****************************************************************************
-06 Components
+04 Components
 *****************************************************************************
 ****************************************************************************/
 
 /*---------------------------------------------------------------------------
-Unique Brand Elements & Classes
+04-00 Unique Elements & Classes
 ---------------------------------------------------------------------------*/
 .strike-span strong{ position: relative; font-size: 75%;}
 .strike-span strong:before { position: absolute; content: ""; left: 0; top: 50%; right: 0; border-top: 3px solid; border-color: #000000; transform: rotate(-5deg); }
@@ -32,7 +32,7 @@ Unique Brand Elements & Classes
 
 
 /*---------------------------------------------------------------------------
-Navigation
+04-01 Navigation
 ---------------------------------------------------------------------------*/
 /* Side Nav Canvas */
 :root { --canvas_dist:400px; }
@@ -121,7 +121,7 @@ header.masthead .utility-masthead { display: none; }
     }
 
 /*---------------------------------------------------------------------------
- Modals
+04-02 Modals
 ---------------------------------------------------------------------------*/
 
 /* Full Screen Modal
@@ -153,17 +153,39 @@ header.masthead .utility-masthead { display: none; }
 .modal_dark .modal_close_btn svg:hover, .modal_dark .modal_close_btn svg:focus { color: var(--clr-white); opacity: 0.5; }
     
 /*---------------------------------------------------------------------------
- Search Form
+04-03 Search Elements
 ---------------------------------------------------------------------------*/
 
-.main_search_form { text-align: center; }
-.main_search_form form label { font-weight: 700; color: var(--clr-2); font-size: 2em; text-transform: unset; letter-spacing: unset; display: flex; justify-content: center; gap: 1rem; }
-.main_search_form form label svg { color: var(--clr-1); }
-.main_search_form input.search-field { margin: var(--sp-base) 0; }
+/* Search Form
+-----------------------------------------------*/
+    
+  /* Using Component Defaults */
+
+/* Search.php
+-----------------------------------------------*/
+.search-grid { padding: var(--sp-baseg); }
+.search-section { width: 100%; color: var(--clr-2); padding-bottom: var(--sp-rim); }
+.search-section h4 { text-transform: uppercase; color: var(--clr-2); margin: 0; }
+.article-header-content { position:relative; }
+.posttypetext { position: absolute; top: 0; right: 0; padding: 2px 4px 2px 2px; background: var(--clr-2); line-height: 15px; }
+.posttypetext i { color: #FFFFFF; line-height: 15px; font-size: 13px; }
+.cpts-hide { display: none !important; }
+.cpts-message { display: inline-block; width: 100%; float: left; cursor: pointer; background:  var(--clr-2); padding: 5px; color: var(--clr-white); }
+ 
+.search_section_grid .post_wrap {
+    /* overflow: visible; */
+    padding: var(--sp-rim);
+}
+.search_section_grid { display: grid; grid-gap: var(--sp-base); padding: 0 var(--sp-base) var(--sp-base); }
+    /* Desktop */
+    @media screen and (min-width: 1025px) {
+        .search_section_grid{ grid-template-columns: repeat(3, 1fr);}
+        .search-no-results .search_section_grid{ grid-template-columns: repeat(1, 1fr); margin: 0 auto;  width: 100%;  max-width: var(--gcw-max); }
+    }
 
 
 /*---------------------------------------------------------------------------
-Icon Lists Grids
+04-04 Icons
 ---------------------------------------------------------------------------*/
 
 
@@ -206,9 +228,26 @@ Icon Lists Grids
         .icon_list_grid-heading-link .icon_list_grid-heading-heading { display:grid ;grid-template-columns: 1fr auto; grid-gap: var(--sp-rim); }
     }
 
+/*---------------------------------------------------------------------------
+04-05 Accordions & Toggles
+---------------------------------------------------------------------------*/
+
+/* Accordion
+-----------------------------------------------*/
+.faq_accordion { width: 100%; padding-bottom: var(--sp-rim); }
+.faq_accordion .faq_acc_container { position: relative; padding: 20px 20px 15px; background-color: var(--clr-white); transition: all 0.2s ease; border-bottom: solid 2px var(--clr-3); transition: all 350ms ease-in-out !important; }
+.faq_accordion .faq_acc_container:last-of-type { border: none; }
+.faq_accordion .faq_acc_container.open_acc { background-color: var(--clr-white); }
+.faq_accordion .faq_acc_trigg  { position: relative; display: flex; justify-content: flex-start; gap: var(--sp-base); align-items: center; cursor: pointer; }
+.faq_accordion .faq_acc_trigg svg { transition: all 0.4s ease; vertical-align: middle; font-size: 1.1rem; color: var(--clr-1); }
+.faq_accordion .open_acc .faq_acc_trigg svg { transform: rotate(-45deg); color: var(--clr-1); }
+.faq_accordion .faq_acc_trigg p { font-size: 1.2rem; font-weight: 700; transition: all 350ms ease-in-out !important; }
+.faq_accordion .faq_acc_trigg:hover p { color: var(--clr-1); }
+.faq_accordion .open_acc .faq_acc_trigg p { color: var(--clr-1); }
+.faq_accordion_content { position: relative; display: none; padding-top: 10px; }
 
 /*---------------------------------------------------------------------------
- Post & Pages
+04-06 Pages
 ---------------------------------------------------------------------------*/
 
 /* Blog Page home.php 
@@ -258,31 +297,10 @@ background-repeat: repeat-x; bottom: 0; content: ""; left: 0; position: absolute
 
 .service-card{ background-color: var(1); }
 
-/* Search.php
------------------------------------------------*/
-.search-grid { padding: var(--sp-baseg); }
-.search-section { width: 100%; color: var(--clr-2); padding-bottom: var(--sp-rim); }
-.search-section h4 { text-transform: uppercase; color: var(--clr-2); margin: 0; }
-.article-header-content { position:relative; }
-.posttypetext { position: absolute; top: 0; right: 0; padding: 2px 4px 2px 2px; background: var(--clr-2); line-height: 15px; }
-.posttypetext i { color: #FFFFFF; line-height: 15px; font-size: 13px; }
-.cpts-hide { display: none !important; }
-.cpts-message { display: inline-block; width: 100%; float: left; cursor: pointer; background:  var(--clr-2); padding: 5px; color: var(--clr-white); }
- 
-.search_section_grid .post_wrap {
-    /* overflow: visible; */
-    padding: var(--sp-rim);
-}
-.search_section_grid { display: grid; grid-gap: var(--sp-base); padding: 0 var(--sp-base) var(--sp-base); }
-    /* Desktop */
-    @media screen and (min-width: 1025px) {
-        .search_section_grid{ grid-template-columns: repeat(3, 1fr);}
-        .search-no-results .search_section_grid{ grid-template-columns: repeat(1, 1fr); margin: 0 auto;  width: 100%;  max-width: var(--gcw-max); }
-    }
 
-
-/* Blog/Archive & Posts
------------------------------------------------*/
+/*---------------------------------------------------------------------------
+04-07 Blog & Posts
+---------------------------------------------------------------------------*/
 
 .archive-parent-container {display: grid; grid-gap: var(--sp-base); }
 .blog-post-container { padding-bottom: calc( var(--sp-base) * 2); }
@@ -444,70 +462,8 @@ background-repeat: repeat-x; bottom: 0; content: ""; left: 0; position: absolute
 .act-purchase-info > :first-child { padding: var(--sp-base); background-color: #fff;     box-shadow: var(--shadowbox-btn); }
 
 /*---------------------------------------------------------------------------
-Comments
----------------------------------------------------------------------------*/
-
-#comments .commentlist { margin-left: 0px; }
-#respond ul { margin-left: 0px; }
-.commentlist li { position: relative; clear: both; overflow: hidden; list-style-type: none; margin-bottom: 1.5em; padding: 0.7335em 10px; }
-.commentlist li:last-child { margin-bottom: 0; }
-.commentlist li ul.children { margin: 0; }
-.commentlist li[class*=depth-] { margin-top: 1.1em; }
-.commentlist li.depth-1 { margin-left: 0; margin-top: 0; }
-.commentlist li:not(.depth-1) { margin-left: 10px; margin-top: 0; padding-bottom: 0; }
-.commentlist .vcard { margin-left: 50px; }
-.commentlist .vcard cite.fn { font-weight: 700; font-style: normal; }
-.commentlist .vcard time { float: right; }
-.commentlist .vcard time a { color: #999; text-decoration: none; }
-.commentlist .vcard time a:hover { text-decoration: underline; }
-.commentlist .vcard img.avatar { position: absolute; left: 10px; padding: 2px; border: 1px solid #cecece; background: #fff; }
-.commentlist .comment_content p { margin: 0.7335em 0 1.5em; font-size: 1em; line-height: 1.5em; }
-.commentlist .comment-reply-link { float: right; }
-
-/* COMMENT FORM STYLES */
-.respond-form { margin: 1.5em 10px; padding-bottom: 2.2em; }
-.respond-form form { margin: 0.75em 0; }
-.respond-form form li { list-style-type: none; clear: both; margin-bottom: 0.7335em; }
-.respond-form form li label,.respond-form form li small { display: none; }
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url],
-.respond-form form textarea { padding: 3px 6px; background: #efefef; border: 2px solid #cecece; line-height: 1.5em; }
-.respond-form form input[type=text]:focus,
-.respond-form form input[type=email]:focus,
-.respond-form form input[type=url]:focus,
-.respond-form form textarea:focus { background: #fff; }
-.respond-form form input[type=text]:invalid,
-.respond-form form input[type=email]:invalid,
-.respond-form form input[type=url]:invalid,
-.respond-form form textarea:invalid { outline: none; border-color: #fbc2c4; background-color: #f6e7eb; box-shadow: none; }
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url] { max-width: 400px; min-width: 250px; }
-.respond-form form textarea { resize: none; width: 97.3%; height: 150px; }
-#comment-form-title { margin: 0 0 1.1em; }
-#allowed_tags { margin: 1.5em 10px 0.7335em 0; }
-.nocomments { margin: 0 20px 1.1em; }
-
-/*---------------------------------------------------------------------------
 Widgets
 ---------------------------------------------------------------------------*/
-
-
-/*---------------------------------------------------------------------------
-Media
----------------------------------------------------------------------------*/
-
-
-/*---------------------------------------------------------------------------
-Captions
----------------------------------------------------------------------------*/
-
-
-/*---------------------------------------------------------------------------
-Galleries
----------------------------------------------------------------------------*/
-
 
 /*---------------------------------------------------------------------------
 Blocks
