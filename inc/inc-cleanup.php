@@ -4,7 +4,7 @@
  * 
  * @author JJROD Framework
  * @see https://github.com/javsrod/wp-framework
- * @version 1.0
+ * @version 1.1
  */
 
 // Fire all our initial functions at the start
