@@ -1,0 +1,118 @@
+/*---------------------------------------------------------------------------
+04-01 Navigation
+---------------------------------------------------------------------------*/
+
+/* Side Nav Canvas
+------------------------------------------*/
+:root { --canvas_dist:400px; }
+    @media screen and (max-width: 700px) {
+        :root { --canvas_dist: calc( 100vw - 110px); }
+    }
+#canvas_slide_wrapper { overflow: hidden; background: transparent; position: relative; }
+#canvas_slide_wrapper.open #canvas_main { margin-left: var(--canvas_dist); margin-right: calc( var(--canvas_dist) * -1 ); }
+#canvas_slide_wrapper.open #canvas_side { margin-left: 0 }
+.canvas_side { height: 100%; width: var(--canvas_dist); margin-left: calc( var(--canvas_dist) * -1 );  position: fixed; z-index: 1; top: 0; left: 0; background-color: var(--clr-1-dark); overflow-x: hidden;  padding-top: var(--sp-base); transition: 0.5s; }
+.canvas_side nav { padding: var(--sp-base); position: relative; }
+.canvas_side nav ul li a { text-decoration: none; font-size: 1.4rem; color: var(--clr-white); display: block; transition: 0.3s; }
+.canvas_side a:hover { opacity: 0.7; }
+.canvas_side .closebtn { position: absolute; top: 0; right: var(--sp-base); font-size: 3rem; margin-left: 50px; }
+#canvas_main { transition: .5s; }
+
+/* Side Nav Canvas Open Right
+------------------------------------------*/
+#canvas_slide_wrapper.open-right.open #canvas_main { margin-right: var(--canvas_dist); margin-left: calc( var(--canvas_dist) * -1 ); }
+#canvas_slide_wrapper.open-right.open #canvas_side { margin-right: 0; margin-left: unset; }
+#canvas_slide_wrapper.open-right .canvas_side { margin-right: calc( var(--canvas_dist) * -1 ); right: 0; left: unset;}
+
+/* Toggle Shape
+------------------------------------------*/
+a.nav-toggle-wrap { width: 40px; height: 40px; }
+span.nav-toggle-icon , span.nav-toggle-icon:before, span.nav-toggle-icon:after { position: absolute; }
+a span.nav-toggle-icon , a span.nav-toggle-icon:before, a span.nav-toggle-icon:after { height: 4px; width: 40px; background: var(--clr-1) !important; display: block; cursor: pointer;  display: block; content: ""; left: 0; transition: all .5s ease; border-radius: 2px; }
+
+span.nav-toggle-icon  { position: relative; top: 15px; margin-bottom: 20px; }
+span.nav-toggle-icon:before { top: -12px; }
+span.nav-toggle-icon:after { bottom: -12px; }
+
+/* Toggle Open Shape */
+#canvas_slide_wrapper.open  { opacity: 1; }
+#canvas_slide_wrapper.open  span.nav-toggle-icon { background: none !important; }
+#canvas_slide_wrapper.open  span.nav-toggle-icon:before, #canvas_slide_wrapper.open  span.nav-toggle-icon:after { background: var(--clr-1) !important; }
+#canvas_slide_wrapper.open  span.nav-toggle-icon:before { transform: rotate(45deg); top: 0; left: 0; }
+#canvas_slide_wrapper.open  span.nav-toggle-icon:after { transform: rotate(-45deg); bottom: 0; left: 0; }
+#canvas_slide_wrapper.open.dark_header  span.nav-toggle-icon:before, #canvas_slide_wrapper.open.dark_header span.nav-toggle-icon:after { background: var(--clr-white) !important; }
+
+/* Masthead
+------------------------------------------*/
+header.masthead .main-masthead .site-branding { grid-area: hl; }
+header.masthead .main-masthead .masthead-desktop_nav { grid-area: hn; }
+header.masthead .main-masthead .masthead-desktop_nav { display: none; }
+header.masthead .main-masthead .header_icons { grid-area: hi; }
+header.masthead .main-masthead .header_icons {display: flex;justify-content: flex-end;}
+header.masthead { position: relative;  box-shadow: 0 0 7px rgb(0 0 0 / 10%) !important;  /*border-bottom: 2px solid var(--clr-1);*/ }
+header.masthead .main-masthead { padding: var(--sp-rim); position: relative; z-index: 999; width: 100%; display: grid; grid-gap: calc( var(--sp-rim) * 1 ); grid-template-areas: "hl hi hn"; grid-template-columns: min-content auto  min-content; align-items: center; background-color: #fff;  }
+header.masthead .main-masthead #logo { position: relative; width: 150px; height: 38px; background-image: url(img/mov-logo-franchise.svg); background-size: contain; background-repeat: no-repeat; }
+header.masthead .main-masthead a { transition: .2s ease-in; display: block; }
+header.masthead .main-masthead .site-branding h1 { margin: 0; top: 0; }
+/* Masthead Main Menu Sltyling   */
+header.masthead .main-masthead .masthead-desktop_nav li { display: flex; align-items: center; }
+header.masthead .main-masthead .masthead-desktop_nav li a {  font-size: .7rem; font-weight: 700; text-transform: uppercase; color: var(--clr-3-dark); padding: 0.2rem 0.3rem; }
+header.masthead .main-masthead .masthead-desktop_nav li a:hover, header.masthead .main-masthead .masthead-desktop_nav li a:focus { color: var(--clr-1); }
+header.masthead .main-masthead .masthead-desktop_nav li.current-menu-item a { color: var(--clr-1); }
+header.masthead .main-masthead .masthead-desktop_nav li.button.hollow { margin: 0;margin-left: var(--button_brdr); padding:0; }
+/* Masthead Utility Menu Sltyling   */
+header.masthead .main-masthead .masthead-desktop_nav nav.masthead-desktop_nav-utility li a {  font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--clr-3-); padding: 0.3rem 0.8rem; }
+header.masthead .main-masthead .masthead-mobile_cta svg,
+header.masthead .main-masthead .masthead-search svg { display: block; margin: 0 auto; font-size: 2rem; color: var(--clr-1); }
+header.masthead .main-masthead .masthead-search svg { margin-bottom: 7px;}
+header.masthead .main-masthead .masthead-search Button { color: var(--clr-1); background: transparent; border: none; display: block; margin: 0; padding: 0; transition: 0.3s; }
+header.masthead .main-masthead .masthead-search Button:hover, header.masthead .main-masthead .masthead-search Button:active { background: none !important; color: var(--clr-1) !important; }
+header.masthead .main-masthead .masthead-mobile_cta,
+header.masthead .main-masthead .masthead-search,
+header.masthead .main-masthead .masthead-canvas_side_togle  { font-size: calc( var(--fontSize) * 0.7); text-align: center; display: flex; justify-content: flex-end;}
+
+/* Masthead Icons  */
+header.masthead ul.navicon_list { text-align: right; margin: 0; }
+header.masthead ul.navicon_list li { display: inline-block !important; height: 100%; margin-left: 1rem; }
+header.masthead ul.navicon_list li:first-of-type { margin-left: 0px; }
+header.masthead .navicon { font-size: .75rem; font-weight: 700; color: var(--clr-3);  }
+header.masthead .navicon:hover,.navicon:focus { color: var(--clr-3) !important; opacity: .3;}
+header.masthead .navicon svg { color: var(--clr-1); font-size: 2rem;  margin-bottom: .35rem; }
+header.masthead .navicon:hover svg,.navicon:focus svg  {  }
+
+    @media screen and (max-width: 400px) {
+        header.masthead .main-masthead span.sicon-text { font-size: .65rem; }
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 800px) {
+        header.masthead .main-masthead { padding: calc(var(--sp-rim) / 2) var(--sp-base) }
+    }
+
+    @media screen and (min-width: 1200px) {
+        header.masthead .main-masthead { grid-template-columns: min-content auto; grid-gap: var(--sp-rim); grid-template-areas: "hl hn" }
+        header.masthead .main-masthead #logo { /*position: absolute; top: 1rem;*/ width: 102px; height: 40px; background-image: url(img/mov-logo-franchise.svg) }
+        header.masthead .main-masthead .masthead-canvas_side_togle { display: none; }
+        header.masthead .main-masthead .masthead-mobile_cta { display: none; }
+        header.masthead .main-masthead .masthead-desktop_nav { display: unset; }
+        header.masthead .utility-masthead { display: block; }
+        header.masthead .utility-masthead { padding: calc(var(--sp-rim) / 2) var(--sp-base); color: var(--clr-white) !important; background: linear-gradient(  90deg, var(--clr-1-light),var(--clr-2) ); }
+    }
+    /* Laptop Med  */
+    @media screen and (min-width: 1024px) and (max-width: 1299px) {
+        header.masthead .main-masthead #logo { width: 200px; height: 50px; }
+    }
+
+    /* Laptop large  */
+    @media screen and (min-width: 1300px) and (max-width: 1599px) {
+        header.masthead .main-masthead #logo { width: 200px; height: 50px; }
+        header.masthead .main-masthead .masthead-desktop_nav li a { font-size: .75rem; padding: 0.3rem 0.5rem; }
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1600px) {
+        header.masthead .main-masthead #logo { width: 280px; height: 70px; }
+        header.masthead .main-masthead .masthead-desktop_nav li a { font-size: .7rem; padding: 0.6rem 0.6rem; }
+    }
+
+.opened-main{opacity: .2;transition: opacity 0.3s;}
