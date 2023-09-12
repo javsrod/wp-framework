@@ -24,27 +24,23 @@ get_header(); ?>
             </header><!-- .page-header -->
 
             <!-- ***************************** -->
-            <!-- Posts -->
+            <!-- Blog Posts -->
             <!-- ***************************** -->
 
-            <div class="">
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <?php get_template_part( 'template-parts/blog/bloog', 'loop-archive' ); ?>
-                <?php endwhile; ?>  
-            </div>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php get_template_part( 'template-parts/content', 'search' ); ?>
+            <?php endwhile; ?>  
 
-          <?php joints_page_navi(); ?>
+            <?php joints_page_navi(); ?>
 
-          <?php else : ?>                     
-              <?php get_template_part( 'template-parts/content', 'missing' ); ?>   
-          <?php endif; ?>
+            <?php else : ?>                     
+                <?php get_template_part( 'template-parts/content', 'missing' ); ?>   
+            <?php endif; ?>
 
-        </div><!-- gcw -->
-    </div><!-- spv sph -->
+            <!-- ***************************** -->
+            <!-- Blog Posts -->
+            <!-- ***************************** -->
 
-    <div class="spv sph">
-        <div class="gcw">
-                  <?php get_search_form(); ?>        
         </div><!-- gcw -->
     </div><!-- spv sph -->
 
