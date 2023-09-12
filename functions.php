@@ -24,9 +24,6 @@ require_once(get_template_directory().'/inc/inc-cleanup.php');
 // Makes WordPress comments suck less
 require_once(get_template_directory().'/inc/inc-comments.php');
 
-// Remove Emoji Support
-require_once(get_template_directory().'/inc/inc-disable-emoji.php');
-
 // Register scripts and stylesheets
 require_once(get_template_directory().'/inc/inc-enqueue-scripts.php');
 
@@ -37,10 +34,7 @@ require_once(get_template_directory().'/inc/inc-enqueue-scripts.php');
 require_once(get_template_directory().'/inc/inc-menu.php');
 
 // Replace 'older/newer' post links with numbered navigation
- require_once(get_template_directory().'/inc/inc-page-navi.php');
-
-// Related post function - no need to rely on plugins
-// require_once(get_template_directory().'/inc/related-posts.php');
+require_once(get_template_directory().'/inc/inc-page-navi.php');
 
 // Theme editor options
 require_once(get_template_directory().'/inc/inc-theme-editor.php');
