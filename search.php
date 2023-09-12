@@ -32,7 +32,7 @@ get_header(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('search-article-card'); ?> role="article">
 
                     <header>
-                        <h3 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                        <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
                     </header>   
 
                     <?php the_excerpt(); ?>
