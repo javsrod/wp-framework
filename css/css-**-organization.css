@@ -2,50 +2,48 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 00 Includes
-    - Framework
-        - Normalize
-        - WP & Gutenberg Block Resets
-        - Helpers Classes
-        - Gss & Flex Grid Helpers
-        - Absolute Positioning Helpers
-        - Plugins
-    - Theme Specific Includes
+    - 00 Framework
+        - 00 Normalize
+        - 01 WP & Gutenberg Block Resets
+        - 02 Helpers Classes
+        - 03a Gss & Flex Grid Helpers
+        - 03b Absolute Positioning Helpers
+        - 04 Components
+        - 07+ Plugins
+    - 01 Theme Specific Includes
 01 Root Variables
-    - Branding Variables
+    - 00 Branding Variables
         - Colors
         - Text Shadow
         - Drop Shadow
         - Backdrop Blur
         - Border Radius
-    - Typography & Sizing
-    - Spacing Variables
+    - 01 Typography & Sizing
+    - 01 Spacing Variables
 02 Fallbacks
 03 Base Styling
-    - Colors
-    - Typography
-    - Links
-    - Buttons
-    - Forms 
-    - Lists
-    - Blockquote
+    - 00 Colors
+    - 01 Typography
+    - 02 Links
+    - 03 Buttons
+    - 04 Forms 
+    - 05 Lists
+    - 06 Blockquote
+    - 07 Captions
 04 Components
-    - Unique Brand Elements & Classes
-    - Loader
-    - Navigation
-    - Modals
-    - Search Form
-    - Icons
-    - Accordions & Toggles
-    - Pages
-    - Blog & Posts
-    - Custom Posts Types
-    - Comments
-    - Widgets
-    - Media
-    - Captions
-    - Galleries
-    - Blocks
-    - Footer
+    - 00 Unique Brand Elements & Classes
+    - 00A Loader
+    - 01 Navigation
+    - 02 Modals
+    - 03 Search Form
+    - 04 Icons
+    - 05 Accordions & Toggles
+    - 06 Pages
+    - 07 Blog & Posts
+    - 08 Custom Posts Types
+    - 09 Widgets
+    - 10 Blocks
+    - 11 Footer
 05 Plugins
     - Swiper
     - Scroll Reveal
