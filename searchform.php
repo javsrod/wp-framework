@@ -7,9 +7,9 @@
  * @link https://developer.wordpress.org/reference/functions/wp_unique_id/
  * @link https://developer.wordpress.org/reference/functions/get_search_form/
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since 1.0.0
+ * @author JJROD Framework
+ * @see https://github.com/javsrod/wp-framework
+ * @version 1.0
  */
 
 /*
