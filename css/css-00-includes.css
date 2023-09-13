@@ -43,3 +43,53 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/*---------------------------------------------------------------------------
+00-02 Media Query Refference (MQR)
+---------------------------------------------------------------------------*/
+
+    /* Mobile Small */
+    @media screen and (max-width: 569px) {
+
+    }
+
+    /* Mobile Large */
+    @media screen and (min-width: 570px) and (max-width: 799px) {
+
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 799px) {
+
+    }
+
+    /* Tablet */
+    @media screen and (min-width: 800px) and (max-width: 1023px) {
+
+    }
+
+    /* Laptop Med  */
+    @media screen and (min-width: 1024px) and (max-width: 1299px) {
+
+    }
+
+    /* Laptop Large  */
+    @media screen and (min-width: 1300px) and (max-width: 1499px) {
+
+    }
+
+    /* Desktop Medium */
+    @media screen and (min-width: 1500px) and (max-width: 1699px) {
+
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1700px) {
+
+    }
+
+    /* Desktop 1440P & UP*/
+    @media screen and (min-width: 2200px) {
+
+    }
