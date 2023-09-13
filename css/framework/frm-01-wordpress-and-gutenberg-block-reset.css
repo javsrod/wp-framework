@@ -2,11 +2,14 @@
 Wordpress Resets
 ---------------------------------------------------------------------------*/ 
 
-@media screen and (max-width: 600px) { #wpadminbar {position: fixed !important;} }
+@media screen and (max-width: 600px) { 
+    #wpadminbar { position: fixed !important; }
+}
 
 /*---------------------------------------------------------------------------
 Gutenberg Block Resets
 ---------------------------------------------------------------------------*/
+
 .wp-block-image { margin: 0; }
 .wp-block-file { margin-bottom: 1.5em; display: grid; text-align: center; }
 .wp-block-file .wp-block-file__button { background: unset; border-radius: unset; color: unset; font-size: unset; padding: unset; }
@@ -28,4 +31,4 @@ Gutenberg Block Resets
 :where(.wp-block-group.has-background) { padding: unset; }
 :where(.wp-block-columns.has-background) { padding: unset; }
 :where(.wp-block-columns.is-layout-flex), :where(.is-layout-flex) { gap: unset; }
-body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {  margin-left: unset; !important;  margin-right: unset; !important; }
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {  margin-left: unset !important;  margin-right: unset !important; }
