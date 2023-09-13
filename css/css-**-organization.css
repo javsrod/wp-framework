@@ -2,7 +2,7 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 00 Includes
-    - 00 Framework
+    - 00 Framework (FRM)
         - 00 Normalize
         - 01 WP & Gutenberg Block Resets
         - 02 Helpers Classes
@@ -12,7 +12,7 @@
         - 07+ Plugins
     - 01 Theme Specific Includes
     - 02 Media Query Refference (MQR)
-01 Root Variables
+01 Root Variables (VARS)
     - 00 Branding Variables
         - Colors
         - Text Shadow
@@ -21,8 +21,8 @@
         - Border Radius
     - 01 Typography & Sizing
     - 01 Spacing Variables
-02 Fallbacks
-03 Base Styling
+02 Fallbacks (FBK)
+03 Base Styling (BSE)
     - 00 Colors
     - 01 Typography
     - 02 Links
@@ -31,11 +31,11 @@
     - 05 Lists
     - 06 Blockquote
     - 07 Captions
-04 Components
+04 Components (CMP)
     - 00 Unique Elements & Classes
-    - 01 Navigation
+    - 01 Navigation (HDR)
     - 02 Modals
-    - 03 Search Form
+    - 03 Search Elements
     - 04 Icons
     - 05 Accordions & Toggles
     - 06 Pages
@@ -43,8 +43,8 @@
     - 08 Custom Posts Types
     - 09 Widgets
     - 10 Blocks
-    - 11 Footer
-05 Plugins
+    - 11 Footer (FTR)
+05 Plugins (PLG)
     - Swiper
     - Scroll Reveal
     - learn-dash
