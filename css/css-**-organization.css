@@ -1,8 +1,8 @@
 /*----------------------------------------------------------------------------------------------------------------------------
->>> TABLE OF CONTENTS <<<  * NOTE: (C-L-D) = Category Codes. Type with no spaces for faster searching *
+>>> TABLE OF CONTENTS <<<  * NOTE: (C-L-D) = Category Codes. Type these with no spaces while search for faster locating *
 ------------------------------------------------------------------------------------------------------------------------------
-00 Includes (C-L-D)
-    - 00 Framework (F-R-M)
+00 Includes (I-C-D)
+    - 00 Framework (I-C-F)
         - 00 Normalize
         - 01 WP & Gutenberg Block Resets
         - 02 Helpers Classes
@@ -10,7 +10,7 @@
         - 03b Absolute Positioning Helpers
         - 04 Component Defaults
         - 07+ Plugins
-    - 01 Theme Specific Includes (T-S-P)
+    - 01 Theme Specific Includes (I-C-T)
     - 02 Media Query Refference (M-Q-R)
 01 Root Variables (V-R-S)
     - 00 Branding Variables (B-V-R)
@@ -23,35 +23,35 @@
     - 01 Spacing Variables (B-V-S)
 02 Fallbacks (F-B-K)
 03 Base Styling (B-S-E)
-    - 00 Colors (C-L-S)
-    - 01 Typography (H-D-G)
-    - 02 Links (L-K-S)
-    - 03 Buttons (B-T-S)
-    - 04 Forms (F-R-M)
-    - 05 Lists (L-T-S)
-    - 06 Blockquote (B-Q-T)
-    - 07 Captions (C-P-N)
+    - 00 Colors (B-S-C)
+    - 01 Typography (B-S-T)
+    - 02 Links (B-S-L)
+    - 03 Buttons (B-S-B)
+    - 04 Forms (B-S-F)
+    - 05 Lists (B-S-L)
+    - 06 Blockquote (B-S-Q)
+    - 07 Captions (B-S-N)
 04 Components (C-M-P)
-    - 00 Unique Elements & Classes (U-N-Q)
-    - 01 Navigation (H-D-R)
-    - 02 Modals (M-D-L)
-    - 03 Search Elements (S-C-H)
-    - 04 Icons (I-C-N)
-    - 05 Accordions & Toggles (A-T-G)
-    - 06 Pages (P-G-S)
-    - 07 Blog & Posts (B-L-G)
-    - 08 Custom Posts Types (C-P-T)
-    - 09 Widgets (W-G-T)
-    - 10 Blocks (B-K-S)
-    - 11 Footer (F-T-R)
+    - 00 Unique Elements & Classes (C-M-U)
+    - 01 Navigation (C-M-H)
+    - 02 Modals (C-M-M)
+    - 03 Search Elements (C-M-S)
+    - 04 Icons (C-M-I)
+    - 05 Accordions & Toggles (C-M-A)
+    - 06 Pages (C-M-P)
+    - 07 Blog & Posts (C-M-B)
+    - 08 Custom Posts Types (C-M-C)
+    - 09 Widgets (C-M-W)
+    - 10 Blocks (C-M-K)
+    - 11 Footer (C-M-F)
 05 Plugins (P-L-G)
-    - Swiper (S-W-P)
-    - Scroll Reveal (S-C-R)
-    - Learn Dash (L-D-S)
-    - WooFunnels (W-F-N)
-    - Woocoommerce (W-O-C)
-    - Gravity Forms (G-V-F)
-    - WPSL (W-L-C)
+    - Swiper (P-S-W)
+    - Scroll Reveal (P-S-R)
+    - Learn Dash (P-L-D)
+    - WooFunnels (P-W-F)
+    - Woocoommerce (P-W-C)
+    - Gravity Forms (P-G-F)
+    - WPSL (P-S-L)
 ----------------------------------------------------------------------------------------------------------------------------*/
 
 /* --------------- NOTE MAKER LEGEND --------------- */
