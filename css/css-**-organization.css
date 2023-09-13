@@ -1,57 +1,58 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-00 Includes
-    - 00 Framework (FRM)
+/*----------------------------------------------------------------------------------------------------------------------------
+>>> TABLE OF CONTENTS <<<  * NOTE: (C-L-D) = Category Codes. Type with no spaces for faster searching *
+------------------------------------------------------------------------------------------------------------------------------
+00 Includes (C-L-D)
+    - 00 Framework (F-R-M)
         - 00 Normalize
         - 01 WP & Gutenberg Block Resets
         - 02 Helpers Classes
         - 03a Gss & Flex Grid Helpers
         - 03b Absolute Positioning Helpers
-        - 04 Components
+        - 04 Component Defaults
         - 07+ Plugins
-    - 01 Theme Specific Includes
-    - 02 Media Query Refference (MQR)
-01 Root Variables (VRS)
-    - 00 Branding Variables
+    - 01 Theme Specific Includes (T-C-D)
+    - 02 Media Query Refference (M-Q-R)
+01 Root Variables (V-R-S)
+    - 00 Branding Variables (B-V-R)
         - Colors
         - Text Shadow
         - Drop Shadow
         - Backdrop Blur
         - Border Radius
-    - 01 Typography & Sizing
-    - 01 Spacing Variables
-02 Fallbacks (FBK)
-03 Base Styling (BSE)
-    - 00 Colors
-    - 01 Typography
-    - 02 Links
-    - 03 Buttons
-    - 04 Forms 
-    - 05 Lists
-    - 06 Blockquote
-    - 07 Captions
-04 Components (CMP)
-    - 00 Unique Elements & Classes
-    - 01 Navigation (HDR)
-    - 02 Modals
-    - 03 Search Elements
-    - 04 Icons
-    - 05 Accordions & Toggles
-    - 06 Pages
-    - 07 Blog & Posts
-    - 08 Custom Posts Types
-    - 09 Widgets
-    - 10 Blocks
-    - 11 Footer (FTR)
-05 Plugins (PLG)
-    - Swiper
-    - Scroll Reveal
-    - learn-dash
-    - WooFunnels
-    - Woocoommerce
---------------------------------------------------------------*/
-
+    - 01 Typography & Sizing (T-V-R)
+    - 01 Spacing Variables (S-V-R)
+02 Fallbacks (F-B-K)
+03 Base Styling (B-S-E)
+    - 00 Colors (C-L-S)
+    - 01 Typography (H-D-G)
+    - 02 Links (L-K-S)
+    - 03 Buttons (B-T-S)
+    - 04 Forms (F-R-M)
+    - 05 Lists (L-T-S)
+    - 06 Blockquote (B-Q-T)
+    - 07 Captions (C-P-N)
+04 Components (C-M-P)
+    - 00 Unique Elements & Classes (U-N-Q)
+    - 01 Navigation (H-D-R)
+    - 02 Modals (M-D-L)
+    - 03 Search Elements (S-C-H)
+    - 04 Icons (I-C-N)
+    - 05 Accordions & Toggles (A-T-G)
+    - 06 Pages (P-G-S)
+    - 07 Blog & Posts (B-L-G)
+    - 08 Custom Posts Types (C-P-T)
+    - 09 Widgets (W-G-T)
+    - 10 Blocks (B-K-S)
+    - 11 Footer (F-T-R)
+05 Plugins (P-L-G)
+    - Swiper (S-W-P)
+    - Scroll Reveal (S-C-R)
+    - Learn Dash (L-D-S)
+    - WooFunnels (W-F-N)
+    - Woocoommerce (W-O-C)
+    - Gravity Forms (G-V-F)
+    - WPSL (W-L-C)
+----------------------------------------------------------------------------------------------------------------------------*/
 
 /* --------------- NOTE MAKER LEGEND --------------- */
 
