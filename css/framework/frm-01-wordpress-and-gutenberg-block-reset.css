@@ -1,6 +1,10 @@
 /*---------------------------------------------------------------------------
 Wordpress Resets
 ---------------------------------------------------------------------------*/ 
+:root { --wpadminbar_height: 46px; }
+@media screen and (min-width: 783px) {
+    :root { --wpadminbar_height: 46px; }
+}
 
 @media screen and (max-width: 600px) { 
     #wpadminbar { position: fixed !important; }
