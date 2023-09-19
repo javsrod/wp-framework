@@ -1,0 +1,16 @@
+/*---------------------------------------------------------------------------
+03-02 links (BST)
+---------------------------------------------------------------------------*/
+
+a { transition: all 250ms ease-in-out; color: var(--clr-1); text-decoration: none;}
+a:visited {color: var(--clr-1);}
+a:hover, a:focus, a:active {color: var(--clr-1-dark);}
+a, a:active, a:focus{ outline: none; }
+a:hover, a:active {outline: 0;}
+a p, a p:visited, a p:hover, a p:focus, a p:active { color: var(--clr-body); }
+
+.light a:visited { color: var(--clr-white); }
+.light a:hover, .light a:focus, .light a:active { color: var(--clr-white); opacity: 0.7 }
+.light a, .light a:active, .light a:focus{ color: var(--clr-white); outline: none; }
+.light  a:hover, .light  a:active { outline: 0;}
+.light a p, .light a p:visited, .light a p:hover, .light a p:focus, .light a p:active { color: var(--clr-white); }
