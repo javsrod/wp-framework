@@ -1,0 +1,43 @@
+/*---------------------------------------------------------------------------
+03-06 Blockquote (BSQ)
+---------------------------------------------------------------------------*/
+blockquote {
+    font-size: 1rem;
+    font-weight: 700;
+    width: 90%;
+    margin: var(--sp-base) 0 var(--sp-base) 3rem !important;
+    color: var(--clr-white);
+    padding: var(--sp-rim) var(--sp-rim) var(--sp-rim) 2rem !important;
+    border-left: 4px solid var(--clr-1);
+    border: none !important;
+    border-radius: var(--borderradius);
+    /* line-height: 1.6; */
+    position: relative;
+    background: #fbfbfb;
+    background: linear-gradient( 90deg, var(--clr-1), var(--clr-1-dark) );
+    box-shadow: var(--shadow);
+}
+
+blockquote::before { display: absolute; font-family: "Font Awesome 6 Pro"; font-weight: 900; content: "\f10d" !important;  color:var(--clr-1); font-size:4em; position: absolute; left: -36px; top: -15px; }
+blockquote::before { display: none; }
+blockquote svg[data-fa-pseudo-element="::before"] {
+    border-radius: 50%;
+    position: absolute;
+    font-size: 2.5rem;
+    left: -2.5rem;
+    top: 1rem;
+    /* transform: translateX(-50%); */
+    color: var(--clr-1);
+    background: var(--clr-white);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: solid 0.5rem var(--clr-white);
+    box-shadow: var(--shadow);
+}
+blockquote::after{ content: ''; }
+blockquote span { display:block; color:var(--clr-1); margin-top:1em;  font-family: "Gotham A", "Gotham B", 'Montserrat', sans-serif; font-style: normal; font-weight: 700;}
+blockquote p, blockquote strong { color: var(--clr-white) !important; }
+
+.light blockquote {color: #ffffff; border-left: 4px solid #ffffff; background: #fbfbfb29; }
+.light blockquote::before{ color:#ffffff; }
+.light blockquote span { display:block; color:#ffffff; }
