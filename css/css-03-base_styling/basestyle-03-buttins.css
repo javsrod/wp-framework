@@ -1,0 +1,142 @@
+/*---------------------------------------------------------------------------
+03-03 Buttons (BSB)
+---------------------------------------------------------------------------*/
+
+/* Button Variables
+-----------------------------------------------*/
+:root { --button_brdr: 3px; }
+    @media screen and (max-width: 700px) {
+        :root { --button_brdr: 3px; }
+    }
+
+/* Button Default
+-----------------------------------------------*/
+textarea, input, button { outline: none; }
+.wp-block-buttons>.wp-block-button { display: inline-block; margin: 0 !important; }
+
+/* Woo Base*/ .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,
+/* Woo Alt*/  .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+/* Gut */ a.wp-block-button__link,
+/* Wpsl Search page */ #wpsl-search-btn,
+
+.button, .wp-block-file a.wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="submit" i]
+
+{   display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 .7em 0;
+    padding: .7em 1.2em;
+    /*font-family: 'qanelasblack';*/
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase !important;
+    line-height: 1;
+    font-size: .9rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--clr-1);
+    color: var(--clr-white) !important;
+    border-radius: 9999px !important;
+    transition: all 350ms ease-in-out !important;
+    letter-spacing: .15em;
+    border:  none;
+}
+
+/* Button Default Hover
+-----------------------------------------------*/
+/* Woo Base*/ .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
+/* Woo Alt*/  .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
+/* Gut */ a.wp-block-button__link:hover,
+.button:hover,.button:focus, .wp-block-file a.wp-block-file__button:hover,.wp-block-file a.wp-block-file__button:focus,
+button:hover,button:active, button:focus,
+input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
+input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus  
+
+{ background-color: var(--clr-1-dark) !important; opacity: .7; color: #fff !important; }
+
+/* Solid Buttons
+-----------------------------------------------*/
+.button.bkg-1, .wp-block-button__link.has-clr-1-background-color, 
+.wp-block-file a.wp-block-file__button { color: var(--clr-white) !important; background: linear-gradient( 90deg, var(--clr-1-light),var(--clr-1-dark) ); border: none; }
+.button.bkg-1:hover, .wp-block-button__link.has-clr-1-background-color:hover, .button.bkg-1:focus, .wp-block-button__link.has-clr-1-background-color:focus {  }
+
+.button.bkg-2, .wp-block-button__link.has-clr-2-background-color { color: var(--clr-3) !important;  text-shadow: var(--shadow-text) !important; background: linear-gradient( 90deg, var(--clr-2-light),var(--clr-2-dark) ); border: none; }
+.button.bkg-2:hover, .wp-block-button__link.has-clr-2-background-color:hover, .button.bkg-2:focus, .wp-block-button__link.has-clr-2-background-color:focus {  }
+
+.button.bkg-3, .wp-block-button__link.has-clr-3-background-color { color: var(--clr-1) !important; background-color: var(--clr-3) !important;  }
+.button.bkg-3:hover, .wp-block-button__link.has-clr-3-background-color:hover, .button.bkg-3:focus, .wp-block-button__link.has-clr-3-background-color:focus { background-color: var(--clr-3-hover) !important;  }
+
+.button.bkg-4, .wp-block-button__link.has-clr-4-background-color { color: var(--clr-2) !important; background-color: var(--clr-4) !important;  }
+.button.bkg-4:hover, .wp-block-button__link.has-clr-4-background-color:hover, .button.bkg-4:focus, .wp-block-button__link.has-clr-4-background-color:focus { color: var(--clr-2) !important; background-color: var(--clr-4-op) !important;  }
+
+#wpsl-search-btn,
+.wpsl-search-widget input[type="submit" i], 
+.button.bkg-white, .wp-block-button__link.has-white-background-color 
+    { color: var(--clr-1) !important; background-color: var(--clr-white) !important;  }
+
+#wpsl-search-btn:hover, #wpsl-search-btn:focus,    
+.wpsl-search-widget input[type="submit" i]:hover, .wpsl-search-widget input[type="submit" i]:focus, 
+.button.bkg-white:hover, .wp-block-button__link.has-white-background-color:hover, .button.bkg-white:focus, .wp-block-button__link.has-white-background-color:focus {
+     color: var(--clr-white) !important; background-color: var(--clr-white-hover) !important;  }
+
+.button.bkg-black, .wp-block-button__link.has-black-background-color 
+    { color: var(--clr-white) !important; background-color: var(--clr-black) !important;  }
+.button.bkg-black:hover,.wp-block-button__link.has-black-background-color:hover, .button.bkg-black:focus,.wp-block-button__link.has-black-background-color:focus { background-color: var(--clr-black-hover) !important;  }
+
+/* Hollow Buttons
+-----------------------------------------------*/
+.button.hollow, .is-style-outline>.wp-block-button__link, .wp-block-button__link.is-style-outline { border: var(--button_brdr) solid !important; background: transparent !important; text-shadow: none;}
+
+.is-style-outline > .wp-block-button__link:not(.has-background), .wp-block-button__link.is-style-outline:not(.has-background),
+.is-style-outline > .wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color),
+
+.button.hollow, .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline,
+.button.bkg-1.hollow, .is-style-outline>.wp-block-button__link.has-clr-1-color, .wp-block-button__link.has-clr-1-color.is-style-outline 
+    { color: var(--clr-1) !important; border-color: var(--clr-1) !important; background: transparent !important}
+
+    .button.bkg-1.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-1-color:hover, .wp-block-button__link.has-clr-1-color.is-style-outline:hover,
+    .button.bkg-1.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-1-color:focus, .wp-block-button__linkhas-clr-1-color.is-style-outline:focus
+        { color: var(--clr-1-hover) !important; border-color: var(--clr-1-hover) !important; background: transparent !important}
+
+.button.bkg-2.hollow, .is-style-outline>.wp-block-button__link.has-clr-2-color, .wp-block-button__link.has-clr-2-color.is-style-outline 
+    { color: var(--clr-2) !important; border-color: var(--clr-2) !important; background: transparent !important}
+
+    .button.bkg-2.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-2-color:hover, .wp-block-button__link.has-clr-2-color.is-style-outline:hover,
+    .button.bkg-2.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-2-color:focus, .wp-block-button__linkhas-clr-2-color.is-style-outline:focus
+        { color: var(--clr-white) !important; border-color: var(--clr-2-hover) !important; background: var(--clr-2-hover) !important; opacity: 1; }
+
+.button.bkg-3.hollow, .is-style-outline>.wp-block-button__link.has-clr-3-color, .wp-block-button__link.has-clr-3-color.is-style-outline 
+    { color: var(--clr-3) !important; border-color: var(--clr-3) !important; background: transparent !important}
+
+    .button.bkg-3.hollow:hover, .is-style-outline>.wp-block-button__link.has-clr-3-color:hover, .wp-block-button__link.has-clr-3-color.is-style-outline:hover,
+    .button.bkg-3.hollow:focus, .is-style-outline>.wp-block-button__link.has-clr-3-color:focus, .wp-block-button__linkhas-clr-3-color.is-style-outline:focus
+        { color: var(--clr-3-hover) !important; border-color: var(--clr-3-hover) !important; background: transparent !important}
+
+.button.bkg-white.hollow, .is-style-outline>.wp-block-button__link.has-white-color, .wp-block-button__link.has-white-color.is-style-outline 
+    { color: var(--clr-white) !important; border-color: var(--clr-white) !important; background: transparent !important}
+
+    .button.bkg-white.hollow:hover, .is-style-outline>.wp-block-button__link.has-white-color:hover, .wp-block-button__link.has-white-color.is-style-outline:hover,
+    .button.bkg-white.hollow:focus, .is-style-outline>.wp-block-button__link.has-white-color:focus, .wp-block-button__linkhas-white-color.is-style-outline:focus
+        { color: var(--clr-white-hover) !important; border-color: var(--clr-white-hover) !important; background: transparent !important}
+
+.button.bkg-black.hollow, .is-style-outline>.wp-block-button__link.has-black-color, .wp-block-button__link.has-black-color.is-style-outline 
+    { color: var(--clr-black) !important; border-color: var(--clr-black) !important; background: transparent !important}
+
+    .button.bkg-black.hollow:hover, .is-style-outline>.wp-block-button__link.has-black-color:hover, .wp-block-button__link.has-black-color.is-style-outline:hover,
+    .button.bkg-black.hollow:focus, .is-style-outline>.wp-block-button__link.has-black-color:focus, .wp-block-button__linkhas-black-color.is-style-outline:focus
+        { color: var(--clr-black-hover) !important; border-color: var(--clr-black-hover) !important; background: transparent !important}
+
+/* Button Woocommerce
+-----------------------------------------------*/
+.woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled] {
+    color: inherit; cursor: not-allowed; opacity: .5; padding: .618em 1em; padding: .4rem 1.8rem; font-size: 1rem; color: #fff; }
+
+/* Button Sizing
+-----------------------------------------------*/
+.button.smallbtn, .wp-block-button.smallbtn .wp-block-button__link { font-size: 0.75rem; }
+.button.largebtn, .wp-block-button.largebtn .wp-block-button__link { font-size: 2rem; }
+.button.expanded, .wp-block-button.expanded, .wp-block-button.expanded .wp-block-button__link { display: block; width: 100%; margin-right: 0; margin-left: 0; }
