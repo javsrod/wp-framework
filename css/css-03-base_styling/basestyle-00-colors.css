@@ -1,0 +1,39 @@
+/****************************************************************************
+*****************************************************************************
+03 Base Styling (BSE)
+*****************************************************************************
+****************************************************************************/
+
+/*---------------------------------------------------------------------------
+03-00 Colors (BSC)
+---------------------------------------------------------------------------*/
+
+/* Color Clases
+-----------------------------------------------*/
+.clr-1, .has-clr-1-color { color: var(--clr-1) !important; } svg .clr-1 { fill: var(--clr-1) !important; }
+.clr-2, .has-clr-2-color { color: var(--clr-2) !important; } svg .clr-2 { fill: var(--clr-2) !important; }   
+.clr-3, .has-clr-3-color { color: var(--clr-3) !important; } svg .clr-3 { fill: var(--clr-3) !important; } 
+.clr-4, .has-clr-4-color { color: var(--clr-4) !important; } svg .clr-4 { fill: var(--clr-4) !important; } 
+.clr-white, .has-white-color { color: var(--clr-white) !important; } svg .clr-white { fill: var(--clr-white) !important; }
+.clr-black, .has-black-color { color: var(--clr-black) !important; } svg .clr-black { fill: var(--clr-black) !important; }   
+
+/* Background Color Classes
+-----------------------------------------------*/
+.bkg-1, .has-clr-1-background-color { background-color: var(--clr-1) !important; }
+.bkg-1-grad{ background: linear-gradient( 90deg, var(--clr-1-light), var(--clr-1-dark) ); }
+.bkg-1-grad-op{ background: linear-gradient( 90deg, var(--clr-1-light-op), var(--clr-1-dark-op) ); }
+.has-clr-1-grad-background-color{ background: linear-gradient( 180deg, var(--clr-1), var(--clr-2) ); } 
+
+.bkg-2, .has-clr-2-background-color { background-color: var(--clr-2) !important; } 
+.bkg-2-grad{ background: linear-gradient( 90deg,var(--clr-2-light), var(--clr-2-dark) ); }
+.bkg-2-grad-op{ background: linear-gradient( 90deg,var(--clr-2-light-op), var(--clr-2-dark-op) ); }
+
+.bkg-3, .has-clr-3-background-color { background-color: var(--clr-3) !important; }
+.bkg-3-dark, .has-clr-3-dark-background-color { background-color: var(--clr-3-dark) !important; }
+
+.bkg-4, .has-clr-4-background-color { background-color: var(--clr-4) !important; }
+.bkg-4-dark, .has-clr-4-dark-background-color { background-color: var(--clr-4-dark) !important; }
+
+.bkg-white, .has-clr-white-background-color  { background-color: var(--clr-white) !important; }
+.bkg-white-child > :first-child { background-color: var(--clr-white) !important; }
+.bkg-black, .has-clr-black-background-color{ background-color: var(--clr-black) !important; }
