@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------
-03-04 Forms (BSF) - Gravity Forms Integrated Disable theme. "Output Default CSS" Set to Disabled -
+03-04 Forms (BSF) - Gravity Forms Integrated Disable theme.
 ---------------------------------------------------------------------------*/
 
 /* Firso Variables
@@ -7,6 +7,21 @@
 :root { 
     /* Base Fields */
     --form_field-margin_bottom: 0.75rem;
+    --form_field-text_color: var(--clr-2);
+    --form_field-placeholder_color: var(--clr-1);
+    --form_field-background_color: transparent;
+    --form_field-border_thickness: 2px;
+    --form_field-border_color: var(--clr-2-light-op);
+    --form_field-border_radius: var(--border-radius);
+    
+    /* Base Fields FOCUS */
+    --form_field-focus-text_color: var(--clr-white);
+    --form_field-focus-background_color: var(--clr-2);
+    --form_field-focus-border_color: var(--clr-2);
+
+    /* Labels */
+    --form_field-lable_color: var(--clr-2);
+    --form_field-lable_option_color: var(--clr-2);
 
     /* Radio & Checkbox Field */
     --form_radiocheckbox-fontsize: 1.5rem; 
@@ -16,24 +31,57 @@
     --form_radiocheckbox-field_border_thickness: .225rem; 
     --form_radiocheckbox-field_color: var(--clr-2-light-op); 
 
-    /* Radio & Checkbox C */
+    /* Radio & Checkbox Cheked */
     --form_radiocheckbox-input_size: 2.25rem; 
     --form_radiocheckbox-input_color: var(--clr-1);
 }
 
-/* Gravity Forms Interation
+/* Form Typography
 ------------------------------------------*/
-/*  Gravity Forms Theme Styling - Special Classes */
-.gform_wrapper.gravity-theme .hidden_label .gfield_label, 
-.gform_wrapper.gravity-theme .hidden_sub_label, 
-.gform_wrapper.gravity-theme .screen-reader-text 
-{ clip: rect(1px,1px,1px,1px); word-wrap: normal!important; border: 0; -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+form p  { margin-bottom: 15px; font-size: 1rem; color: var(--clr-2); box-sizing: border-box; font-family: qanelasregular, sans-serif; font-weight: 400; font-style: normal; }
+form label, form legend {font-family: qanelasblack, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: .75;
+    letter-spacing: 0.05em;
+    color: var(--form_field-lable_color); 
+    margin: 0;
+}
 
-.gform_wrapper.gravity-theme .gform_validation_container, 
-body .gform_wrapper.gravity-theme .gform_body .gform_fields .gfield.gform_validation_container, 
-body .gform_wrapper.gravity-theme .gform_fields .gfield.gform_validation_container, 
-body .gform_wrapper.gravity-theme .gform_validation_container 
-{ display: none!important; left: -9000px; position: absolute!important; }
+/* Input Fields
+------------------------------------------*/
+input[type="text"], input[type="email"], input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"], 
+input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea 
+{ 
+    width: 100%; padding: .5rem 1rem !important; 
+    margin-bottom: var(--form_field-margin_bottom); 
+    border-radius: var(--form_field-border_radius) !important; 
+    border: solid var(--form_field-border_thickness) var(--form_field-border_color);
+    box-sizing: border-box;
+    font-family: qanelasregular, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem !important;
+    color: var(--form_field-text_color); 
+    background-color: var(--form_field-background_color);
+    transition: .25s ease;
+}
+
+/* Input Focus
+------------------------------------------*/
+input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus, input[type="date"]:focus,
+input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus 
+{ 
+    background-color: var(--form_field-focus-background_color); 
+    border: solid var(--form_field-border_thickness) var(--form_field-focus-border_color); 
+    color: var(--form_field-focus-text_color);  }
+
+/* Placeholder Text
+------------------------------------------*/
+::placeholder { color: var(--form_field-placeholder_color); font-family: lolapeluzablack, sans-serif; font-weight: 700; font-style: normal; letter-spacing: 0.03em; text-transform: uppercase; }
+
+/* Gravity Forms Integration
+------------------------------------------*/
 
 /*  Gravity Forms Theme Styling - Hide Defaults */ 
 .gform_wrapper input[type=radio], .gform_wrapper input[type=checkbox], 
@@ -45,57 +93,16 @@ body .gform_wrapper.gravity-theme .gform_validation_container
 .gform_wrapper.gravity-theme fieldset, .gform_wrapper.gravity-theme legend { background: none; padding: 0; }
 .gform_wrapper .ginput_container_radio, .gform_wrapper .ginput_container_checkbox { padding: 0; }
 
-/* Form Typography
-------------------------------------------*/
-form p  { margin-bottom: 15px; font-size: 1rem; color: var(--clr-2); box-sizing: border-box; font-family: qanelasregular, sans-serif; font-weight: 400; font-style: normal; }
-form label, form legend {font-family: qanelasblack, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    line-height: .75;
-    letter-spacing: 0.05em;
-    color: var(--clr-2); 
-    margin: 0;
-}
-
-/* Input Fields
-------------------------------------------*/
-input[type="text"], input[type="email"], input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"], 
-input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea 
-
-{ 
-    width: 100%; padding: .5rem 1rem !important; margin-bottom: var(--form_field-margin_bottom); 
-    border-radius: var(--border-radius) !important; border: solid 2px var(--clr-2-light-op);
-    box-sizing: border-box;
-    font-family: qanelasregular, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.2rem !important;
-    color: var(--clr-2); 
-    background: var(--clr-white); transition: .25s ease;
-    background-color: transparent;
-}
-
-/* Input Focus
-------------------------------------------*/
-input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus, input[type="date"]:focus,
-input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus 
-{ background-color: var(--clr-2); border: solid 2px var(--clr-2); color: var(--clr-white);  }
-
-/* Placeholder Text
-------------------------------------------*/
-::placeholder { color: var(--clr-1); font-family: lolapeluzablack, sans-serif; font-weight: 700; font-style: normal; letter-spacing: 0.03em; text-transform: uppercase; }
-
 /* Radio & Checkbox
 ------------------------------------------*/
-
 /* Radio & Checkbox Globals, Grid & Input Spacing */
 .gform_wrapper .ginput_container_radio .gfield_radio,
 .gform_wrapper .ginput_container_checkbox .gfield_checkbox 
-{ display: grid; grid-gap: 0.5rem 1rem; grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ); margin-top: var(--form_field-margin_bottom); }
+{ display: grid !important; grid-gap: 0.5rem 1rem; grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ) ; margin-top: var(--form_field-margin_bottom); }
 .gform_wrapper .gfield_radio div.gchoice, .gform_wrapper .gfield_checkbox div.gchoice
-{ position: relative; cursor: pointer; display: block; padding: .25rem 0 0 var(--form_radiocheckbox-field_left_space);  }
+{ position: relative; cursor: pointer; display: block !important; padding: 0 0 0 var(--form_radiocheckbox-field_left_space) !important;  }
 
-.gform_wrapper input[type=checkbox] + label,  .gform_wrapper input[type=radio] + label { font-size: var(--form_radiocheckbox-fontsize);}
+.gform_wrapper input[type=checkbox] + label,  .gform_wrapper input[type=radio] + label { font-size: var(--form_radiocheckbox-fontsize) !important;  color: var(--form_field-lable_option_color) !important;}
 /* Radio & Checkbox Borders */
 .gform_wrapper input[type=radio] + label:before, .gform_wrapper input[type=checkbox] + label:before { 
     display: block; content: ''; position: absolute; top: 0; left: 0; 
@@ -109,7 +116,7 @@ input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, i
 .gform_wrapper input[type=checkbox] + label svg { display: none; }
 .gform_wrapper input[type=checkbox] + label:after {
     display: block; position: absolute; bottom:0; left:0;
-    transform: translate(10%, -25%);
+    transform: translate(8%, -15%);
     font-family: "Font Awesome 5 Pro";
     font-weight: 400;
     content: "\f00c";
