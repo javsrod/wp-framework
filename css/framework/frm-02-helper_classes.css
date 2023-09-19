@@ -1,5 +1,5 @@
 /*---------------------------------------------------------------------------
-General Helpers
+General Helpers (Updated 2023-09-19)
 ---------------------------------------------------------------------------*/
 
 .bkg-img { background-repeat: no-repeat; background-size: cover; }
@@ -135,6 +135,12 @@ Menu Helpers
 .menu.vertical { flex-wrap: nowrap; flex-direction: column; }
 
 /*---------------------------------------------------------------------------
+Sticky Helpers
+---------------------------------------------------------------------------*/
+.sticky-parent { height: 100%; display: flex; flex-flow: row wrap; }
+.sticky { width: 100%; top: 2rem; position: sticky; align-self: flex-start; }
+
+/*---------------------------------------------------------------------------
 Form Layout Helpers
 ---------------------------------------------------------------------------*/
 
@@ -216,15 +222,17 @@ Padding & Margin Helpers
 
 /* Padding, Margin Feature
 -----------------------------------------------*/
-.spv-feat, .spv-feat-child > :first-child { padding-top: var(--sp-feat) !important; ; padding-bottom: var(--sp-feat) !important; ; }
-.spb-feat, .spb-feat-child > :first-child { padding-bottom: var(--sp-feat) !important; ; }
-.spt-feat, .spt-feat-child > :first-child { padding-top: var(--sp-feat) !important; ; }
-.sph-feat, .sph-feat-child > :first-child { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; ; }
+.spv-feat, .spv-feat-child      > :first-child { padding-top: var(--sp-feat) !important; ; padding-bottom: var(--sp-feat) !important; ; }
+.spb-feat, .spb-feat-child      > :first-child { padding-bottom: var(--sp-feat) !important; ; }
+.spb-feat15, .spb-feat15-child  > :first-child { padding-bottom: calc(var(--sp-feat) * 1.5); !important; ; }
+.spb-feat2, .spb-feat2-child    > :first-child { padding-bottom: calc(var(--sp-feat) * 2); !important; ; }
+.spt-feat, .spt-feat-child      > :first-child { padding-top: var(--sp-feat) !important; ; }
+.sph-feat, .sph-feat-child      > :first-child { padding-left: var(--sp-feat); padding-right: var(--sp-feat) !important; ; }
 
-.smv-feat, .smv-feat-child > :first-child { margin-top: var(--sp-feat) !important; ; margin-bottom: var(--sp-feat) !important; ; }
-.smb-feat, .smb-feat-child > :first-child { margin-bottom: var(--sp-feat) !important; ; }
-.smt-feat, .smt-feat-child > :first-child { margin-top: var(--sp-feat) !important; ; }
-.smh-feat, .smh-feat-child > :first-child { margin-left: var(--sp-feat); margin-right: var(--sp-feat) !important; ; }
+.smv-feat, .smv-feat-child      > :first-child { margin-top: var(--sp-feat) !important; ; margin-bottom: var(--sp-feat) !important; ; }
+.smb-feat, .smb-feat-child      > :first-child { margin-bottom: var(--sp-feat) !important; ; }
+.smt-feat, .smt-feat-child      > :first-child { margin-top: var(--sp-feat) !important; ; }
+.smh-feat, .smh-feat-child      > :first-child { margin-left: var(--sp-feat); margin-right: var(--sp-feat) !important; ; }
 
 /* Pull top */
 .pull-top-feat { position: relative; margin-top: calc(var(--sp-feat) * -1); z-index: 1; }
