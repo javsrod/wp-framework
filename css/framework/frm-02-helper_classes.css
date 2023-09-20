@@ -134,6 +134,15 @@ Menu Helpers
 .menu a, .menu .button { line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
 .menu.vertical { flex-wrap: nowrap; flex-direction: column; }
 
+    @media screen and (max-width: 800px) {
+        *[class*="menu-small-"] { display: -webkit-box !important; display: -webkit-flex !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-orient: horizontal !important; -webkit-box-direction: normal !important; -webkit-flex-flow: row wrap !important; -ms-flex-flow: row wrap !important; flex-flow: row wrap !important; }
+        *[class*="menu-small-"] > li { -webkit-box-flex: 0; -webkit-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; min-height: 0; min-width: 0; width: 100%; }
+        .menu-small-4 > li {  width: 25% !important; }
+        .menu-small-3 > li {  width: 33.3333% !important; }
+        .menu-small-2 > li {  width: 50% !important; }
+        .menu-small-1 > li {  width: 100% !important; }
+    }
+
 /*---------------------------------------------------------------------------
 Sticky Helpers
 ---------------------------------------------------------------------------*/
