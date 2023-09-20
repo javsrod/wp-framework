@@ -1,0 +1,33 @@
+/* WPSL Single Page Store Template
+-----------------------------------------------*/
+
+/* WPSL Single Page - GRID For map & Details */
+:root { --wpsl_single_grid-map-height: 500px; }
+.wpsl_single_map { grid-area: wpsl_single_map; }
+.wpsl_single_details { grid-area: wpsl_single_details; }
+.wpsl_single_grid {  background-color: var(--wpsl_single-main-area-color); padding: 1rem  var(--sp-base) var(--sp-base) var(--sp-base);display: grid; gap: var(--sp-base); grid-template-columns: 1fr; grid-template-areas: "wpsl_single_details" "wpsl_single_map" }
+.wpsl_single_map #wpsl-base-gmap_0 { height: var(--wpsl_single_grid-map-height); }
+.wpsl_single_details .wpsl-locations-details > span:first-of-type, .wpsl_single_details .wpsl-location-address > span:last-of-type { display: none; }
+
+    @media screen and (min-width: 800px) {
+        :root { 
+            --wpsl_single_grid-sidebar-width: 300px; 
+            --wpsl_single_grid-map-height: 70vh; 
+        }
+        .wpsl_single_grid { background-color: var(--wpsl_single-main-area-color); display: grid; gap: var(--sp-base); grid-template-columns: var(--wpsl_single_grid-sidebar-width) auto;  grid-template-areas: "wpsl_single_details wpsl_single_map"; }
+    }
+
+    @media screen and (min-width: 1200px) {
+        :root { --wpsl_single_grid-sidebar-width: 400px; }
+    }
+
+/* WPSL Single Page - Details Section */
+.wpsl_single_details { color: white; }
+.wpsl_single_details h3 { color: var(--clr-1); }
+
+/* WPSL Opening Hours */
+table.wpsl-opening-hours { width: 100% !important; font-size: 100%!important; font-size: .875rem !important; }
+table.wpsl-opening-hours td { text-align: right; }
+table.wpsl-opening-hours td:first-child { text-align: left; color:var(--clr-4); font-family: 'qanelasblack'; font-weight: normal; font-style: normal; }
+table.wpsl-opening-hours tbody tr,
+table.wpsl-opening-hours tbody tr:nth-child(even) { border-bottom: 2px solid var(--clr-body) !important; }
