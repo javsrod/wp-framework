@@ -1,0 +1,20 @@
+/* WPSL Search Widget
+-----------------------------------------------*/
+/* WPSL Search Widget - Form Variable Overides */
+.wpsl-search-widget form#wpsl-widget-form { --form_field-text_color: var(--clr-white); --form_field-border_color: var(--clr-2); --form_field-placeholder_color: var(--clr-white); }
+
+/* WPSL Search Widget - Grid Styling */
+.wpsl-search-widget form#wpsl-widget-form p, .wpsl-search-widget form input { margin: 0; }
+.wpsl-search-widget form#wpsl-widget-form label { display:none; }
+.wpsl-search-widget form#wpsl-widget-form { display: grid; grid-template-columns: 1fr; grid-gap: var(--sp-rim); }
+    @media screen and (min-width: 800px) { 
+        .wpsl-search-widget form#wpsl-widget-form { grid-template-columns: 1fr auto; } 
+        .wpsl-search-widget form#wpsl-widget-form  p, .wpsl-search-widget form input { display: flex; flex-direction: column; justify-content: center; }
+    }
+
+/* WPSL Search Widget - Submit Button */
+.wpsl-search-widget form#wpsl-widget-form input[type="submit" i]
+    { color: var(--clr-2) !important; background-color: var(--clr-4) !important;  }
+.wpsl-search-widget form#wpsl-widget-form input[type="submit" i]:hover, 
+.wpsl-search-widget form#wpsl-widget-form input[type="submit" i]:focus 
+    { color: var(--clr-2) !important; background-color: var(--clr-4) !important;  }
