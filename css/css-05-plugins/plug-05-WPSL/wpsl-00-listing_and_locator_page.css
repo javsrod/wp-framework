@@ -1,0 +1,93 @@
+/*---------------------------------------------------------------------------
+PLUGIN: WP Store Locator WPSL (WSL)
+---------------------------------------------------------------------------*/
+
+/* WPSL Listing & Locator page
+-----------------------------------------------*/
+
+/* WPSL Listing Grid */  
+:root {
+    --wpsl_listing_grid-colmax: 2;
+    --wpsl_listing_grid-colspan: 2;
+    --wpsl_listing_grid-heading_span-col: 2;
+    --wpsl_listing_grid-heading_span-row: 2;
+}
+
+.wpsl_listing_grid { display: grid; gap: 1rem; row-gap: 1.75rem; grid-template-columns: repeat( var(--wpsl_listing_grid-colmax) , 1fr); }
+.wpsl_listing_grid_heading { grid-column: auto / span var(--wpsl_listing_grid-heading_span-col); grid-row: auto / span var(--wpsl_listing_grid-heading_span-row); border: none; margin-top: var(--content-over-imagevideo-bottom-pull); position: relative; z-index: 1;  }
+    
+    /* Mobile Large */
+    @media screen and (min-width: 570px){
+        .wpsl_listing_grid { gap: var(--sp-base); row-gap: 1.75rem; }
+    }
+
+
+    /* Laptop Med  */
+    @media screen and (min-width: 1024px) and (max-width: 1299px) {
+        :root {
+            --wpsl_listing_grid-colmax: 3;
+            --wpsl_listing_grid-heading_span-col: 1;
+            --wpsl_listing_grid-heading_span-row: 3;
+        }
+        .wpsl_listing_grid_heading { margin-top: calc(var(--sp-feat) * -1);  }
+    }
+
+    /* Laptop Large  */
+    @media screen and (min-width: 1300px) and (max-width: 1499px) {
+        :root {
+            --wpsl_listing_grid-colmax: 3;
+            --wpsl_listing_grid-heading_span-col: 1;
+            --wpsl_listing_grid-heading_span-row: 3;
+        }
+        .wpsl_listing_grid_heading { margin-top: calc(var(--sp-feat) * -1);  }
+
+    }
+    /* Desktop Medium */
+    @media screen and (min-width: 1500px) and (max-width: 1699px) {
+        :root {
+            --wpsl_listing_grid-colmax: 4;
+            --wpsl_listing_grid-heading_span-col: 2;
+
+        }
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1700px) {
+        :root {
+            --wpsl_listing_grid-colmax: 5;
+            --wpsl_listing_grid-heading_span-col: 2;
+        }
+    }
+
+/* WPSL Listing Card */
+:root {
+    --wpsl_listing_card-icon-size: calc( var(--h2-size) - 0.75rem );
+}
+
+/* .wpsl_listing_card */
+.wpsl_listing_card { display: grid; grid-auto-flow: row; grid-template-columns: 1fr; grid-gap: .5rem; margin: 0; }
+.wpsl_listing_card  > :first-child  { display: flex; justify-content: flex-start; width: 100%; height:100%; }
+.wpsl_listing_card  > :last-child { display: flex; justify-content: flex-start; flex-direction: column; height:100%; }
+.wpsl_listing_card  :last-child > :last-child { margin-bottom: 0px !important; }
+.wpsl_listing_card .wpsl_listing_item-icon { display: block; }
+.wpsl_listing_card svg { color: var(--clr-2-light-op); font-size: var(--wpsl_listing_card-icon-size); transition: all 250ms ease-in; }
+.wpsl_listing_card:hover svg {  color: var(--clr-2);}
+.wpsl_listing_card .wpsl_listing_item-heading { color: var(--clr-1); font-size: var(--h4-size); margin-bottom:.25rem; transition: all 250ms ease-in;}
+.wpsl_listing_card:hover .wpsl_listing_item-heading { color: var(--clr-1-dark) }
+.wpsl_listing_card-content p { font-size: .85rem; line-height: 1.4; }
+    
+    /* Mobile Large */
+    @media screen and (min-width: 570px){
+        :root {
+             --wpsl_listing_card-icon-size: calc( var(--h2-size) - 0.25rem );
+        }
+        .wpsl_listing_card { grid-gap: calc( var(--sp-rim) + 0.5rem ); }
+        .wpsl_listing_card .wpsl_listing_item-heading { font-size: var(--h3-size); }
+    }
+
+    @media screen and (min-width: 800px) {
+        :root {
+            --wpsl_listing_card-icon-size: calc( var(--h2-size) - 0.25rem );
+        }
+        .wpsl_listing_card { grid-template-columns: var(--wpsl_listing_card-icon-size) 1fr;  }
+    }
