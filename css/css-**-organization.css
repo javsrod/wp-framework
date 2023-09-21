@@ -2,7 +2,8 @@
 >>> TABLE OF CONTENTS <<<  * NOTE: (C-L-D) = Category Codes. Type these with no spaces while search for faster locating *
 ------------------------------------------------------------------------------------------------------------------------------
 00 Includes (I-C-D)
-    - 00 Framework (F-R-M)
+    - 00 Theme Specific Includes (T-H-M)
+    - 01 Framework (F-R-M)
         - 00 Normalize
         - 01 WP & Gutenberg Block Resets
         - 02 Helpers Classes
@@ -10,7 +11,6 @@
         - 03b Absolute Positioning Helpers
         - 04 Component Defaults
         - 07+ Plugins
-    - 01 Theme Specific Includes (T-H-M)
     - 02 Media Query Refference (M-Q-R)
 01 Root Variables (V-R-S)
     - 00 Branding Variables (B-V-R)
@@ -54,7 +54,6 @@
     - Gravity Forms (G-R-V)
     - WPSL (W-S-L)
 ----------------------------------------------------------------------------------------------------------------------------*/
-
 /* --------------- NOTE MAKER LEGEND --------------- */
 
     /****************************************************************************
