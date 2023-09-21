@@ -12,9 +12,10 @@
 
 /* BLOG Archive Grid
 --------------------------------------------------------------*/
-.blog-archive-grid { display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: var(--sp-base); }
+:root{ --blog_archive_grid: 1; }
+.blog-archive-grid { display: grid; grid-template-columns: repeat(var(--blog_archive_grid), 1fr); grid-gap: var(--sp-base); }
     @media screen and (min-width: 900px) {
-        .blog-archive-grid{ grid-template-columns: repeat(3, 1fr); } 
+        :root{ --blog_archive_grid: 3; }
         article.article-card .article-content p { font-size: .75rem }
     }
 
