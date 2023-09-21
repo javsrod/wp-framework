@@ -19,13 +19,25 @@ Swiper Slider
 /* Swiper css Variables
 -----------------------------------------------*/
 :root { 
+    /*  Colors  */
+    --swiper-button-color: var(--clr-white);
+    --swiper-button-color-disabled: var(--clr-black);
+    --swiper-scrollbar-color: var(--clr-white);
+    --swiper-scrollbar-color-bkg: var(--clr-black);
+    --swiper-bullet-color-active: var(--clr-white);
+    --swiper-bullet-color: var(--clr-black);
+    
+    /*  Sizing  */
     --swiper-navigation-size: 2rem;
-    --swiper-bullet-size: 14px;
+    --swiper-bullet-size: 10px;
+    --swiper-scrollbar-thickness: 3px;
+    --swiper_bottom_nav-scrollbar-width: 80% ;
 }
     @media screen and (min-width: 800px) {
         :root { 
-                --swiper-navigation-size: 3rem;
+                --swiper-navigation-size: 2rem;
                 --swiper-bullet-size: 14px;
+                --swiper_bottom_nav-scrollbar-width: 90% ;
         }
     }
 
@@ -35,18 +47,20 @@ Swiper Slider
 /* Navigation Buttons */
 .swiper-button-prev { left: var(--sp-rim); }
 .swiper-button-next { right: var(--sp-rim); }
-.swiper-button-next:after, .swiper-button-prev:after { color: var(--clr-1); }
+.swiper-button-next:after, .swiper-button-prev:after { color: var(--swiper-button-color); }
 .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled { opacity: .5; }
-.swiper-button-next.swiper-button-disabled:after, .swiper-button-prev.swiper-button-disabled:after { color: var(--clr-2); }
+.swiper-button-next.swiper-button-disabled:after, .swiper-button-prev.swiper-button-disabled:after { color: var(--swiper-button-color-disabled); }
 
 /* Navigation Bullets */
-.swiper-pagination-bullet { width: var(--swiper-bullet-size); height: var(--swiper-bullet-size); border-radius: 100%; background: var(--clr-2); opacity: 1; }
-.swiper-pagination-bullet-active { opacity: 1; background: var(--clr-1); }
+.swiper-pagination-bullet { width: var(--swiper-bullet-size); height: var(--swiper-bullet-size); border-radius: 100%; background: var(--swiper-bullet-color); opacity: 1; }
+.swiper-pagination-bullet-active { opacity: 1; background: var(--swiper-bullet-color-active); }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction { bottom: 0;}
 
 /* Navigation Scrollbar */
-.swiper-scrollbar { background: var(--clr-3-dark-op);     height: 7px; }
-.swiper-scrollbar-drag { height: calc(100% + 2px); width: 100%; position: relative; background: var(--clr-1); border-radius: 10px; top: -1px; }
+.swiper-scrollbar { background: var(--swiper-scrollbar-color-bkg);  }
+.swiper-scrollbar-drag { height: calc(100% + 2px); width: 100%; position: relative; background: var(--swiper-scrollbar-color); border-radius: 10px; top: -1px; }
+
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal { height: var(--swiper-scrollbar-thickness); }
 
 /* Swiper Helpers
 -----------------------------------------------*/
@@ -65,11 +79,11 @@ Swiper Slider
 .swiper_bottom_nav { width:100%; position: relative; height: calc( var(--swiper-navigation-size) + 1rem ); margin-top: 1rem; display: flex; justify-content: center; flex-direction: column; }
 .swiper_bottom_nav .swiper-pagination { position:relative; }
 .swiper_bottom_nav.swiper_bottom_nav-no_arrows { height: unset; margin-top: 0.5rem; }
-.swiper_bottom_nav-scrollbar { width: 80% ; display: block; margin: 0 auto; }
+.swiper_bottom_nav-scrollbar { width: var(--swiper_bottom_nav-scrollbar-width); display: block; margin: 0 auto; }
 .swiper_bottom_nav-scrollbar .swiper-scrollbar.swiper-scrollbar-horizontal { position:relative; }
     /* Large and up */
     @media screen and (min-width: 700px) {
-        .swiper_bottom_nav-scrollbar { width: 85%; }
+        .swiper_bottom_nav-scrollbar { width: var(--swiper_bottom_nav-scrollbar-width); }
     }
 
 /* Slide Link */
@@ -103,9 +117,8 @@ Swiper Slider
 
 /* Swiper Card Slider
 -----------------------------------------------*/
-.card_swiper-slide { background-color: var(--clr-white); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadowbox); }
-.card_swiper-slide p { font-weight: 700; text-align: center; margin: 0; }
-.card_swiper-slide img { border-radius: var(--border-radius); overflow: hidden;}
+.card_swiper-slide { overflow: hidden; }
+.card_swiper-slide img { overflow: hidden;}
 
 /* Swiper CTA Overlay
 -----------------------------------------------*/
