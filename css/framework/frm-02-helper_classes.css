@@ -60,10 +60,10 @@ General Helpers - (UPDATED 2023-09-19)
 .z95   { position:relative; z-index: 95; }
 .z100   { position:relative; z-index: 100; }
 .z150   { position:relative; z-index: 150; }
-.z200   { position:relative; z-index: 20;0 }
-.z250   { position:relative; z-index: 25; 0}
-.z300   { position:relative; z-index: 30; 0}
-.z350   { position:relative; z-index: 35; 0}
+.z200   { position:relative; z-index: 200; }
+.z250   { position:relative; z-index: 250; }
+.z300   { position:relative; z-index: 300; }
+.z350   { position:relative; z-index: 350; }
 
 /* Overflow */
 .overhid, .over-hidden { overflow: hidden; }
