@@ -106,11 +106,11 @@ Common Effect Helpers
 .tshad-light { text-shadow: var(--shadow-text-light); }
 
 /* Box Shadows */
-.shad { box-shadow: var(--shadowbox); }
+.shad, .box-shad { box-shadow: var(--shadowbox); }
 .shad-btn { box-shadow: var(--shadowbox); }
 
 /* Border Radius */
-.brnd { border-radius: var(--border-radius); overflow: hidden;}
+.brnd { border-radius: var(--borderradius); overflow: hidden;}
 
 /* Backdrop Blur */
 .bblur {     backdrop-filter: var(--backdropblur); }
@@ -128,7 +128,6 @@ Accessibility Helpers
 
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus { outline: 0; }
-
 
 /*---------------------------------------------------------------------------
 Menu Helpers
