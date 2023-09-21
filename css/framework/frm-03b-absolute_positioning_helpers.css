@@ -1,12 +1,3 @@
-/* frm-03b-absolute_positioning_helpers.css --- V 1.0 Date 2023-09-20 */
-
-/****************************************************************************
-*****************************************************************************
-UNMINIFIED BELLOW  - Copy , Minify Add to Theme.
-*****************************************************************************
-****************************************************************************/
-
-
 /*---------------------------------------------------------------------------
 Absolute Positioning Helpers
 ---------------------------------------------------------------------------*/
@@ -19,78 +10,78 @@ Absolute Positioning Helpers
     --abs-edge_factor: -1.2;
 }
 
-*[class*="abs--"] { position: absolute; z-index: 5; }
+*[class*="abs--"] { position: absolute; z-index: 5;  }
 .abs--rt-gcw-edge, .abs--rt-gcw-plus-edge, .abs--rt-gcw-s-edge, .abs--rt-gcw-s-plus-edge, .abs--rt-gcw-m-edge, .abs--rt-gcw-m-plus-edge, .abs--rt-gcw-xl-edge, 
 .abs--rb-gcw-edge, .abs--rb-gcw-plus-edge, .abs--rb-gcw-s-edge, .abs--rb-gcw-s-plus-edge, .abs--rb-gcw-m-edge, .abs--rb-gcw-m-plus-edge, .abs--rb-gcw-xl-edge,
 .abs--lt-gcw-edge, .abs--lt-gcw-plus-edge, .abs--lt-gcw-s-edge, .abs--lt-gcw-s-plus-edge, .abs--lt-gcw-m-edge, .abs--lt-gcw-m-plus-edge, .abs--lt-gcw-xl-edge,
 .abs--lb-gcw-edge, .abs--lb-gcw-plus-edge, .abs--lb-gcw-s-edge, .abs--lb-gcw-s-plus-edge, .abs--lb-gcw-m-edge, .abs--lb-gcw-m-plus-edge, .abs--lb-gcw-xl-edge { position: absolute; z-index: 15; }
 
 /* Right Top */
-.abs--rt                    { top:0;                                                    bottom: auto;       left:auto;      right: 0; }
-.abs--rt-gcw                { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
-.abs--rt-gcw-s              { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
-.abs--rt-gcw-m              { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
-.abs--rt-gcw-xl             { top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
+.abs--rt                    { pointer-events: none; top:0;                                                    bottom: auto;       left:auto;      right: 0; }
+.abs--rt-gcw                { pointer-events: none; top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rt-gcw-s              { pointer-events: none; top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-m              { pointer-events: none; top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-xl             { pointer-events: none; top:0;                                                    bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
 
-.abs--rt-edge               { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: 0; }
-.abs--rt-gcw-edge           { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
-.abs--rt-gcw-s-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
-.abs--rt-gcw-m-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
-.abs--rt-gcw-xl-edge        { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
+.abs--rt-edge               { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: 0; }
+.abs--rt-gcw-edge           { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rt-gcw-s-edge         { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-m-edge         { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+.abs--rt-gcw-xl-edge        { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
 
 /* Right Center */
-.abs--rc                    { top:50%;      bottom: auto;       left:auto;      right: 0;                                       transform: translateY(-50%); }
-.abs--rc-gcw                { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%,  -50%); }
-.abs--rc-gcw-s              { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%,  -50%); }
-.abs--rc-gcw-m              { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%,  -50%); }
-.abs--rc-gcw-xl             { top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );    transform: translate(100%,  -50%); }
+.abs--rc                    { pointer-events: none; top:50%;      bottom: auto;       left:auto;      right: 0;                                       transform: translateY(-50%); }
+.abs--rc-gcw                { pointer-events: none; top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%,  -50%); }
+.abs--rc-gcw-s              { pointer-events: none; top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%,  -50%); }
+.abs--rc-gcw-m              { pointer-events: none; top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%,  -50%); }
+.abs--rc-gcw-xl             { pointer-events: none; top:50%;      bottom: auto;       left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );    transform: translate(100%,  -50%); }
  
 /* Right Bottom */
-.abs--rb                    { top: auto;    bottom: 0;      left:auto;      right: 0; }
-.abs--rb-gcw                { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
-.abs--rb-gcw-s              { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
-.abs--rb-gcw-m              { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
-.abs--rb-gcw-xl             { top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
+.abs--rb                    { pointer-events: none; top: auto;    bottom: 0;      left:auto;      right: 0; }
+.abs--rb-gcw                { pointer-events: none; top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-half) );       transform: translate(100%, 0); }
+.abs--rb-gcw-s              { pointer-events: none; top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-s-half) );     transform: translate(100%, 0); }
+.abs--rb-gcw-m              { pointer-events: none; top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-m-half) );     transform: translate(100%, 0); }
+.abs--rb-gcw-xl             { pointer-events: none; top: auto;    bottom: 0;      left:auto;      right: calc( 50% - var(--gcw-max-xl-half) );     transform: translate(100%, 0); }
     
-.abs--rb-edge               { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: 0; }
-.abs--rb-gcw-edge           { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-half) ); transform: translate(100%, 0); }
-.abs--rb-gcw-s-edge         { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-s-half) ); transform: translate(100%, 0); }
-.abs--rb-gcw-m-edge         { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-m-half) ); transform: translate(100%, 0); }
-.abs--rb-gcw-xl-edge        { top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(100%, 0); }
+.abs--rb-edge               { pointer-events: none; top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: 0; }
+.abs--rb-gcw-edge           { pointer-events: none; top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-half) ); transform: translate(100%, 0); }
+.abs--rb-gcw-s-edge         { pointer-events: none; top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-s-half) ); transform: translate(100%, 0); }
+.abs--rb-gcw-m-edge         { pointer-events: none; top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-m-half) ); transform: translate(100%, 0); }
+.abs--rb-gcw-xl-edge        { pointer-events: none; top: auto;    bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );    left:auto;      right: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(100%, 0); }
 
 /* Left Top */
-.abs--lt                    { top:0;                                                    bottom: auto;   right:auto;     left: 0; }
-.abs--lt-gcw                { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-s              { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-m              { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-xl             { top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
+.abs--lt                    { pointer-events: none; top:0;                                                    bottom: auto;   right:auto;     left: 0; }
+.abs--lt-gcw                { pointer-events: none; top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-s              { pointer-events: none; top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-m              { pointer-events: none; top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-xl             { pointer-events: none; top:0;                                                    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
 
-.abs--lt-edge               { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: 0; }
-.abs--lt-gcw-edge           { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-s-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-m-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
-.abs--lt-gcw-xl-edge         { top: calc( var(--sp-feat) * var(--abs-edge_factor) );    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
+.abs--lt-edge               { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: 0; }
+.abs--lt-gcw-edge           { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-s-edge         { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-m-edge         { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );     bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+.abs--lt-gcw-xl-edge        { pointer-events: none; top: calc( var(--sp-feat) * var(--abs-edge_factor) );    bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
 
  
 /* Left Center */
-.abs--lc                    { top:50%;              bottom: auto;   right:auto;     left: 0;                                        transform: translateY(-50%); }
-.abs--lc-gcw                { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) );        transform: translate(-100%,  -50%); }
-.abs--lc-gcw-s              { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) );      transform: translate(-100%,  -50%); }
-.abs--lc-gcw-m              { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) );      transform: translate(-100%,  -50%); }
-.abs--lc-gcw-xl             { top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) );      transform: translate(-100%,  -50%); }
+.abs--lc                    { pointer-events: none; top:50%;              bottom: auto;   right:auto;     left: 0;                                        transform: translateY(-50%); }
+.abs--lc-gcw                { pointer-events: none; top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-half) );        transform: translate(-100%,  -50%); }
+.abs--lc-gcw-s              { pointer-events: none; top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-s-half) );      transform: translate(-100%,  -50%); }
+.abs--lc-gcw-m              { pointer-events: none; top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-m-half) );      transform: translate(-100%,  -50%); }
+.abs--lc-gcw-xl             { pointer-events: none; top:50%;              bottom: auto;   right:auto;     left: calc( 50% - var(--gcw-max-xl-half) );      transform: translate(-100%,  -50%); }
  
 /* Left Bottom */
-.abs--lb                    { top:auto;     bottom: 0;                                                      right:auto;     left: 0; }
-.abs--lb-gcw                { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-s              { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-m              { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-xl             { top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
+.abs--lb                    { pointer-events: none; top:auto;     bottom: 0;                                                      right:auto;     left: 0; }
+.abs--lb-gcw                { pointer-events: none; top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-s              { pointer-events: none; top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-m              { pointer-events: none; top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-xl             { pointer-events: none; top:auto;     bottom: 0;                                                      right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
 
-.abs--lb-edge               { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: 0; }   
-.abs--lb-gcw-edge           { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-s-edge         { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-m-edge         { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
-.abs--lb-gcw-xl-edge         { top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );       right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
+.abs--lb-edge               { pointer-events: none; top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: 0; }   
+.abs--lb-gcw-edge           { pointer-events: none; top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-s-edge         { pointer-events: none; top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-s-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-m-edge         { pointer-events: none; top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );        right:auto;     left: calc( 50% - var(--gcw-max-m-half) ); transform: translate(-100%, 0); }
+.abs--lb-gcw-xl-edge        { pointer-events: none; top:auto;     bottom: calc( var(--sp-feat) * var(--abs-edge_factor) );       right:auto;     left: calc( 50% - var(--gcw-max-xl-half) ); transform: translate(-100%, 0); }
     
 
 /* Absolute Image Sizes 
@@ -98,12 +89,14 @@ Absolute Positioning Helpers
 :root {
     --abssize: 300px;
     --abssize-m: 200px;
+    --abssize-full: 460px;
     --abs_pull_factor: 1.5rem
 }
     /* Tablet */
     @media screen and (min-width: 800px) and (max-width: 1023px) {:root {
             --abssize: 300px;
             --abssize-m: 200px;
+            --abssize-full: 460px;
         }
     }
     /* Laptop Med  */
@@ -111,6 +104,7 @@ Absolute Positioning Helpers
         :root {
             --abssize: 400px;
             --abssize-m: 350px;
+            --abssize-full: 620px;
         }
     }
 
@@ -119,6 +113,7 @@ Absolute Positioning Helpers
         :root {
             --abssize: 500px;
             --abssize-m: 400px;
+            --abssize-full: 770px;
         }
     }
 
@@ -128,6 +123,7 @@ Absolute Positioning Helpers
         :root {
             --abssize: 450px;
             --abssize-m: 320px;
+            --abssize-full: 690px;
         }
     }
 
@@ -136,6 +132,7 @@ Absolute Positioning Helpers
         :root {
             --abssize: 550px;
             --abssize-m: 380px;
+            --abssize-full: 850px;
         }
     }
 
@@ -144,11 +141,13 @@ Absolute Positioning Helpers
         :root {
             --abssize: 650px;
             --abssize-m: 470px;
+            --abssize-full: 1000px;
         }
     }
 
-    .abssize { width: var(--abssize); }
-    .abssize-m { width: var(--abssize-m); }
+    .abssize { width: var(--abssize) !important; }
+    .abssize-m { width: var(--abssize-m) !important; }
+    .abssize-full { width: var(--abssize-full) !important; z-index: 2 !important}
     .abssize-200 { width: 200px; }
     *[class*="abs--r"].abspi  > :first-child { margin-left: calc( var(--abs_pull_factor) * -1 ); }
     *[class*="abs--r"].abspo > :first-child { margin-left: calc( var(--abs_pull_factor) * 1 ); }
