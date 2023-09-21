@@ -294,3 +294,41 @@ Gap Helpers for CSS Gird & Flexbox
 .col-gap-rim,  .col-gap-rim-child  > *   { column-gap: var(--sp-rim) !important; }
 .col-gap,      .col-gap-child      > *   { column-gap: var(--sp-base) !important; }
 .col-gap-feat, .col-gap-feat-child > *   { column-gap: var(--sp-feat) !important; }
+
+/*---------------------------------------------------------------------------
+Galleries
+---------------------------------------------------------------------------*/
+
+/* Reset Gallery Figure sizing*/
+.wp-block-gallery.has-nested-images.columns-3 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-4 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-5 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-6 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-7 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-8 figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image):first-child:nth-last-child(2),
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image):first-child:nth-last-child(2)~figure.wp-block-image:not(#individual-image),
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image):first-child:last-child 
+{ width: 100% !important }
+
+/* Gallery Block Grid & Columns */
+.wp-block-gallery { display: grid !important; }
+.wp-block-gallery.columns-1 { grid-template-columns: repeat(1, 1fr); }
+.wp-block-gallery.columns-2 { grid-template-columns: repeat(2, 1fr); }
+.wp-block-gallery.columns-3 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-4 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-5 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-6 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-7 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-8 { grid-template-columns: repeat(3, 1fr); }
+.wp-block-gallery.columns-9 { grid-template-columns: repeat(3, 1fr); }
+    
+    @media screen and (min-width: 800px) {
+        .wp-block-gallery.columns-4 { grid-template-columns: repeat(4, 1fr); }
+        .wp-block-gallery.columns-5 { grid-template-columns: repeat(5, 1fr); }
+        .wp-block-gallery.columns-6 { grid-template-columns: repeat(6, 1fr); }
+        .wp-block-gallery.columns-7 { grid-template-columns: repeat(7, 1fr); }
+        .wp-block-gallery.columns-8 { grid-template-columns: repeat(8, 1fr); }
+        .wp-block-gallery.columns-9 { grid-template-columns: repeat(9, 1fr); }
+    }
