@@ -1,4 +1,4 @@
-/* frm-02-helper_classes.css --- V 1.0 Date 2023-09-20 */
+/* frm-02-helper_classes.css --- V 1.1 Date 2023-09-20 */
 
 /****************************************************************************
 *****************************************************************************
@@ -203,6 +203,18 @@ Content Container Helpers
 .gcw-m, .gcw-m-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max-m); }
 .gcw-s, .gcw-s-child > :first-child { margin: 0 auto;  width: 100%; max-width: var(--gcw-max-s); }
 .gcw.fluid { width: 100%; max-width: 100% !important; }
+
+.gcw-plus, .gcw-child-plus > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max) + var(--sp-base) + var(--sp-base) ); }
+.gcw-plus-rim, .gcw-child-plus-rim > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max) + var(--sp-rim) + var(--sp-rim) ); }
+.gcw-plus-feat, .gcw-child-plus-feat > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max) + var(--sp-feat) + var(--sp-feat) ); }
+
+.gcw-m-plus, .gcw-m-child-plus > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-m) + var(--sp-base) + var(--sp-base) ); }
+.gcw-m-plus-rim, .gcw-m-child-plus-rim > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-m) + var(--sp-rim) + var(--sp-rim) ); }
+.gcw-m-plus-feat, .gcw-m-child-plus-feat > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-m) + var(--sp-feat) + var(--sp-feat) ); }
+
+.gcw-s-plus, .gcw-s-child-plus > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-s) + var(--sp-base) + var(--sp-base) ); }
+.gcw-s-plus-rim, .gcw-s-child-plus-rim > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-s) + var(--sp-rim) + var(--sp-rim) ); }
+.gcw-s-plus-feat, .gcw-s-child-plus-feat > :first-child { margin: 0 auto;  width: 100%; max-width: calc( var(--gcw-max-s) + var(--sp-feat) + var(--sp-feat) ); }
 
 /*---------------------------------------------------------------------------
 Padding & Margin Helpers
