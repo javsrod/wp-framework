@@ -2,59 +2,49 @@
 03-05 Lists (BSL)
 ---------------------------------------------------------------------------*/
 
-/* List Basic Styling
+/* List Grid
 ------------------------------------------*/
-ol, ul { margin-left: 2rem; }
-.no-bullet { list-style: none; margin-left: 0; }
-ol.no-bullet, ul.no-bullet { margin-left: 0; list-style: none; }
+:root {
+    --list-icon-font_size: 1.5rem;
+    --list-icon-color: var(--clr-1);
+    --licon-li-padding_left: 2.25rem;
+    --num_list-border_color: var(--clr-4);
+    --num_list-border_width: 2px;
+    --list_grid-min: 300px;
+}
 
 /* List Grid
 ------------------------------------------*/
-ol.list-grid, ul.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 5px 2rem; }
+ol.list-grid, ul.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax( var(--list_grid-min), 1fr ) ); grid-gap: .45rem 2rem; }
 ol.list-grid > li, ul.list-grid > li { margin-bottom: 0px; }
 
-/* Number Lists
+ul[class*="licon--"] { list-style: none; margin-left: 0;  list-style-type: none;  }
+ul[class*="licon--"] li { color: var(--clr-body); position: relative; padding-left: var(--licon-li-padding_left); }
+ul[class*="licon--"] li::before { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 900; content: ""; }
+ul[class*="licon--"] li:before { display: none; }
+ul[class*="licon--"] li svg { color: var(--list-icon-color); position: absolute; left: 0; top: 0; transform: translate( 0%, 0% );  font-size: var(--list-icon-font_size); } 
+
+/* Bullet List */
+ul.licon--bullet li::before { content: "\f068" !important; }
+/* Dot List */
+ul.licon--dot li::before { content: "\f111" !important; } ul.licon--dot li svg { transform: scale(.5); }
+/* Check List */
+ul.licon--check li::before { content: "\f00c" !important; }
+/* Star List */
+ul.licon--star li::before { content: "\f005" !important;  }
+
+/* Number Lists 
 ------------------------------------------*/
-ol.num-list, .styled-type ol { list-style-type: none; list-style-type: decimal !ie; /*IE 7- hack*/ counter-reset: li-counter;}
-    .light ol.num-list, .styled-type.light ol, .styled-type .light ol { color: var(--clr-white); }
-ol.num-list > li, .styled-type ol > li { position: relative; margin-bottom: 10px; padding-left: 0.5em; min-height: 1.6em; border-left: 1px solid var(--clr-3);}
-    .light ol.num-list > li, .styled-type.light ol > li, .styled-type .light ol > li { border-left: 4px solid var(--clr-1); }
-ol.num-list > li:before, .styled-type ol > li:before
-{ position: absolute; font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; top: 0; left: -2.1rem; width: 1.8rem; font-size: 1.3rem;
-    text-align: center; color: var(--clr-1); content: counter(li-counter); counter-increment: li-counter; }
-    .light ol.num-list > li:before, .styled-type.light ol, .styled-type .light ol  > li:before { color: var(--clr-white); }
+ol.num-list { list-style-type: none; list-style-type: decimal !ie; /*IE 7- hack*/ counter-reset: li-counter;}
+ol.num-list > li { position: relative; margin-bottom: 10px; padding-left: 0.5em; min-height: 1.6em; border-left: var(--num_list-border_width) solid var(--num_list-border_color);}
+ol.num-list > li:before, .styled-type ol > li:before { 
+    position: absolute; 
+    left: -2.1rem; width: 1.8rem; 
+    font-family: var(--fontHead),-system-ui,system-ui,sans-serif; 
+    font-weight: 700; top: 0; font-size: var(--list-icon-font_size); 
+    text-align: center; 
+    color: var(--list-icon-color); 
+    content: counter(li-counter); 
+    counter-increment: li-counter; }
 ol.num-list li:marker { display: none; }
-ol.num-list > li::marker, .styled-type ol > li::marker { color: transparent; }
-
-/* Bullet List
-------------------------------------------*/
-ul.bullet-list, .styled-type ul { list-style: none; }
-ul.bullet-list li, .styled-type ul li { color: var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
-    .light ul.bullet-list li, .styled-type.light ul li, .styled-type .light ul li  { color:  var(--clr-white); }
-ul.bullet-list li::before, .styled-type ul li::before  { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 900; content: "\f111" !important; }
-ul.bullet-list li::before, .styled-type ul li::before  { display: none; }
-
-ul.bullet-list li svg, .styled-type ul li svg { color: var(--clr-1); position: absolute; margin-top: .4rem; margin-left: -1.2rem; font-size: .6rem; }
-    .light ul.bullet-list li svg, .styled-type.light ul li svg, .styled-type .light ul li svg { color: var(--clr-2) }
-
-/* Check List
-------------------------------------------*/
-ul.check-list { list-style: none; }
-ul.check-list li { color:  var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
-ul.check-list li::before { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f00c" !important; }
-ul.check-list li:before { display: none !important; }
-ul.check-list li svg { color: var(--clr-1); position: absolute; margin-top: .15rem; margin-left: -1.6rem; font-size: 1.2rem; }
-.light ul.check-list li { color:  var(--clr-white); } .light ul.check-list li svg { color: var(--clr-2) }
-ul.check-list ul { list-style-type: none; margin-top: calc( var(--sp-rim) / 2); }
-ul.check-list ul  li { margin-bottom: .5em; }
-ul.check-list ul  li::before { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 400; content: "\f054" !important; }
-
-/* Star List
-------------------------------------------*/
-ul.star-list { list-style: none; }
-ul.star-list li { color: var(--clr-body); font-family: var(--fontHead),-system-ui,system-ui,sans-serif; font-weight: 700; }
-    .light ul.star-list li  { color:  var(--clr-white); }
-ul.star-list li::before  { display: inline-block; font-family: "Font Awesome 5 Pro"; font-weight: 900; content: "\f005" !important; }
-ul.star-list li:before  { display: none; }
-ul.star-list li svg { color: var(--clr-1); position: absolute; margin-top: .15rem; margin-left: -1.6rem; font-size: 1.2rem; }
-    .light ul.star-list li svg  { color: var(--clr-2) }
+ol.num-list > li::marker { color: transparent; }
