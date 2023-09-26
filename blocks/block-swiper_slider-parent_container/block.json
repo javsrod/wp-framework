@@ -4,7 +4,7 @@
     "description": "block-swiper_slider-parent_container.php",
     "category": "formatting",
     "apiVersion": 2,
-    "keywords": ["slider", "swiper", "card slider"],
+    "keywords": ["slider", "swiper", "slider parent container"],
     "acf": {
         "mode": "preview",
         "renderTemplate": "blocks/block-swiper_slider-parent_container/block-swiper_slider-parent_container.php"
