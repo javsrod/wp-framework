@@ -20,10 +20,11 @@ if ( ! empty( $block['className'] ) ) {
 
      <div class="swiper swiper-cta <?php if( get_field('swiper_set_slider_height') ): ?>swiper-set-height<?php endif; ?> <?php echo esc_attr( $class_name ); ?>">
 
-        <!-- Child Slides -->
-        <div class="swiper-wrapper">
-          <InnerBlocks />
-        </div><!-- swiper-wrapper -->
+    <!-- Child Slides -->
+
+      <InnerBlocks class="swiper-wrapper"/>
+
+    <!-- Child Slides End -->
 
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
