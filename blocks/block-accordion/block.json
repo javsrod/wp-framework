@@ -1,0 +1,15 @@
+{
+    "name": "Accordion",
+    "title": "Accordion",
+    "description": "blocks/block-accordion/block-accordion.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["accordion", "faq"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-accordion/block-accordion.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
