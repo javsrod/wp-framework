@@ -1,0 +1,16 @@
+{
+    "name": "Swiper Slider Child Slide",
+    "title": "Swiper Slider Child Slide",
+    "description": "block-swiper_slider-child_slide.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["slider", "swiper", "card slider"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-swiper_slider-child_slide/block-swiper_slider-child_slide.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
