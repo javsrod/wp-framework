@@ -1,0 +1,16 @@
+{
+    "name": "Swiper Card Slider",
+    "title": "Swiper Card Slider",
+    "description": "block-swiper-card_slider.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["slider", "swiper", "card slider"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-swiper-card_slider/block-swiper-card_slider.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
