@@ -1,0 +1,16 @@
+{
+    "name": "Swiper Slider Parent Container Outside Arrows",
+    "title": "Swiper Slider Parent Container Outside Arrows",
+    "description": "block-swiper_slider-parent_container-oa.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["slider", "swiper", "slider parent container outside arrows"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-swiper_slider-parent_container-oa/block-swiper_slider-parent_container-oa.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
