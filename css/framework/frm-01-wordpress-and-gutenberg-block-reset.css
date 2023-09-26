@@ -1,4 +1,10 @@
-/* frm-01-wordpress-and-gutenberg-block-reset.css --- V 1.1 Date 2023-09-20 */
+/* frm-01-wordpress-and-gutenberg-block-reset.css --- V 1.1 Date 2023-09-25 */
+
+/****************************************************************************
+*****************************************************************************
+UNMINIFIED BELLOW  - Copy , Minify Add to Theme.
+*****************************************************************************
+****************************************************************************/
 
 /*---------------------------------------------------------------------------
 Wordpress Resets
@@ -23,7 +29,7 @@ body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alig
 
 /*  Buttons Block
 -----------------------------------------------*/
-div.wp-block-buttons[class*="is-content-justification-"] { display: flex; }
+.wp-block-buttons-is-layout-flex { display: flex; gap: 1rem; }
 
 /*  Image Block
 -----------------------------------------------*/
