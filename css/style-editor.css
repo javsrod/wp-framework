@@ -1,3 +1,5 @@
+
+
 /****************************************************************************
 /****************************************************************************
 *****************************************************************************
@@ -332,3 +334,7 @@ Galleries
         .wp-block-gallery.columns-8 { grid-template-columns: repeat(8, 1fr); }
         .wp-block-gallery.columns-9 { grid-template-columns: repeat(9, 1fr); }
     }
+
+/*  Buttons Block
+-----------------------------------------------*/
+.wp-block-buttons-is-layout-flex { display: flex; gap: 1rem; }
