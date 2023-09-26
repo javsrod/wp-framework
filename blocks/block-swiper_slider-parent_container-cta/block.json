@@ -1,0 +1,16 @@
+{
+    "name": "Swiper Slider Parent Container Call to Action",
+    "title": "Swiper Slider Parent Container Call to Action",
+    "description": "block-swiper_slider-parent_container-cta.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["slider", "swiper", "slider parent container outside arrows"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-swiper_slider-parent_container-cta/block-swiper_slider-parent_container-cta.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
