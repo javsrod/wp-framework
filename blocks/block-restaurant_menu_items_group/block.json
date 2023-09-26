@@ -1,0 +1,16 @@
+{
+    "name": "Restaurant Menu Item Group",
+    "title": "Restaurant Menu Item Group",
+    "description": "block-restaurant_menu_items_group.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["restaurant menu", "menu Restaurant"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-restaurant_menu_items_group/block-restaurant_menu_items_group.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
