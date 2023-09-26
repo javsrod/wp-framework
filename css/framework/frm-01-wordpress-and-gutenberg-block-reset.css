@@ -1,11 +1,5 @@
 /* frm-01-wordpress-and-gutenberg-block-reset.css --- V 1.1 Date 2023-09-20 */
 
-/****************************************************************************
-*****************************************************************************
-UNMINIFIED BELLOW  - Copy , Minify Add to Theme.
-*****************************************************************************
-****************************************************************************/
-
 /*---------------------------------------------------------------------------
 Wordpress Resets
 ---------------------------------------------------------------------------*/ 
@@ -27,6 +21,10 @@ Gutenberg Block Resets
 :where(.wp-block-columns.is-layout-flex), :where(.is-layout-flex) { gap: unset; }
 body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {  margin-left: unset;  margin-right: unset; }
 
+/*  Buttons Block
+-----------------------------------------------*/
+div.wp-block-buttons[class*="is-content-justification-"] { display: flex; }
+
 /*  Image Block
 -----------------------------------------------*/
 .wp-block-image { margin: 0; }
@@ -35,7 +33,8 @@ body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alig
 -----------------------------------------------*/
 .wp-block-file { margin-bottom: 1.5em; display: grid; text-align: center; }
 .wp-block-file .wp-block-file__button { background: unset; border-radius: unset; color: unset; font-size: unset; padding: unset; }
-/*  File  Block
+
+/*  Latest Posts Block
 -----------------------------------------------*/
 .wp-block-latest-posts.is-grid { display: grid; grid-gap: var(--sp-rim); }
 .wp-block-latest-posts__featured-image img { height: auto; width: 100%; max-width: 100%; object-fit: cover; max-height: 150px; }
