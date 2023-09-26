@@ -1,6 +1,6 @@
 <?php
 /**
- * Block: Swiper Slider Parent Container
+ * Block: Swiper Slider Parent Container Outside Arrows 
  *
  * @package JJROD
  */
