@@ -1,11 +1,5 @@
 /* frm-07-plugins-swiper.css --- V 1.0 Date 2023-09-20 */
 
-/****************************************************************************
-*****************************************************************************
-UNMINIFIED BELLOW  - Copy , Minify Add to Theme.
-*****************************************************************************
-****************************************************************************/
-
 /*---------------------------------------------------------------------------
 Swiper Slider
 ---------------------------------------------------------------------------*/
@@ -146,10 +140,10 @@ Swiper Slider
      }
      /* Before break-inside */
      @media screen and (min-width: 1100px) {
-         .swiper-cta .swiper-pagination { display: block; }
-         .swiper-cta-overlay { position: absolute; height: 0%; top: 0; left: 0; bottom: 0; right: 0; margin-top: 0px; padding-top: var(--sp-base); }
-         .slide-content-wrapper-inner { width: 40%; }
-         .swiper-cta-overlay-inner { width: 35%; margin-left: auto; }
+        .swiper-cta .swiper-pagination { display: block; }
+        .swiper-cta-overlay { position: absolute; height: 0%; top: 0; left: 0; bottom: 0; right: 0; margin-top: 0px; padding-top: var(--sp-base); }
+        .swiper-cta  .slide-content-wrapper-inner { width: 40%; }
+        .swiper-cta-overlay-inner { width: 35%; margin-left: auto; }
      }
 
     @media screen and (min-width: 1100px) and (max-width: 1399px) {
