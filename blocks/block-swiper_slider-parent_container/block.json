@@ -1,0 +1,16 @@
+{
+    "name": "Swiper Slider Parent Container",
+    "title": "Swiper Slider Parent Container",
+    "description": "block-swiper_slider-parent_container.php",
+    "category": "formatting",
+    "apiVersion": 2,
+    "keywords": ["slider", "swiper", "card slider"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/block-swiper_slider-parent_container/block-swiper_slider-parent_container.php"
+    },
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}
