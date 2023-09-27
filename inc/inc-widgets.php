@@ -14,15 +14,16 @@ function wpt_create_widget( $name, $id, $description ) {
         'name' => __( $name ),
         'id' => $id,
         'description' => __( $description ),
-        'before_widget' => '<div class="widget">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s"xw>',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="module-heading">',
-        'after_title' => '</h2>'
+        'before_title' => '<h4 class="module-heading">',
+        'after_title' => '</h4>'
     ));
 
 }
 
-wpt_create_widget( 'Blog Sidebar', 'primary', 'Displays on the side of pages in the blog section' );
+wpt_create_widget( 'Primary Sidebar', 'primary', 'Displays on the side of pages in the blog section' );
+wpt_create_widget( 'Legal Sidebar', 'legal', 'Legal page template sidebar' );
 
 
 // Search Widget Areas
