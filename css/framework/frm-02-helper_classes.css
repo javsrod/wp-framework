@@ -1,4 +1,4 @@
-/* frm-02-helper_classes.css --- V 1.02 Date 2023-09-25 */
+/* frm-02-helper_classes.css --- V 1.03 Date 2023-09-28 */
 
 /*---------------------------------------------------------------------------
 General Helpers - (UPDATED 2023-09-19)
@@ -133,7 +133,10 @@ Menu Helpers
 
 .menu { padding: 0; margin: 0; list-style: none; position: relative; display: flex; flex-wrap: wrap; }
 .menu, .menu.horizontal { flex-wrap: wrap; flex-direction: row; }
-.align-right { justify-content: flex-end; }
+ *[class*="align-left-"] { justify-content: flex-start; }
+.align-left-flush > li:first-child a { padding-left: 0 !important; }
+ *[class*="align-right-"] { justify-content: flex-end; }
+.align-right-flush > li:last-child a { padding-right: 0 !important; }
 .align-center { justify-content: center; }
 .menu.expanded li { flex: 1 1 0px; }
 .menu a, .menu .button { line-height: 1; text-decoration: none; display: block; padding: 0.7rem 1rem; }
