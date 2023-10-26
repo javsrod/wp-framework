@@ -5,6 +5,12 @@
  * @package JJROD
  */
 
+// Support custom "anchor" values.
+$anchor = '';
+if ( ! empty( $block['anchor'] ) ) {
+    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
+}
+
 // Create class attribute allowing for custom "className" values.
 $class_name = '';
 if ( ! empty( $block['className'] ) ) {
@@ -16,7 +22,7 @@ if ( ! empty( $block['className'] ) ) {
 <!-- ***************************** -->
 <!-- Swiper Slider -->
 <!-- ***************************** -->
- <div class="swiper swiper-front <?php if( get_field('swiper_set_slider_height') ): ?>swiper-set-height<?php endif; ?> <?php echo esc_attr( $class_name ); ?>">
+ <div <?php echo $anchor; ?> class="swiper swiper-front <?php if( get_field('swiper_set_slider_height') ): ?>swiper-set-height<?php endif; ?> <?php echo esc_attr( $class_name ); ?>">
     
     <!-- Child Slides -->
 
