@@ -5,12 +5,25 @@
  * @package JJROD
  * 
  */
+
+// Support custom "anchor" values.
+$anchor = '';
+if ( ! empty( $block['anchor'] ) ) {
+    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
+}
+
+// Create class attribute allowing for custom "className"
+$class_name = '';
+if ( ! empty( $block['className'] ) ) {
+    $class_name .= ' ' . $block['className'];
+}
+
 ?>
 
 <!-- ***************************** -->
 <!-- Slide -->
 <!-- ***************************** -->
-<div class="swiper-slide img-cover picture-cover relavite" >
+<div <?php echo $anchor; ?> class="swiper-slide img-cover picture-cover relavite <?php echo esc_attr( $class_name ); ?>" >
 
     <!-- Slide Link -->
     <?php 
