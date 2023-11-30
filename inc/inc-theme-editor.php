@@ -31,8 +31,6 @@ function tabor_add_colors_and_gradients() {
         'clr-4-light'   => '#f2cee4',
         'clr-4-dark'   => '#8b2463',
 
-
-
     );
 
     // Block Editor Palette.
