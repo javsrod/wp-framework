@@ -15,53 +15,118 @@
 function tabor_add_colors_and_gradients() {
 
     $colors = array(
-        'clr-1'   => '#83007e',
-        'clr-1-dark'   => '#45246c',
-        'clr-2'   => '#62bb46',
-        'clr-2-dark'   => '#62bb46',
-        'clr-3'   => '#7b7c8e',
-        'clr-3-light'   => '#f7f7f7',
+        'clr-1'   => '#79127d',
+        'clr-1-light'   => '#cc99cc',
+        'clr-1-dark'   => '#4d0860',
+        
+        'clr-2'   => '#7d7c8c',
+        'clr-2-light'   => '#f7f7f7',
+        'clr-2-dark'   => '#3d3749',
+
+        'clr-3'   => '#3200cd',
+        'clr-3-light'   => '#d9cdff',
+        'clr-3-dark'   => '#1f0081',
+
+        'clr-4'   => '#c8348e',
+        'clr-4-light'   => '#f2cee4',
+        'clr-4-dark'   => '#8b2463',
+
+
+
     );
 
     // Block Editor Palette.
     $editor_color_palette = array(
+
+        // Color 1
         array(
-            'name' => esc_attr__( 'Brand Purple', 'movita_child' ),
+            'name' => esc_attr__( 'Color 1', '4eleven' ),
             'slug' => 'clr-1',
             'color' => $colors[ 'clr-1' ],
         ),
 
         array(
-            'name' => esc_attr__( 'Brand Acai', 'movita_child' ),
+            'name' => esc_attr__( 'Color 1 Light', '4eleven' ),
+            'slug' => 'clr-1-light',
+            'color' => $colors[ 'clr-1-light' ],
+        ),
+
+        array(
+            'name' => esc_attr__( 'Color 1 Dark', '4eleven' ),
             'slug' => 'clr-1-dark',
             'color' => $colors[ 'clr-1-dark' ],
         ),
 
+
+
+        // Color 2
         array(
-            'name' => esc_attr__( 'Brand Green', 'movita_child' ),
+            'name' => esc_attr__( 'Color 2', '4eleven' ),
             'slug' => 'clr-2',
             'color' => $colors[ 'clr-2' ],
         ),
+
         array(
-            'name' => esc_attr__( 'Brand Gray', 'movita_child' ),
+            'name' => esc_attr__( 'Color 2 Light', '4eleven' ),
+            'slug' => 'clr-2-light',
+            'color' => $colors[ 'clr-2-light' ],
+        ),
+
+        array(
+            'name' => esc_attr__( 'Color 2 Dark', '4eleven' ),
+            'slug' => 'clr-2-dark',
+            'color' => $colors[ 'clr-2-dark' ],
+        ),
+
+
+        // Color 3
+        array(
+            'name' => esc_attr__( 'Color 3', '4eleven' ),
             'slug' => 'clr-3',
             'color' => $colors[ 'clr-3' ],
         ),
 
         array(
-            'name' => esc_attr__( 'Brand Light Gray', 'movita_child' ),
+            'name' => esc_attr__( 'Color 3 Light', '4eleven' ),
             'slug' => 'clr-3-light',
             'color' => $colors[ 'clr-3-light' ],
         ),
 
         array(
-            'name' => esc_attr__( 'Brand White', 'movita_child' ),
+            'name' => esc_attr__( 'Color 3 Dark', '4eleven' ),
+            'slug' => 'clr-3-dark',
+            'color' => $colors[ 'clr-3-dark' ],
+        ),
+
+        // Color 4
+        array(
+            'name' => esc_attr__( 'Color 4', '4eleven' ),
+            'slug' => 'clr-4',
+            'color' => $colors[ 'clr-4' ],
+        ),
+
+        array(
+            'name' => esc_attr__( 'Color 4 Light', '4eleven' ),
+            'slug' => 'clr-4-light',
+            'color' => $colors[ 'clr-4-light' ],
+        ),
+
+        array(
+            'name' => esc_attr__( 'Color 4 Dark', '4eleven' ),
+            'slug' => 'clr-4-dark',
+            'color' => $colors[ 'clr-4-dark' ],
+        ),
+
+        // Color White
+        array(
+            'name' => esc_attr__( 'Brand White', '4eleven' ),
             'slug' => 'white',
             'color' => '#ffffff',
         ),
 
+        // Color Black
         array(
-            'name' => esc_attr__( 'Brand White', 'movita_child' ),
+            'name' => esc_attr__( 'Brand White', '4eleven' ),
             'slug' => 'black',
             'color' => '#000000',
         ),
@@ -72,11 +137,11 @@ function tabor_add_colors_and_gradients() {
     add_theme_support(
         'editor-gradient-presets',
         array(
-            array(
-                'name'     => __( 'Clr 1 Grad', 'tabor' ),
-                'gradient' => 'linear-gradient(60deg, ' . esc_attr( hex_to_rgb( $colors[ 'clr-1' ] ) ) . ' 0%, ' . hex_to_rgb( $colors[ 'clr-1-dark' ] ) . ' 100%)',
-                'slug'     => 'clr-1',
-            ),
+            // array(
+            //     'name'     => __( 'Clr 1 Grad', 'tabor' ),
+            //     'gradient' => 'linear-gradient(60deg, ' . esc_attr( hex_to_rgb( $colors[ 'clr-1' ] ) ) . ' 0%, ' . hex_to_rgb( $colors[ 'clr-1-dark' ] ) . ' 100%)',
+            //     'slug'     => 'clr-1',
+            // ),
             // array(
             //     'name'     => __( 'Primary to Tertiary', 'tabor' ),
             //     'gradient' => 'linear-gradient(135deg, ' . esc_attr( hex_to_rgb( $colors[ 'primary' ] ) ) . ' 0%, ' . hex_to_rgb( $colors[ 'tertiary' ] ) . ' 100%)',
