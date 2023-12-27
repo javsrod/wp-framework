@@ -4,13 +4,12 @@
 
 /* Full Screen Modal
 -----------------------------------------------*/
-.fullscrnmodal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;  transition: var(--transitions); backdrop-filter: var(--backdropblur);}
+@keyframes modalFadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+.fullscrnmodal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;  transition: var(--transitions); backdrop-filter: var(--backdropblur);  animation: modalFadeIn ease .25s;}
 .fullscrnmodal-content { margin: auto; width: 100%; height: 100%; padding: var(--sp-base); display: flex; justify-content: center; flex-direction: column; }
-.fullscrnmodal-content-inner { margin: 0 auto; width: 100%; max-width: var(--gcw-max); }
-.fullscrnmodal-content-inner.fluid { width: 100%; max-width: 100%; margin: 0 auto; }
+.fullscrnmodal-content-container { margin: 0 auto; width: 100%; max-width: var(--gcw-max); }
+.fullscrnmodal-content-container.fluid { width: 100%; max-width: 100%; margin: 0 auto; }
 
-.fade-in { animation: fadeIn ease .5s; }
-    @keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
     @media only screen and (max-width: 799px){
       .fullscrnmodal-content { width: 100%; }
     }
