@@ -1,4 +1,4 @@
-
+/* Style Editor --- Last Update Date 2023-12-27 */
 
 /****************************************************************************
 /****************************************************************************
@@ -16,6 +16,7 @@
     --sp-base: 3rem;
     --sp-rim: 1.25rem;
 }
+
 .block-editor-page .wp-block, .wp-block-column.is-vertically-aligned-bottom, .wp-block-column.is-vertically-aligned-center, .wp-block-column.is-vertically-aligned-top  { max-width: 100%; width: unset; }
 .block-editor-page .editor-block-list__layout { max-width: 100%; }
 .block-editor-page .edit-post-visual-editor .wp-block  { padding: 3px; margin: 10px !important; border: 3px #f1f1f1 solid !important;}
