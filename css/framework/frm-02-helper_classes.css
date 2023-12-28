@@ -155,19 +155,6 @@ Menu Helpers
 /* Menu Element Spacing */
  *[class*="menu--"].expanded li { flex: 1 1 0px; }
 
-    /* Menu Small Regular */
-    @media screen and (max-width: 799px) {
-        *[class*="menusmall--"] {display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; }
-        *[class*="menusmall--center"] { justify-content: center !important;}
-        *[class*="menusmall--between"] { justify-content: space-between; }
-        *[class*="menusmall--"] > li { flex: 0 0 auto; min-height: 0; min-width: 0; width: 100%; }
-        *[class*="menusmall--"] a,  *[class*="menusmall--"] .button { padding-left: 0 !important; padding-right: 0 !important; }
-        .menusmall--4 > li {  width: 25% !important; }
-        .menusmall--3 > li {  width: 33.3333% !important; }
-        .menusmall--2 > li {  width: 50% !important; }
-        .menusmall--1 > li {  width: 100% !important; }
-    }
-
     /* Menu Small Up To 1023px */
     @media screen and (max-width: 1023px) {
         *[class*="menusmall1023--"] {display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; }
@@ -179,6 +166,19 @@ Menu Helpers
         .menusmall1023--3 > li {  width: 33.3333% !important; }
         .menusmall1023--2 > li {  width: 50% !important; }
         .menusmall1023--1 > li {  width: 100% !important; }
+    }
+
+    /* Menu Small Regular */
+    @media screen and (max-width: 799px) {
+        *[class*="menusmall--"] {display: flex !important; flex-wrap: wrap !important; flex-direction: row !important; }
+        *[class*="menusmall--center"] { justify-content: center !important;}
+        *[class*="menusmall--between"] { justify-content: space-between; }
+        *[class*="menusmall--"] > li { flex: 0 0 auto; min-height: 0; min-width: 0; width: 100%; }
+        *[class*="menusmall--"] a,  *[class*="menusmall--"] .button { padding-left: 0 !important; padding-right: 0 !important; }
+        .menusmall--4 > li {  width: 25% !important; }
+        .menusmall--3 > li {  width: 33.3333% !important; }
+        .menusmall--2 > li {  width: 50% !important; }
+        .menusmall--1 > li {  width: 100% !important; }
     }
 
 /*---------------------------------------------------------------------------
