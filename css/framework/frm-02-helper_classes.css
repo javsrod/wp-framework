@@ -297,3 +297,36 @@ Padding & Margin Helpers
 .pull-top-feat { position: relative; margin-top: calc(var(--sp-feat) * -1); z-index: 1; }
 .pull-top-feat15 { position: relative; margin-top: calc(var(--sp-feat) * -1.5); z-index: 1; }
 .pull-top-feat2 { position: relative; margin-top: calc(var(--sp-feat) * -2); z-index: 1; }
+
+/*---------------------------------------------------------------------------
+Modal Helpers
+---------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------
+04-02 Modals (MDL)
+---------------------------------------------------------------------------*/
+:root {
+    --fullscrnmodal_closebtnsize: 4rem;
+    --fullscrnmodal_modal_light-bkg: rgba(255,255,255,0.9);
+    --fullscrnmodal_modal_light-closebtn: var(--clr-black);
+    --fullscrnmodal_modal_dark-bkg: rgba(0,15,30,0.9);
+    --fullscrnmodal_modal_dark-closebtn: var(--clr-white);
+}
+
+/* Full Screen Modal
+-----------------------------------------------*/
+.fullscrnmodal { display: none; position: fixed; z-index: 99999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;  transition: var(--transitions);  animation: modalReveal ease .25s; }
+    @keyframes modalReveal{ 0% { opacity:0; } 100% { opacity:1; } }
+.fullscrnmodal-content { margin: auto; height: 100%; display: flex; justify-content: center; flex-direction: column; }
+
+/* Modal Close Button
+-----------------------------------------------*/
+.modal_close_btn svg { position: absolute; top: var(--sp-base); right: var(--sp-base); font-size: var(--fullscrnmodal_closebtnsize); transition: var(--transitions); }
+.modal_close_btn svg:hover, .modal_close_btn svg:focus { text-decoration: none; cursor: pointer; opacity: 0.5; }
+
+/* Modal Colors
+-----------------------------------------------*/
+.fullscrnmodal.modal_light { background-color: var(--fullscrnmodal_modal_light-bkg); backdrop-filter: var(--backdropblur); -webkit-backdrop-filter: var(--backdropblur); }
+.fullscrnmodal.modal_dark { background-color: var(--fullscrnmodal_modal_dark-bkg);  backdrop-filter: var(--backdropblur); -webkit-backdrop-filter: var(--backdropblur); }
+.modal_light .modal_close_btn svg { color: var(--brand-clr-primary); }
+.modal_dark .modal_close_btn svg { color: var(--fullscrnmodal_modal_dark-closebtn); }
