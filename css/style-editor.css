@@ -1,4 +1,4 @@
-/* Style Editor --- Last Update Date 2023-12-27 */
+/* Style Editor --- Last Update Date 2024-02-17 */
 
 /****************************************************************************
 /****************************************************************************
@@ -16,7 +16,6 @@
     --sp-base: 3rem;
     --sp-rim: 1.25rem;
 }
-
 .block-editor-page .wp-block, .wp-block-column.is-vertically-aligned-bottom, .wp-block-column.is-vertically-aligned-center, .wp-block-column.is-vertically-aligned-top  { max-width: 100%; width: unset; }
 .block-editor-page .editor-block-list__layout { max-width: 100%; }
 .block-editor-page .edit-post-visual-editor .wp-block  { padding: 3px; margin: 10px !important; border: 3px #f1f1f1 solid !important;}
@@ -42,6 +41,9 @@
 /* Backend colors for ease of use */
 .editor-styles-wrapper .has-white-background-color { color: var(--wp--preset--color--black) !important; }
 .is-style-outline>.wp-block-button__link:not(.has-text-color), .wp-block-button__link.is-style-outline:not(.has-text-color) { background: transparent !important; }
+
+/* SVG Helpers */
+.block-editor-page .edit-post-visual-editor .wp-block[class*="wp-block-acf"] svg { height: 2em; }
 
 /****************************************************************************
 *****************************************************************************
@@ -339,3 +341,10 @@ Galleries
 /*  Buttons Block
 -----------------------------------------------*/
 .wp-block-buttons-is-layout-flex { display: flex; gap: 1rem; }
+
+/****************************************************************************
+*****************************************************************************
+# ACF BLOCKS
+*****************************************************************************
+****************************************************************************/
+.acf-relationship .list { height: unset !important; }
