@@ -5,53 +5,68 @@
 ****************************************************************************/
 
 /*---------------------------------------------------------------------------
-Band Variables
+01-00 Branding Variables (BVR)
 ---------------------------------------------------------------------------*/
-
 :root {
 
     /* Colors
     -----------------------------------------------*/
 
-    /* Hex Alpha Codes: 95% = F2, 90% = E6,  85% = D9, 80% = CC,  75% = BF, 70% = B3,  65% = A6, 60% = 99,  55% = 8C, 50% = 80,  
+    /* Hex Alpha Codes: 95% = F2, 90% = E6,  85% = D9, 80% = CC,  75% = BF, 70% = B3,  65% = A6, 60% = 99,  55% = 8C, 50% = 80,
                         45% = 73, 40% = 66,  35% = 59, 30% = 4D,  25% = 40, 20% = 33,  15% = 26, 10% = 1A,  5% = 0D */
+    /* Body Paragraph */
+    --clr-body: #303d48;
 
-    --clr-body: #5b6369;
-    --clr-body-dark: #5b6369;
-    --clr-body-light: #5b6369;
-    --clr-body-op: #5b6369;
+    /* Color 1 */
+    --clr-1-dark: #a71c24;
+    --clr-1: #ED2224;
 
-    --clr-1: #83007e;
-    --clr-1-dark: #45246c;
-    --clr-1-light: #83007e;
-    --clr-1-op: #83007eBF;
-    --clr-1-hover: #45246c;
+    /* Color 2 */
+    --clr-2-dark: #303d48;
+    --clr-2-dark-op: #303d4866;
+    --clr-2: #6a7580;
+    --clr-2-op: #6a758040;
+    --clr-2-light: #F0F1F2;
+    --clr-2-light-op: #F0F1F266;
 
-    --clr-2: #62bb46;
-    --clr-2-dark: #368e33;
-    --clr-2-light: #62bb46;
-    --clr-2-op: #62bb4699;
-    --clr-2-hover: #368e33;
+    /* Color 3 */
+    --clr-3: #f7f7f7;
+    --clr-3-dark: #303d48;
+    --clr-3-dark-op: #303d4866;
+    --clr-3-light: #f7f7f78066;
+    --clr-3-op: #f7f7f7;
+    --clr-3-hover: #f7f7f7;
 
-    --clr-3: #7b7c8e;
-    --clr-3-dark: #303039;
-    --clr-3-light: #f7f7f7;
-    --clr-3-op: #30303926;
-    --clr-3-hover: #505d66;
+    /* Color White */
+    --clr-white: #ffffff;
+    --clr-white-op: #ffffffBF;
+    --clr-white-hover: #ffffff80;
 
-    --clr-4: #e8003d;
-    --clr-4-dark: #e8003d;
-    --clr-4-light: #e8003d;
-    --clr-4-op: #e8003d99;
-    --clr-4-hover: #e8003d;
-
-    --clr-white: #ffffff ;
-    --clr-white-op: #ffffff80 ;
-    --clr-white-hover: #ffffff5c ;
-
+    /* Color Black */
     --clr-black: #000000;
     --clr-black-op: #000000E6;
-    --clr-black-op: #0000005c ;
+    --clr-black-hover: #000000E6;
+
+    /* Font Awesome Duotone Colors */
+    --fa-primary-color: var(--clr-1);
+    --fa-primary-opacity: 1.0;
+    --fa-secondary-color: var(--clr-1-dark);
+    --fa-secondary-opacity: 1.0;
+
+    /* Color Notices */
+    --clr-notice-info: #007cba;
+    --clr-notice-info-bkg: #f4f8ff;
+    --clr-notice-success: #4ab866;
+    --clr-notice-success-bkg: #f4fff7;
+    --clr-notice-warning: #f0b849;
+    --clr-notice-warning-bkg: #fffbf4;
+    --clr-notice-error: #cc1818;
+    --clr-notice-error-bkg: #fff0f0;
+
+    /*  Font Awesome Duotone Colors */
+    --fa-primary-color: var(--clr-1);
+    --fa-secondary-color: var(--clr-1-dark);
+    --fa-secondary-opacity: 1.0;
 
     /* Text Shadow
     -----------------------------------------------*/
@@ -73,56 +88,105 @@ Band Variables
     --shadow-soft:   0px 50px 40px  rgba(var(--shadowcolor-soft), 65%);
     
 
-    /* Backdrop Blur
+     /* Backdrop Filters
     -----------------------------------------------*/
     --backdropblur:  blur(10px);
+    --backdropsaturate:  saturate(145%);
 
     /* Border Radius
     -----------------------------------------------*/
-    --borderradius:  .75rem;
+    --borderradius: 2rem ;
+
+    /* Transitions
+    -----------------------------------------------*/
+    --transitions: all 150ms ease-in !important;
+    --transitions_slower: all 350ms ease-in !important;
+
+    /* Design Verncular (VRN)
+    -----------------------------------------------*/
+    /* Lines & Borders */
+    --vern-line-thic: 2px;
+    --vern-line-color: var(--clr-2);
+    --vern-line-color-em: var(--clr-black);
+    --vern-line-color-light: var(--clr-white);
+
+    --vern-line: var(--vern-line-thic) solid var(--vern-line-color);
+    --vern-line-em: var(--vern-line-thic) solid var(--vern-line-color-em);
+    --vern-line-light: var(--vern-line-thic) solid var(--vern-line-color-light);
+
+    /* Charts & Tables Text Colors */
+    --vern-info_type-p: var(--clr-body);
+    --vern-info_type-h: var(--clr-black);
+
+    /* Cell */
+    --vern-cell-padding: 0.5rem;
+    --vern-cell-bkg-th: var(--clr-2-light-60);
+    --vern-cell-bkg-td: var(--clr-white);
+    --vern-cell-bkg-tdAlt: var(--clr-2-light-100);
 }
 
 /*---------------------------------------------------------------------------
-Typography & Sizing
+01-01a Fonts (BVF)
 ---------------------------------------------------------------------------*/
 
 :root {
+    
+    /* Brand Fonts
+    -----------------------------------------------*/
+    /* Body Font */
+    --bodyfont: "Montserrat", sans-serif;
+    --bodyfont-weight: 400;
+    --bodyfont-weight-bold: 700;
+    --bodyfont-style: normal;
 
-    /* Font Size Master */ /* Font size is the basis of all spacing */
+    /* Heading 1 Font */
+    --headingfont: "Montserrat", sans-serif;
+    --headingfont-weight: 700;
+    --headingfont-style: normal;
+
+    /* Heading 2 Font */
+    --heading2font: "Montserrat", sans-serif;
+    --heading2font-weight: 700;
+    --heading2font-style: normal;
+
+    /* Heading 3 Font */
+    --heading3font: "Montserrat", sans-serif;
+    --heading3font-weight: 700;
+    --heading3font-style: normal;
+}
+
+
+/*---------------------------------------------------------------------------
+01-01b Typescale (BVT)
+---------------------------------------------------------------------------*/
+
+:root {
+    
+    /* Font Size Master -- Font size is the basis of all spacing */
     --fontSize: 16px;
-
-    /* line height is the basis for vertical spacing */
+    
+    /* line height */
     --lineHeight: calc(var(--fontSize) * 1.6);
 
-    /* horizontal rule */
-    --hrThickness: 4px;
+    /* Lead Paragraph Text */
+    --leadsize: 1.6em;
+    --leadlineHeight: calc(var(--fontSize) * 1.8);
 
-    /* Heading Sizing */
-    --xxxlarge-size:  3.0rem;
-    --xxlarge-size:  2.8rem;
-    --xlarge-size: 2.6rem;
-    --large-size: 2.4rem;
-    --h1-size: 2.0rem;
+    /* Fine Print */
+    --fineprint: .8em;
+    --fineprintlineHeight: calc(var(--fontSize) * 1.3);
+
+    /* Heading Scaling */
+    --h1-size: 2.1rem;
     --h2-size: 1.8rem;
-    --h3-size: 1.4rem;
-    --h4-size: 1.2rem;
-    --h5-size: 1.1rem;
-    --h6-size: 1.0rem;
-    --small-size: 0.85rem;
-    --xsmall-size: 0.8em;
-    --xxsmall-size: 0.65em;
-    --xxxsmall-size: 0.5em;
+    --h3-size: 1.55rem;
+    --h4-size: 1.3rem;
+    --h5-size: 1.175rem;
+    --h6-size: .8rem;
 
-    --lead-size: 1.4rem;
-    --lead-height: 1.3;
-    --lead-mb: 1.2rem;
-
-    /* Grid-Containers */
-    --gcw-max-xl: 100%; 
-    --gcw-max: 100%;
-    --gcw-max-m: 100%;
-    --gcw-max-s: 80%;
-    --border-radius: 1rem ;
+    /* Letter Spacing */
+    --letter_spacing-contract: -.05em;
+    --letter_spacing-expand: .2em;
 
 }
     /* Tablet (Ipad Vert, Ipad Pro 11" Vert, )*/
@@ -133,23 +197,12 @@ Typography & Sizing
             --fontSize: 16px;
 
             /* Heading Sizing */
-            --xxxlarge-size:  3.0rem;
-            --xxlarge-size:  2.7rem;
-            --xlarge-size: 2.5rem;
-            --large-size: 2.3rem;
             --h1-size: 2.0rem;
             --h2-size: 1.8rem;
             --h3-size: 1.6rem;
             --h4-size: 1.4rem;
             --h5-size: 1.2rem;
 
-            --lead-size: 1.2rem;
-
-            /* Grid-Containers */
-            --gcw-max-xl:   100%; 
-            --gcw-max:      100%;
-            --gcw-max-m:    100%;
-            --gcw-max-s:    80%;
         }
     }
 
@@ -161,23 +214,11 @@ Typography & Sizing
             --fontSize: 15px;
 
             /* Heading Sizing */
-            --xxxlarge-size:  3.0rem;
-            --xxlarge-size:  2.7rem;
-            --xlarge-size: 2.5rem;
-            --large-size: 2.3rem;
             --h1-size: 2.0rem;
             --h2-size: 1.8rem;
             --h3-size: 1.6rem;
             --h4-size: 1.4rem;
             --h5-size: 1.2rem;
-
-            --lead-size: 1.2rem;
-
-            /* Grid-Containers */
-            --gcw-max-xl:   100%; 
-            --gcw-max:      1000px;
-            --gcw-max-m:    850px;
-            --gcw-max-s:    600px;
 
         }
     }
@@ -190,23 +231,11 @@ Typography & Sizing
             --fontSize: 16px;
 
             /* Heading Sizing */
-            --xxxlarge-size:  3.4rem;
-            --xxlarge-size:  3.1rem;
-            --xlarge-size: 3.8rem;
-            --large-size: 2.5rem;
             --h1-size: 2.2rem;
             --h2-size: 2.0rem;
             --h3-size: 1.8rem;
             --h4-size: 1.6rem;
             --h5-size: 1.4rem;
-
-            --lead-size: 1.3rem;
-
-            /* Grid-Containers */
-            --gcw-max-xl:   1440px; 
-            --gcw-max:      1140px;
-            --gcw-max-m:    960px;
-            --gcw-max-s:    720px;
         }
     }
 
@@ -218,23 +247,11 @@ Typography & Sizing
             --fontSize: 18px;
 
             /* Heading Sizing */
-            --xxxlarge-size:  3.4rem;
-            --xxlarge-size:  3.1rem;
-            --xlarge-size: 3.8rem;
-            --large-size: 2.5rem;
             --h1-size: 2.2rem;
             --h2-size: 2.0rem;
             --h3-size: 1.8rem;
             --h4-size: 1.6rem;
             --h5-size: 1.4rem;
-
-            --lead-size: 1.4rem;
-
-            /* Grid-Containers */
-            --gcw-max-xl:   1440px; 
-            --gcw-max:      1140px;
-            --gcw-max-m:    960px;
-            --gcw-max-s:    720px;
         }
     }
 
@@ -256,33 +273,31 @@ Typography & Sizing
             --h4-size: 1.6rem;
             --h5-size: 1.4rem;
 
-            --lead-size: 1.4rem;
-
-            /* Grid-Containers */
-            --gcw-max-xl:   1600px; 
-            --gcw-max:      1320px;
-            --gcw-max-m:    960px;
-            --gcw-max-s:    720px;
         }
     }
 
-
 /*---------------------------------------------------------------------------
-Spacing Variables
+01-02 Spacing Variables (BVS)
 ---------------------------------------------------------------------------*/
 :root {
-  --sp-feat: 8rem;
-  --sp-base: 1.2rem;
-  --sp-rim: 1rem;
+  --sp-feat: 6rem;
+  --sp-base: 1.5rem;
+  --sp-rim: .75rem;
 }
 
     @media screen and (min-width: 800px) {
         :root {
-            --sp-feat: 8rem;
-            --sp-base: 2.2rem;
+            --sp-feat: 6rem;
+            --sp-base: 2.75rem;
             --sp-rim: 1.2rem;
         }
     }
 
-/* WP Admin Bar */
-:root { --wpadminbar: 46px; } /* Small */ @media screen and (max-width: 800px) { :root { --wpadminbar: 32px; } }
+    @media screen and (min-width: 1300px) {
+        :root {
+            --sp-feat: 8rem;
+            --sp-base: 3.5rem;
+            --sp-rim: 1.2rem;
+        }
+    }
+
